@@ -100,7 +100,9 @@ else()
   set_property(TARGET ${_APP_NAME} PROPERTY FOLDER "${CTK_ROOT_FOLDER}/Applications")
 endif()
 
+#[[ HOW TO ADAPT THIS TO CTK
 mitk_use_modules(TARGET ${_APP_NAME} MODULES MitkAppUtil)
+]]
 
 set_target_properties(${_APP_NAME} PROPERTIES
                       COMPILE_FLAGS "${_app_compile_flags}")
@@ -220,6 +222,7 @@ if(NOT _APP_NO_INSTALL)
 
   # Tell cpack the executables that you want in the start menu as links
   # Commented this maybe to be handled later.
+  # HOW TO ADAPT THIS FOR CTK?
   #set(MITK_CPACK_PACKAGE_EXECUTABLES ${MITK_CPACK_PACKAGE_EXECUTABLES} "${_APP_NAME};${_APP_DESCRIPTION}" CACHE INTERNAL "Collecting windows shortcuts to executables")
 
 endif()
