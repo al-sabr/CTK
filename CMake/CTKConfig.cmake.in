@@ -72,6 +72,20 @@ include("${CTK_CMAKE_DIR}/ctkFunctionGetPluginDependencies.cmake")
 include("${CTK_CMAKE_DIR}/ctkMacroSetupPlugins.cmake")
 include("${CTK_CMAKE_DIR}/ctkMacroGenerateMocs.cmake")
 
+# MITK PORT of MACROS AND FUNCTIONS
+# Adding the macros that are imported from MITK and adapted for CTK use.
+include("${CTK_CMAKE_DIR}/ctkFunctionConfigureVisualStudioUserProjectFile.cmake")
+include("${CTK_CMAKE_DIR}/ctkFunctionCreateBlueBerryApplication.cmake")
+include("${CTK_CMAKE_DIR}/ctkFunctionCreateProvisioningFile.cmake")
+include("${CTK_CMAKE_DIR}/ctkFunctionCreateWindowsBatchScript.cmake")
+include("${CTK_CMAKE_DIR}/ctkFunctionGetLibrarySearchPaths.cmake")
+include("${CTK_CMAKE_DIR}/ctkFunctionInstallAutoLoadModules.cmake")
+include("${CTK_CMAKE_DIR}/ctkFunctionInstallCTKPlugin.cmake")
+include("${CTK_CMAKE_DIR}/ctkFunctionInstallProvisioningFiles.cmake")
+include("${CTK_CMAKE_DIR}/ctkFunctionInstallThirdPartyCTKPlugins.cmake")
+include("${CTK_CMAKE_DIR}/ctkMacroInstall.cmake")
+include("${CTK_CMAKE_DIR}/ctkMacroInstallTargets.cmake")
+
 if(CMAKE_VERSION VERSION_LESS 3)
   include("${CTK_CMAKE_DIR}/CMakeFindDependencyMacro.cmake")
 else()
