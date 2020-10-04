@@ -29,6 +29,8 @@ ctkMacroBuildPlugin(
     src/registry
 )
 
-#target_compile_definitions(${PLUGIN_TARGET} PRIVATE "$<$<PLATFORM_ID:Windows>:POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN>")
+# HOW TO ADAPT THIS FOR CTK PLUGIN SYSTEM.
+# Uncommenting this line generate an error while configuration.
+#target_compile_definitions(${PLUGIN_TARGET} PUBLIC "$<$<PLATFORM_ID:Windows>:POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN>")
 
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/berryConfig.h.in" "${CMAKE_CURRENT_BINARY_DIR}/berryConfig.h" @ONLY)
