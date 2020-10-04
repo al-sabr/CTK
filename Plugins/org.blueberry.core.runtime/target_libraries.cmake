@@ -7,4 +7,7 @@
 set(target_libraries
   CTKPluginFramework
   QT_LIBRARIES
+  Poco::Foundation
+  Poco::Util
+  Poco::XML
 )
