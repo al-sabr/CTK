@@ -1,3 +1,7 @@
+#-----------------------------------------------------------------------------
+project(CTK)
+#-----------------------------------------------------------------------------
+
 ###########################################################################
 #
 #  Library:   CTK
@@ -52,6 +56,7 @@ set(CTK_DIR_PLUS_EXTENSION_DIRS ${PROJECT_SOURCE_DIR} ${CTK_EXTENSION_DIRS})
 # Update CMake module path copied from MITK
 #-----------------------------------------------------------------------------
 
+message(INFO "PROJECT_SOURCE_DIR =         ${PROJECT_SOURCE_DIR}")
 set(CTK_CMAKE_DIR ${PROJECT_SOURCE_DIR}/CMake)
 
 set(CMAKE_MODULE_PATH ${CTK_CMAKE_DIR} ${CMAKE_MODULE_PATH})
@@ -60,6 +65,8 @@ set(SUPERBUILD_TOPLEVEL_PROJECT "CTK")
 
 set(EXTERNAL_PROJECT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/CMakeExternals)
 set(EXTERNAL_PROJECT_FILE_PREFIX "")
+
+
 include(ExternalProject)
 include(ctkMacroCheckExternalProjectDependency)
 
@@ -146,10 +153,6 @@ if(USE_BLUEBERRY)
 endif()
 
 #-----------------------------------------------------------------------------
-project(CTK)
-#-----------------------------------------------------------------------------
-
-#-----------------------------------------------------------------------------
 # Set defaults
 #
 if(NOT DEFINED CMAKE_MACOSX_RPATH)
@@ -163,7 +166,7 @@ set(CTK_LIBRARY_MODE "SHARED")
 
 option(CTK_BUILD_SHARED_LIBS "Build CTK libraries as shared module." ON)
 mark_as_advanced(CTK_BUILD_SHARED_LIBS)
-mark_as_superbuild(CTK_BUILD_SHARED_LIBS)
+#mark_as_superbuild(CTK_BUILD_SHARED_LIBS)
 if(NOT CTK_BUILD_SHARED_LIBS)
   set(CTK_LIBRARY_MODE "STATIC")
 endif()
@@ -757,6 +760,7 @@ set(plugin_list
   org.commontk.eventadmin
   org.commontk.log
   org.commontk.metatype
+  org.blueberry.core.runtime
   )
 
 if(CTK_QT_VERSION VERSION_LESS "5")
