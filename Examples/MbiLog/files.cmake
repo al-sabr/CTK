@@ -1,0 +1,1 @@
+set(KIT_SRCS ctkLogExample.cpp)
