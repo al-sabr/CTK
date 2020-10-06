@@ -1,6 +1,6 @@
-project(mbilog)
+project(CTKmbilog)
 
-include(files)
+include(files.cmake)
 
 option(MBILOG_ENABLE_DEBUG_MESSAGES "Enable extra debug log output" OFF)
 mark_as_advanced(MBILOG_ENABLE_DEBUG_MESSAGES)
@@ -20,7 +20,7 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mbilogConfig.h.in"
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
 
-set(KIT_export_directive "MBILOG_EXPORT")
+set(KIT_export_directive "CTK_MBILOG_EXPORT")
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake
 # The following macro will read the target libraries from the file 'target_libraries.cmake'

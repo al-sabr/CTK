@@ -16,6 +16,9 @@ include(CMake/ctkMacroBFDCheck.cmake) # HAVE_BFD will be set to True if it appli
 
 set(KIT_export_directive "CTK_CORE_EXPORT")
 
+# Copied from Modules/Core/CMakeLists.txt for one include file.
+file(GLOB_RECURSE H_FILES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/include/*")
+
 # Source files
 set(KIT_SRCS
   ctkAbstractFactory.h
@@ -148,6 +151,7 @@ ctkMacroBuildLib(
   TARGET_LIBRARIES ${KIT_target_libraries}
   RESOURCES ${KIT_resources}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
+  INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/include}
   )
 
 # Needed for ctkBackTrace

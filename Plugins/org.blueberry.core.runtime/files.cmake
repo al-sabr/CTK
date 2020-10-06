@@ -11,7 +11,7 @@ set(PLUGIN_MOC_SRCS
   src/internal/berryPreferencesService.h
 )
 
-set(PLUGIN_resources
+set(CACHED_RESOURCEFILES
   plugin.xml
 )
 

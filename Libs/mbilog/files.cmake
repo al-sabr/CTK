@@ -1,4 +1,4 @@
-set(PLUGIN_MOC_SRCS
+set(KIT_MOC_SRCS
   mbilog.h
   mbilogLoggingTypes.h
   mbilogTextDictionary.h
@@ -9,7 +9,7 @@ set(PLUGIN_MOC_SRCS
   mbilogBackendCout.h
 )
 
-set(PLUGIN_SRCS
+set(KIT_SRCS
   mbilog.cpp
   mbilogLogMessage.cpp
   mbilogBackendCout.cpp

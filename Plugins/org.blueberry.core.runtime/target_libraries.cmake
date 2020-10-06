@@ -10,4 +10,5 @@ set(target_libraries
   Poco::Foundation
   Poco::Util
   Poco::XML
+  CTKmbilog
 )
