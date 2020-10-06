@@ -27,7 +27,7 @@ namespace mbilog
    */
 
   // todo convert to Struct
-  class MBILOG_EXPORT LogMessage
+  class CTK_MBILOG_EXPORT LogMessage
   {
   public:
     // TODO: all member names m_[...]

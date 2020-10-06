@@ -24,7 +24,7 @@ namespace mbilog
    * File: output generated to a file
    * Other: all other kinds of output
    */
-  enum MBILOG_EXPORT OutputType
+  enum CTK_MBILOG_EXPORT OutputType
   {
     Console = 0,
     File,

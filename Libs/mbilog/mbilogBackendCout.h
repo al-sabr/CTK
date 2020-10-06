@@ -27,7 +27,7 @@ namespace mbilog
    *         The backend formats the logging messages to a normal string and writes them to std::cout.
    *  \ingroup mbilog
    */
-  class MBILOG_EXPORT BackendCout : public TextBackendBase
+  class CTK_MBILOG_EXPORT BackendCout : public TextBackendBase
   {
   public:
     BackendCout();

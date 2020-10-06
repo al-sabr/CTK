@@ -25,7 +25,7 @@ namespace mbilog
    *
    *  \ingroup mbilog
    */
-  class MBILOG_EXPORT TextBackendBase : public BackendBase
+  class CTK_MBILOG_EXPORT TextBackendBase : public BackendBase
   {
   public:
     ~TextBackendBase() override;
