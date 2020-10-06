@@ -530,6 +530,13 @@ endif()
 # before the SuperBuild script is included
 #
 
+# Configure module naming conventions
+set(CTK_MODULE_NAME_REGEX_MATCH "^[A-Z].*$")
+set(CTK_MODULE_NAME_REGEX_NOT_MATCH "^[Cc][Tt][Kk].*$")
+set(CTK_DEFAULT_MODULE_NAME_PREFIX "CTK")
+set(CTK_MODULE_NAME_PREFIX ${MITK_DEFAULT_MODULE_NAME_PREFIX})
+set(CTK_MODULE_NAME_DEFAULTS_TO_DIRECTORY_NAME 1)
+
 #-----------------------------------------------------------------------------
 # Special "BUILD ALL" options
 
@@ -582,6 +589,9 @@ ctk_lib_option(PluginFramework
                "Build the Plugin Framework" OFF
                CTK_ENABLE_PluginFramework)
 
+ctk_lib_option(mbilog
+               "Build the mbilog library" OFF
+               CTK_ENABLE_mbilog)
 ctk_lib_option(Widgets
                "Build the Widgets library" OFF
                CTK_ENABLE_Widgets OR (CTK_ENABLE_DICOMApplicationHosting AND CTK_BUILD_EXAMPLES) OR CTK_USE_QTTESTING)
