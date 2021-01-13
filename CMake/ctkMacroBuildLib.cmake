@@ -211,6 +211,14 @@ ${${MY_EXPORT_CUSTOM_CONTENT_FROM_VARIABLE}}
     DESTINATION ${CTK_INSTALL_INCLUDE_DIR} COMPONENT Development
     )
 
+  # MBILOG
+  # So that mbilog can work normally the connection between MITK\CMake\mitkFunctionCreateModule.cmake#line#482 and #line#515 have to be incorporated in this macro.
+
+  # Adding the US_MODULE_NAME connected with the CTK\Libs\mbilog\mbilogConfig.h.in template file
+  target_compile_definitions(${lib_name} PRIVATE US_MODULE_NAME=${MY_NAME})
+
+  set_property(TARGET ${lib_name} PROPERTY US_MODULE_NAME ${MY_NAME})
+
 endmacro()
 
 
