@@ -48,6 +48,43 @@ if(APPLE)
     VARS CMAKE_OSX_ARCHITECTURES:STRING CMAKE_OSX_SYSROOT:PATH CMAKE_OSX_DEPLOYMENT_TARGET:STRING
     ALL_PROJECTS
     )
+  
+  #-----------------------------------------------------------------------------
+  # Installation preparation
+  #
+  # These should be set before any MITK install macros are used
+  #-----------------------------------------------------------------------------
+
+  # on macOS all BlueBerry plugins get copied into every
+  # application bundle (.app directory) specified here
+
+  #[[ Check if this part is necessary for CTK
+
+  if(MITK_USE_BLUEBERRY)
+
+    foreach(MITK_EXTENSION_DIR ${MITK_DIR_PLUS_EXTENSION_DIRS})
+      set(MITK_APPLICATIONS_EXTENSION_DIR ${MITK_EXTENSION_DIR}/Applications)
+      get_filename_component(MITK_APPLICATIONS_EXTENSION_DIR ${MITK_APPLICATIONS_EXTENSION_DIR} ABSOLUTE)
+      if(EXISTS ${MITK_APPLICATIONS_EXTENSION_DIR}/AppList.cmake)
+        set(MITK_APPS "")
+        include(${MITK_APPLICATIONS_EXTENSION_DIR}/AppList.cmake)
+        foreach(mitk_app ${MITK_APPS})
+          # extract option_name
+          string(REPLACE "^^" "\\;" target_info ${mitk_app})
+          set(target_info_list ${target_info})
+          list(GET target_info_list 1 option_name)
+          list(GET target_info_list 0 app_name)
+          # check if the application is enabled
+          if(${option_name} OR MITK_BUILD_ALL_APPS)
+            set(MACOSX_BUNDLE_NAMES ${MACOSX_BUNDLE_NAMES} Mitk${app_name})
+          endif()
+        endforeach()
+      endif()
+    endforeach()
+
+  endif()
+  ]]
+
 endif()
 
 #-----------------------------------------------------------------------------
@@ -311,6 +348,11 @@ if(BUILD_TESTING)
 endif()
 
 #-----------------------------------------------------------------------------
+# BLUEBERRY FRAMEWORK
+#
+option(CTK_USE_BLUEBERRY "Build the BlueBerry platform" ON)
+
+#-----------------------------------------------------------------------------
 # QtTesting
 #
 option(CTK_USE_QTTESTING "Enable/Disable QtTesting" OFF)
@@ -462,6 +504,55 @@ endif()
 # Let's mark as advanced some default properties
 mark_as_advanced(CMAKE_INSTALL_PREFIX)
 mark_as_advanced(DART_TESTING_TIMEOUT)
+
+# BLUEBERRY FRAMEWORK
+if(CTK_USE_BLUEBERRY)
+    option(BLUEBERRY_USE_QT_HELP "Enable support for integrating plugin documentation into Qt Help" ${DOXYGEN_FOUND})
+    mark_as_advanced(BLUEBERRY_USE_QT_HELP)
+
+    # Sanity checks for in-application BlueBerry plug-in help generation
+    if(BLUEBERRY_USE_QT_HELP)
+      set(_force_blueberry_use_qt_help_to_off 0)
+      if(NOT DOXYGEN_FOUND)
+        message("> Forcing BLUEBERRY_USE_QT_HELP to OFF because Doxygen was not found.")
+        set(_force_blueberry_use_qt_help_to_off 1)
+      endif()
+      if(DOXYGEN_FOUND AND DOXYGEN_VERSION VERSION_LESS 1.8.7)
+        message("> Forcing BLUEBERRY_USE_QT_HELP to OFF because Doxygen version 1.8.7 or newer not found.")
+        set(_force_blueberry_use_qt_help_to_off 1)
+      endif()
+
+      if(NOT QT_HELPGENERATOR_EXECUTABLE)
+        message("> Forcing BLUEBERRY_USE_QT_HELP to OFF because QT_HELPGENERATOR_EXECUTABLE is empty.")
+        set(_force_blueberry_use_qt_help_to_off 1)
+      endif()
+      
+      # Hack for the following condition
+      if(CTK_QT_VERSION VERSION_LESS "5")
+        set(CTK_USE_Qt5 FALSE)
+      endif()
+
+      if(NOT #[[MITK_USE_Qt5]] CTK_USE_Qt5) 
+        message("> Forcing BLUEBERRY_USE_QT_HELP to OFF because MITK_USE_Qt5 is OFF.")
+        set(_force_blueberry_use_qt_help_to_off 1)
+      endif()
+
+      if(NOT QT_XMLPATTERNS_EXECUTABLE)
+        message("You have enabled Qt Help support, but QT_XMLPATTERNS_EXECUTABLE is empty")
+        set(_force_blueberry_use_qt_help_to_off 1)
+      endif()
+
+      if(_force_blueberry_use_qt_help_to_off)
+        set(BLUEBERRY_USE_QT_HELP OFF CACHE BOOL "Enable support for integrating plugin documentation into Qt Help" FORCE)
+      endif()
+    endif()
+
+    if(BLUEBERRY_QT_HELP_REQUIRED AND NOT BLUEBERRY_USE_QT_HELP)
+      message(FATAL_ERROR "BLUEBERRY_USE_QT_HELP is required to be set to ON")
+    endif()
+  endif()
+
+endif()
 
 # KWStyle
 option(CTK_USE_KWSTYLE     "Enable sourcecode-based style tests." OFF)
@@ -953,6 +1044,19 @@ if(BUILD_TESTING)
   list(APPEND CTK_DEPENDENCIES CTKData)
 endif()
 
+# BLUEBERRY FRAMEWORK
+#[[
+if(MITK_USE_BLUEBERRY)
+  option(MITK_BUILD_ALL_PLUGINS "Build all MITK plugins" OFF)
+  mark_as_advanced(MITK_BUILD_ALL_PLUGINS)
+
+  if(NOT MITK_USE_CTK)
+    message("> Forcing MITK_USE_CTK to ON because of MITK_USE_BLUEBERRY")
+    set(MITK_USE_CTK ON CACHE BOOL "Use CTK in MITK" FORCE)
+  endif()
+endif()
+]]
+
 if(CTK_USE_KWSTYLE)
   list(APPEND CTK_DEPENDENCIES KWStyle)
 endif()
@@ -1137,6 +1241,14 @@ if(BUILD_TESTING)
   add_subdirectory(Applications/Testing)
 endif()
 
+#[[
+if(CTK_USE_BLUEBERRY)
+
+  set(BLUEBERRY_XPDOC_OUTPUT_DIR "${MITK_DOXYGEN_OUTPUT_DIR}/html/extension-points/html/")
+  execute_process(COMMAND ${CMAKE_COMMAND} -E make_directory ${BLUEBERRY_XPDOC_OUTPUT_DIR})
+
+endif()
+]]
 
 #-----------------------------------------------------------------------------
 # Add general purpose subdirectories
