@@ -1,4 +1,4 @@
-set(H_FILES
+set(KIT_MOC_SRCS
   mbilog.h
   mbilogLoggingTypes.h
   mbilogTextDictionary.h
@@ -9,7 +9,7 @@ set(H_FILES
   mbilogBackendCout.h
 )
 
-set(CPP_FILES
+set(KIT_SRCS
   mbilog.cpp
   mbilogLogMessage.cpp
   mbilogBackendCout.cpp
