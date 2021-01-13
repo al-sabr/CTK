@@ -1,4 +1,4 @@
-project(CTKmbilog)
+project(mbilog)
 
 include(files.cmake)
 
