@@ -28,10 +28,10 @@ ctkMacroBuildPlugin(
     src/registry
 )
 
-target_link_libraries(${PLUGIN_TARGET} PUBLIC Poco::Foundation Poco::Util Poco::XML)
+target_link_libraries(${PROJECT_NAME} PUBLIC Poco::Foundation Poco::Util Poco::XML)
 
 
-target_compile_definitions(${PLUGIN_TARGET} PUBLIC "$<$<PLATFORM_ID:Windows>:POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN>")
+target_compile_definitions(${PROJECT_NAME} PUBLIC "$<$<PLATFORM_ID:Windows>:POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN>")
 #[[]]
 
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/berryConfig.h.in" "${CMAKE_CURRENT_BINARY_DIR}/berryConfig.h" @ONLY)
