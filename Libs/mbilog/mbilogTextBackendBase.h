@@ -14,7 +14,7 @@ found in the LICENSE file.
 #define _mbilogTextBackendBase_H
 
 #include "mbilogBackendBase.h"
-#include "mbilogExports.h"
+#include "mbilogExport.h"
 
 namespace mbilog
 {

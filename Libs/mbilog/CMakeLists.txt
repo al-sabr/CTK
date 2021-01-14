@@ -20,7 +20,7 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mbilogConfig.h.in"
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
 
-set(KIT_export_directive "MBILOG_EXPORT")
+set(KIT_export_directive "MBILOG_EXPORTS")
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake
 # The following macro will read the target libraries from the file 'target_libraries.cmake'
@@ -28,21 +28,15 @@ set(KIT_target_libraries)
 
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
-if(CTK_QT_VERSION VERSION_GREATER "4")
-  list(APPEND KIT_target_libraries Qt5::Core)
-endif()
-
-if (CTK_QT_VERSION VERSION_LESS "5")
-  list(APPEND KIT_target_libraries QT_LIBRARIES)
-endif()
-
 ctkMacroBuildLib(
   NAME ${PROJECT_NAME}
   EXPORT_DIRECTIVE ${KIT_export_directive}
+  GENERATE_MOC_SRCS ${KIT_GENERATE_MOC_SRCS}
   SRCS ${KIT_SRCS}
   MOC_SRCS ${KIT_MOC_SRCS}
   TARGET_LIBRARIES ${KIT_target_libraries}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
+  BYPASS_REGEX TRUE
   )
 
 #[[ HOW TO ADAPT THIS TO CTK?

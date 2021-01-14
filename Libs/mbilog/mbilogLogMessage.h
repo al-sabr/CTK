@@ -15,7 +15,7 @@ found in the LICENSE file.
 
 #include <string>
 
-#include "mbilogExports.h"
+#include "mbilogExport.h"
 
 namespace mbilog
 {

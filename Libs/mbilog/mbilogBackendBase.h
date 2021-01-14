@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef _mbilogBackendBase_H
 #define _mbilogBackendBase_H
 
-#include "mbilogExports.h"
+#include "mbilogExport.h"
 #include "mbilogLogMessage.h"
 
 namespace mbilog

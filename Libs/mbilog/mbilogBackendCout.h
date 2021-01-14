@@ -15,7 +15,7 @@ found in the LICENSE file.
 
 #include <iostream>
 
-#include "mbilogExports.h"
+#include "mbilogExport.h"
 #include "mbilogLogMessage.h"
 #include "mbilogLoggingTypes.h"
 #include "mbilogTextBackendBase.h"

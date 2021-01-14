@@ -2,7 +2,7 @@ set(KIT_MOC_SRCS
   mbilog.h
   mbilogLoggingTypes.h
   mbilogTextDictionary.h
-  mbilogExports.h
+  #mbilogExport.h
   mbilogLogMessage.h
   mbilogBackendBase.h
   mbilogTextBackendBase.h

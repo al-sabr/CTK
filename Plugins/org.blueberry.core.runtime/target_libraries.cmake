@@ -6,6 +6,10 @@
 
 set(target_libraries
   CTKPluginFramework
-  QT_LIBRARIES
   CTKmbilog
+  QT_LIBRARIES
 )
+
+if(CTK_USE_Qt5)
+  list(append target_libraries Qt5::Gui Qt5::Xml)
+endif()
