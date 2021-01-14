@@ -530,6 +530,8 @@ if(CTK_USE_BLUEBERRY)
       # Hack for the following condition
       if(CTK_QT_VERSION VERSION_LESS "5")
         set(CTK_USE_Qt5 FALSE)
+      else()
+        set(CTK_USE_Qt5 TRUE)
       endif()
 
       if(NOT #[[MITK_USE_Qt5]] CTK_USE_Qt5) 
