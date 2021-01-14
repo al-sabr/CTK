@@ -550,7 +550,6 @@ if(CTK_USE_BLUEBERRY)
     if(BLUEBERRY_QT_HELP_REQUIRED AND NOT BLUEBERRY_USE_QT_HELP)
       message(FATAL_ERROR "BLUEBERRY_USE_QT_HELP is required to be set to ON")
     endif()
-  endif()
 
 endif()
 
@@ -567,6 +566,9 @@ mark_as_superbuild(CTK_BUILD_QTDESIGNER_PLUGINS)
 #-----------------------------------------------------------------------------
 # CTK Libraries
 #
+
+ctk_lib_option(mbilog
+               "Build the MITK mbilog library" ON)
 
 ctk_lib_option(Core
                "Build the Core library" ON)
@@ -759,6 +761,12 @@ if(CTK_QT_VERSION VERSION_LESS "5")
   list(APPEND plugin_list org.commontk.log4qt)
 endif()
 
+if(CTK_USE_BLUEBERRY)
+  list(APPEND plugin_list 
+  org.blueberry.core.runtime
+  )
+endif()
+
 foreach(_plugin ${plugin_list})
   ctk_plugin_option(${_plugin} "Build the ${_plugin} plugin." OFF)
 endforeach()
@@ -818,6 +826,10 @@ endif()
 # DICOM indexing, networking, and GUI widgets.
 ctk_enable_option(DICOM "Enable default DICOM support" OFF
                   CTK_LIB_DICOM/Widgets)
+
+# The CTK infrastructure for mbilog ported from MITK
+ctk_enable_option(mbilog "Enable mbilog support" OFF
+                  CTK_LIB_mbilog)
 
 # The CTK infrastructure for building a DICOM Part 19 compliant application
 # host and/or hosted application. This will not enable any example plugins
