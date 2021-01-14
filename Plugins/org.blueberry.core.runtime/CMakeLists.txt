@@ -6,14 +6,6 @@ include("${CMAKE_CURRENT_LIST_DIR}/files.cmake")
 
 ctkFunctionGetTargetLibraries(PLUGIN_target_libraries)
 
-#[[ 
-*** Only one aspect didn't get converted which is the MODULE_DEPENDS
-*** 
-mitk_create_plugin(
-  MODULE_DEPENDS PUBLIC mbilog
-)
-]]
-
 ctkMacroBuildPlugin(
   NAME ${PROJECT_NAME}
   EXPORT_DIRECTIVE ${PLUGIN_export_directive}
@@ -29,7 +21,6 @@ ctkMacroBuildPlugin(
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC Poco::Foundation Poco::Util Poco::XML)
-
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC "$<$<PLATFORM_ID:Windows>:POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN>")
 #[[]]
