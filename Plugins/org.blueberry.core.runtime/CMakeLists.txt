@@ -22,6 +22,10 @@ ctkMacroBuildPlugin(
 
 target_link_libraries(${PROJECT_NAME} PUBLIC Poco::Foundation Poco::Util Poco::XML)
 
+if(CTK_USE_Qt5)
+  target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Gui Qt5::Xml)
+endif()
+
 target_compile_definitions(${PROJECT_NAME} PUBLIC "$<$<PLATFORM_ID:Windows>:POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN>")
 #[[]]
 

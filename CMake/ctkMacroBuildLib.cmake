@@ -28,7 +28,7 @@
 #! \ingroup CMakeAPI
 macro(ctkMacroBuildLib)
   ctkMacroParseArguments(MY
-    "NAME;EXPORT_DIRECTIVE;SRCS;MOC_SRCS;GENERATE_MOC_SRCS;UI_FORMS;INCLUDE_DIRECTORIES;TARGET_LIBRARIES;RESOURCES;LIBRARY_TYPE;EXPORT_CUSTOM_CONTENT_FROM_VARIABLE;BYPASS_REGEX"
+    "NAME;EXPORT_DIRECTIVE;SRCS;MOC_SRCS;GENERATE_MOC_SRCS;UI_FORMS;INCLUDE_DIRECTORIES;TARGET_LIBRARIES;RESOURCES;LIBRARY_TYPE;EXPORT_CUSTOM_CONTENT_FROM_VARIABLE;BYPASS_REGEX;GENERATE_EXPORT_HEADER"
     "ENABLE_QTTESTING"
     ${ARGN}
     )
@@ -218,7 +218,17 @@ ${${MY_EXPORT_CUSTOM_CONTENT_FROM_VARIABLE}}
     )
 
   # MBILOG
-  # So that mbilog can work normally the connection between MITK\CMake\mitkFunctionCreateModule.cmake#line#482 and #line#515 have to be incorporated in this macro.
+  # So that mbilog can work normally:
+  include(GenerateExportHeader)
+
+  # 1) the connection between MITK\CMake\mitkFunctionCreateModule.cmake#line#593 has to be incorporated in this macro.
+  if (DEFINED MY_GENERATE_EXPORT_HEADER)
+    generate_export_header(${lib_name} #${_export_macro_names}
+      EXPORT_FILE_NAME ${MY_EXPORT_HEADER_PREFIX}Export.h
+    )
+  endif()
+
+  # 2) the connection between MITK\CMake\mitkFunctionCreateModule.cmake#line#482 and #line#515 have to be incorporated in this macro.
 
   # Adding the US_MODULE_NAME connected with the CTK\Libs\mbilog\mbilogConfig.h.in template file
   target_compile_definitions(${lib_name} PRIVATE US_MODULE_NAME=${MY_NAME})

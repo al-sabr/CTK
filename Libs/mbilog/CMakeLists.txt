@@ -20,7 +20,7 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mbilogConfig.h.in"
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
 
-set(KIT_export_directive "MBILOG_EXPORTS")
+set(KIT_export_directive "MBILOG_EXPORT")
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake
 # The following macro will read the target libraries from the file 'target_libraries.cmake'
@@ -37,10 +37,5 @@ ctkMacroBuildLib(
   TARGET_LIBRARIES ${KIT_target_libraries}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
   BYPASS_REGEX TRUE
+  #GENERATE_EXPORT_HEADER TRUE
   )
-
-#[[ HOW TO ADAPT THIS TO CTK?
-mitk_create_module(
-  NO_INIT
-)
-]]
