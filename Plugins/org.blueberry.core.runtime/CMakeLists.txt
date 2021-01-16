@@ -2,7 +2,7 @@ project(org_blueberry_core_runtime)
 
 message("POCO PATH : " ${Poco_DIR})
 
-find_package(Qt5 REQUIRED)
+find_package(Qt5 REQUIRED COMPONENTS Core Gui Xml)
 
 set(PLUGIN_export_directive "org_blueberry_core_runtime_EXPORT")
 
