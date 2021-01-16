@@ -766,8 +766,6 @@ endif()
 
 if(CTK_USE_BLUEBERRY)
 
-  find_package(Poco REQUIRED Foundation)
-
   list(APPEND plugin_list 
   org.blueberry.core.runtime
   )

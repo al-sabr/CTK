@@ -1,5 +1,9 @@
 project(org_blueberry_core_runtime)
 
+message("POCO PATH : " ${Poco_DIR})
+
+find_package(Qt5 REQUIRED)
+
 set(PLUGIN_export_directive "org_blueberry_core_runtime_EXPORT")
 
 include("${CMAKE_CURRENT_LIST_DIR}/files.cmake")
@@ -23,7 +27,7 @@ ctkMacroBuildPlugin(
 target_link_libraries(${PROJECT_NAME} PUBLIC Poco::Foundation Poco::Util Poco::XML)
 
 if(CTK_USE_Qt5)
-  target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Gui Qt5::Xml)
+  target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widget)
 endif()
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC "$<$<PLATFORM_ID:Windows>:POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN>")
