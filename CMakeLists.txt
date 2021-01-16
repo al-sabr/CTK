@@ -753,6 +753,7 @@ set(CTK_ENABLED_APPS ${_enabled_apps} CACHE INTERNAL "" FORCE)
 # Plugins in the list below are not build by default
 set(plugin_list
   # Optional plug-ins implementings interfaces in PluginFramework/service/
+  #mbilog
   org.commontk.configadmin
   org.commontk.eventadmin
   org.commontk.log
@@ -764,6 +765,9 @@ if(CTK_QT_VERSION VERSION_LESS "5")
 endif()
 
 if(CTK_USE_BLUEBERRY)
+
+  find_package(Poco REQUIRED Foundation)
+
   list(APPEND plugin_list 
   org.blueberry.core.runtime
   )
