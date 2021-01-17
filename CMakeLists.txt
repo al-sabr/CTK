@@ -769,7 +769,7 @@ if(CTK_USE_BLUEBERRY)
     org.blueberry.core.runtime
     org.blueberry.core.commands
     org.blueberry.core.expressions
-    org.blueberry.core.jobs
+    org.blueberry.core.qt
     )
 endif()
 
