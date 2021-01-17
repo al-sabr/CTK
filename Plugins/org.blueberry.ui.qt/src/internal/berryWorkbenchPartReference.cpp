@@ -22,7 +22,7 @@ found in the LICENSE file.
 #include "berryIEditorPart.h"
 #include "berryIWorkbenchPartConstants.h"
 
-#include <QIcon>
+#include <QtGui/QIcon>
 
 namespace berry
 {

@@ -16,8 +16,8 @@ found in the LICENSE file.
 
 #include <ui_berryQtStatusPart.h>
 
-#include <QWidget>
-#include <QHBoxLayout>
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QHBoxLayout>
 
 namespace berry
 {

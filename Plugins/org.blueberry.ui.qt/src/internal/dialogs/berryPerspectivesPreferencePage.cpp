@@ -23,8 +23,8 @@ found in the LICENSE file.
 #include "internal/berryWorkbenchPage.h"
 #include "berryWorkbenchPlugin.h"
 
-#include <QListWidgetItem>
-#include <QMessageBox>
+#include <QtWidgets/QListWidgetItem>
+#include <QtWidgets/QMessageBox>
 
 namespace berry {
 

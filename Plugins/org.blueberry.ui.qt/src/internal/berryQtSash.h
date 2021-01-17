@@ -14,8 +14,8 @@ found in the LICENSE file.
 #ifndef BERRYQTSASH_H_
 #define BERRYQTSASH_H_
 
-#include <QWidget>
-#include <QRubberBand>
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QRubberBand>
 
 #include <berryGuiTkISelectionListener.h>
 

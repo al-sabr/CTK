@@ -16,7 +16,7 @@ found in the LICENSE file.
 #include <berryIPerspectiveRegistry.h>
 #include <berryIPerspectiveDescriptor.h>
 
-#include <QIcon>
+#include <QtGui/QIcon>
 
 namespace berry {
 

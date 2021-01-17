@@ -16,8 +16,8 @@ found in the LICENSE file.
 
 #include "berryContributionItem.h"
 
-#include <QIcon>
-#include <QKeySequence>
+#include <QtGui/QIcon>
+#include <QtGui/QKeySequence>
 
 namespace berry {
 

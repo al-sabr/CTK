@@ -29,7 +29,7 @@ found in the LICENSE file.
 #include "berryWorkbenchPreferenceConstants.h"
 #include "berryPreferenceConstants.h"
 
-#include <QMenu>
+#include <QtWidgets/QMenu>
 
 namespace  berry {
 

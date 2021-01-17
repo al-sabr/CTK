@@ -25,9 +25,9 @@ found in the LICENSE file.
 
 #include <berryLog.h>
 
-#include <QFrame>
-#include <QVBoxLayout>
-#include <QKeyEvent>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QVBoxLayout>
+#include <QtGui/QKeyEvent>
 
 namespace berry
 {

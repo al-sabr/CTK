@@ -17,7 +17,7 @@ found in the LICENSE file.
 
 #include <org_blueberry_ui_qt_Export.h>
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 
 namespace berry
 {

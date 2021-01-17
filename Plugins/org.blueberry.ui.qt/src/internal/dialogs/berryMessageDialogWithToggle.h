@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef BERRYMESSAGEDIALOGWITHTOGGLE_H
 #define BERRYMESSAGEDIALOGWITHTOGGLE_H
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 
 namespace Ui {
 class MessageDialogWithToggle;

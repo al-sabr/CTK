@@ -63,8 +63,8 @@ found in the LICENSE file.
 #include "berryIExtension.h"
 
 #include <QDebug>
-#include <QPrinterInfo>
-#include <QSvgGenerator>
+#include <QtPrintSupport/QPrinterInfo>
+#include <QtSvg/QSvgGenerator>
 
 namespace berry
 {

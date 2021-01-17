@@ -13,7 +13,7 @@ found in the LICENSE file.
 
 #include "berryQtWidgetsTweaklet.h"
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 #include <QVariant>
 
 namespace berry

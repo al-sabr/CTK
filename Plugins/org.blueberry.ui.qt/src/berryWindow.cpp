@@ -18,7 +18,7 @@ found in the LICENSE file.
 #include "berrySameShellProvider.h"
 #include "berryMenuManager.h"
 
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 
 namespace berry
 {

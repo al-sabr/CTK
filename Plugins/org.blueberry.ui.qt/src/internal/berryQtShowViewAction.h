@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef BERRYQTSHOWVIEWACTION_H_
 #define BERRYQTSHOWVIEWACTION_H_
 
-#include <QAction>
+#include <QtWidgets/QAction>
 
 #include <berryIWorkbenchWindow.h>
 #include <berryIViewDescriptor.h>

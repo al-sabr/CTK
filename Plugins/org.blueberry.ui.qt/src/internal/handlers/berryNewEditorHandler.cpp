@@ -22,8 +22,8 @@ found in the LICENSE file.
 #include <berryIWorkbenchWindow.h>
 #include <berryIWorkbenchPage.h>
 
-#include <QApplication>
-#include <QMessageBox>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMessageBox>
 
 namespace berry {
 

@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef BERRYIQTPREFERENCEPAGE_H_
 #define BERRYIQTPREFERENCEPAGE_H_
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 
 #include "berryIPreferencePage.h"
 

@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef BERRYQTSHOWPERSPECTIVEDIALOG_H
 #define BERRYQTSHOWPERSPECTIVEDIALOG_H
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 
 class QModelIndex;
 

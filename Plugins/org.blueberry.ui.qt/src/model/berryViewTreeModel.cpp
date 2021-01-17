@@ -21,8 +21,8 @@ found in the LICENSE file.
 #include "internal/intro/berryIntroConstants.h"
 #include "internal/berryKeywordRegistry.h"
 
-#include <QIcon>
-#include <QBrush>
+#include <QtGui/QIcon>
+#include <QtGui/QBrush>
 
 namespace berry {
 

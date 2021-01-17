@@ -14,7 +14,7 @@ found in the LICENSE file.
 #ifndef BERRYQTCONTROLWIDGET_H_
 #define BERRYQTCONTROLWIDGET_H_
 
-#include <QFrame>
+#include <QtWidgets/QFrame>
 
 #include "berryQtWidgetController.h"
 

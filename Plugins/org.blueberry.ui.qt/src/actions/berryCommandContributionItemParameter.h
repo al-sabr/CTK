@@ -15,8 +15,8 @@ found in the LICENSE file.
 #define BERRYCOMMANDCONTRIBUTIONITEMPARAMETER_H
 
 #include <QHash>
-#include <QIcon>
-#include <QKeySequence>
+#include <QtGui/QIcon>
+#include <QtGui/QKeySequence>
 
 #include "berryCommandContributionItem.h"
 

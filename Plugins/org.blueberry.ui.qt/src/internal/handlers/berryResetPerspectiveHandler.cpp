@@ -18,7 +18,7 @@ found in the LICENSE file.
 #include <internal/berryWorkbenchPage.h>
 #include <internal/berryPerspectiveDescriptor.h>
 
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 namespace berry {
 

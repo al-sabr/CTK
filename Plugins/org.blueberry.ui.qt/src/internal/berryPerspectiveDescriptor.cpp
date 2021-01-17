@@ -19,7 +19,7 @@ found in the LICENSE file.
 #include "berryStatus.h"
 #include "berryIContributor.h"
 
-#include <QIcon>
+#include <QtGui/QIcon>
 
 namespace berry
 {

@@ -28,7 +28,7 @@ found in the LICENSE file.
 #include "berryViewDescriptor.h"
 #include "intro/berryIntroConstants.h"
 
-#include <QMenu>
+#include <QtWidgets/QMenu>
 #include <QSet>
 #include <QPair>
 

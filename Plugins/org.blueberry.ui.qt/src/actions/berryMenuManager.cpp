@@ -16,8 +16,8 @@ found in the LICENSE file.
 #include "berryQActionProperties.h"
 #include "berrySubContributionItem.h"
 
-#include <QMenu>
-#include <QMenuBar>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
 
 
 class QMenuProxy

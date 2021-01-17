@@ -14,7 +14,7 @@ found in the LICENSE file.
 #ifndef BERRYQTSAFEAPPLICATION_H_
 #define BERRYQTSAFEAPPLICATION_H_
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 
 namespace berry {
 

@@ -20,9 +20,9 @@ found in the LICENSE file.
 
 #include <berryConstants.h>
 
-#include <QAbstractButton>
-#include <QDesktopWidget>
-#include <QApplication>
+#include <QtWidgets/QAbstractButton>
+#include <QtWidgets/QDesktopWidget>
+#include <QtWidgets/QApplication>
 #include <QVariant>
 
 

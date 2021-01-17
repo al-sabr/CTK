@@ -16,10 +16,10 @@ found in the LICENSE file.
 
 #include "ui_berrySavePerspectiveDialog.h"
 
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QSortFilterProxyModel>
 #include <QModelIndex>
-#include <QPushButton>
+#include <QtWidgets/QPushButton>
 
 namespace berry {
 

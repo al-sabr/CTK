@@ -15,7 +15,7 @@ found in the LICENSE file.
 
 #include <berrySmartPointer.h>
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 
 class QItemSelection;
 class QSortFilterProxyModel;

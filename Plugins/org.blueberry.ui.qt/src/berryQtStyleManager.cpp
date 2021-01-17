@@ -12,16 +12,16 @@ found in the LICENSE file.
 
 #include "berryQtStyleManager.h"
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QFile>
 #include <QTextStream>
 #include <QFileInfo>
 #include <QRegularExpression>
 #include <QStringList>
 #include <QDirIterator>
-#include <QFont>
-#include <QFontDatabase>
-#include <QIcon>
+#include <QtGui/QFont>
+#include <QtGui/QFontDatabase>
+#include <QtGui/QIcon>
 
 #include <berryLog.h>
 #include <berryPlatform.h>

@@ -17,9 +17,9 @@ found in the LICENSE file.
 
 #include "berryWorkbenchPlugin.h"
 
-#include <QFileDialog>
+#include <QtWidgets/QFileDialog>
 #include <QDirIterator>
-#include <QFontDatabase>
+#include <QtGui/QFontDatabase>
 
 namespace berry
 {

@@ -25,9 +25,9 @@ found in the LICENSE file.
 #include "berryWorkbenchPlugin.h"
 #include "berryPreferenceConstants.h"
 
-#include <QAction>
-#include <QMenu>
-#include <QMessageBox>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMessageBox>
 
 namespace berry {
 

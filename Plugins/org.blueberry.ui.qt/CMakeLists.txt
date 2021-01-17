@@ -16,9 +16,26 @@ set(PLUGIN_exported_include_suffixes
   src/util
 )
 
-mitk_create_plugin(EXPORT_DIRECTIVE BERRY_UI_QT
-                        EXPORTED_INCLUDE_SUFFIXES ${PLUGIN_exported_include_suffixes})
+set(PLUGIN_export_directive "BERRY_UI_QT")
 
-if(MITK_USE_Qt5)
-  target_link_libraries(${PLUGIN_TARGET} PUBLIC Qt5::Widgets Qt5::PrintSupport Qt5::Svg)
+include("${CMAKE_CURRENT_LIST_DIR}/files.cmake")
+
+ctkFunctionGetTargetLibraries(PLUGIN_target_libraries)
+
+if(CTK_USE_Qt5)
+  message("BLUEBERRY:UI:QT USES QT5")
+  list(APPEND PLUGIN_target_libraries Qt5::Widgets Qt5::PrintSupport Qt5::Svg)
 endif()
+
+ctkMacroBuildPlugin(
+  NAME ${PROJECT_NAME}
+  EXPORT_DIRECTIVE ${PLUGIN_export_directive}
+  SRCS ${PLUGIN_SRCS}
+  MOC_SRCS ${PLUGIN_MOC_SRCS}
+  UI_FORMS ${PLUGIN_UI_FORMS}
+  RESOURCES ${PLUGIN_resources}
+  TARGET_LIBRARIES ${PLUGIN_target_libraries}
+  CACHED_RESOURCEFILES ${PLUGIN_CACHED_RESOURCEFILES}
+  EXPORTED_INCLUDE_SUFFIXES
+  ${PLUGIN_exported_include_suffixes}
+)

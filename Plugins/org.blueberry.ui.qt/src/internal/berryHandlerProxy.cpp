@@ -37,7 +37,7 @@ found in the LICENSE file.
 #include "berryStatus.h"
 #include "berryWorkbenchPlugin.h"
 
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 namespace berry {
 

@@ -21,7 +21,7 @@ found in the LICENSE file.
 #include "berryIMemento.h"
 
 #include <QStringList>
-#include <QIcon>
+#include <QtGui/QIcon>
 
 namespace berry {
 

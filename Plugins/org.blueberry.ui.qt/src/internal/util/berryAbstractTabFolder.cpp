@@ -16,7 +16,7 @@ found in the LICENSE file.
 #include <berryConstants.h>
 #include <berryIStackPresentationSite.h>
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 
 namespace berry
 {

@@ -12,7 +12,7 @@ found in the LICENSE file.
 
 #include "berryQtDisplay.h"
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 
 namespace berry {
 

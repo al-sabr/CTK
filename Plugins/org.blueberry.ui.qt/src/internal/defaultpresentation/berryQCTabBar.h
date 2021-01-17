@@ -14,7 +14,7 @@ found in the LICENSE file.
 #ifndef BERRYQCTABBAR_H_
 #define BERRYQCTABBAR_H_
 
-#include <QTabBar>
+#include <QtWidgets/QTabBar>
 
 #include "internal/util/berryAbstractTabItem.h"
 

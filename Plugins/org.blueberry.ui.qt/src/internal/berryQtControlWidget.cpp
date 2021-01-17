@@ -16,8 +16,8 @@ found in the LICENSE file.
 
 #include <berryShell.h>
 
-#include <QMoveEvent>
-#include <QResizeEvent>
+#include <QtGui/QMoveEvent>
+#include <QtGui/QResizeEvent>
 
 #include <algorithm>
 

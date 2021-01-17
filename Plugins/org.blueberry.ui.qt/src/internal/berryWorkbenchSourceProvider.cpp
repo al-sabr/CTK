@@ -32,8 +32,8 @@ found in the LICENSE file.
 #include "berryWorkbench.h"
 #include "berryWorkbenchWindow.h"
 
-#include <QApplication>
-#include <QWidget>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QWidget>
 
 namespace berry {
 

@@ -18,7 +18,7 @@ found in the LICENSE file.
 
 #include <berryIConfigurationElement.h>
 
-#include <QIcon>
+#include <QtGui/QIcon>
 
 namespace berry
 {

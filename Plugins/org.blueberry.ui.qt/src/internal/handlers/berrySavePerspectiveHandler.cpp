@@ -20,7 +20,7 @@ found in the LICENSE file.
 #include "berryWorkbenchPlugin.h"
 #include "internal/dialogs/berrySavePerspectiveDialog.h"
 
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 #include <cassert>
 

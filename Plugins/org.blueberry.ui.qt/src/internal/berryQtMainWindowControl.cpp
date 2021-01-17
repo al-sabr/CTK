@@ -15,9 +15,9 @@ found in the LICENSE file.
 #include <berryShell.h>
 
 #include <QEvent>
-#include <QMoveEvent>
-#include <QResizeEvent>
-#include <QWindowStateChangeEvent>
+#include <QtGui/QMoveEvent>
+#include <QtGui/QResizeEvent>
+#include <QtGui/QWindowStateChangeEvent>
 
 namespace berry {
 

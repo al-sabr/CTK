@@ -20,7 +20,7 @@ found in the LICENSE file.
 #include <berryIPreferences.h>
 #include <berryIQtStyleManager.h>
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QString>
 #include <QTextCodec>
 

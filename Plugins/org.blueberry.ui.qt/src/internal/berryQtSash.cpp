@@ -16,9 +16,9 @@ found in the LICENSE file.
 
 #include <berryConstants.h>
 
-#include <QMouseEvent>
-#include <QStyleOption>
-#include <QPainter>
+#include <QtGui/QMouseEvent>
+#include <QtWidgets/QStyleOption>
+#include <QtGui/QPainter>
 
 namespace berry
 {

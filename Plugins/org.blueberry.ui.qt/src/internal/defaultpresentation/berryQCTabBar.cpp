@@ -12,8 +12,8 @@ found in the LICENSE file.
 
 #include "berryQCTabBar.h"
 
-#include <QApplication>
-#include <QMouseEvent>
+#include <QtWidgets/QApplication>
+#include <QtGui/QMouseEvent>
 
 namespace berry
 {

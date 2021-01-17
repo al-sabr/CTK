@@ -21,7 +21,7 @@ found in the LICENSE file.
 #include "berryXMLMemento.h"
 
 #include <QSortFilterProxyModel>
-#include <QPushButton>
+#include <QtWidgets/QPushButton>
 
 namespace berry {
 

@@ -16,7 +16,7 @@ found in the LICENSE file.
 #include "berryIWorkbenchPage.h"
 #include "berryUIException.h"
 
-#include <QIcon>
+#include <QtGui/QIcon>
 
 namespace berry
 {

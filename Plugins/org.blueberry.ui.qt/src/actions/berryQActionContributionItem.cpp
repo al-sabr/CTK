@@ -16,7 +16,7 @@ found in the LICENSE file.
 #include <berryIContributionManager.h>
 #include <berryIContributionManagerOverrides.h>
 
-#include <QMenu>
+#include <QtWidgets/QMenu>
 
 namespace berry {
 

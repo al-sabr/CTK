@@ -21,7 +21,7 @@ found in the LICENSE file.
 #include <berryConstants.h>
 #include <internal/berryTweaklets.h>
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QVariant>
 
 namespace berry

@@ -13,7 +13,7 @@ found in the LICENSE file.
 
 #include "berryQtWorkbenchTweaklet.h"
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 
 #include "berryQtDisplay.h"
 

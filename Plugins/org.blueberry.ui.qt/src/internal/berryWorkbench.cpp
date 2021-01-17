@@ -59,8 +59,8 @@ found in the LICENSE file.
 #include <berryIServiceScopes.h>
 
 #include <QDir>
-#include <QApplication>
-#include <QMessageBox>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMessageBox>
 
 #include <Poco/FileStream.h>
 

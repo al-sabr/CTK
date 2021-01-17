@@ -16,7 +16,7 @@ found in the LICENSE file.
 
 #include <berryStackDropResult.h>
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 #include <QPoint>
 
 #include <org_blueberry_ui_qt_Export.h>

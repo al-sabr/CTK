@@ -15,9 +15,9 @@ found in the LICENSE file.
 #include "internal/berryQtControlWidget.h"
 
 #include <QEvent>
-#include <QMouseEvent>
-#include <QApplication>
-#include <QWidget>
+#include <QtGui/QMouseEvent>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QWidget>
 
 #include <iostream>
 

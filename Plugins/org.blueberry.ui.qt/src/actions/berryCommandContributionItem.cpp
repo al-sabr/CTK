@@ -37,10 +37,10 @@ found in the LICENSE file.
 
 #include "../berryWorkbenchPlugin.h"
 
-#include <QMenu>
-#include <QMenuBar>
-#include <QToolBar>
-#include <QApplication>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QApplication>
 
 #include <QMetaMethod>
 

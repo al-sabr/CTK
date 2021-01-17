@@ -13,8 +13,8 @@ found in the LICENSE file.
 
 #include "berrySeparator.h"
 
-#include <QMenu>
-#include <QToolBar>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QToolBar>
 
 namespace berry {
 

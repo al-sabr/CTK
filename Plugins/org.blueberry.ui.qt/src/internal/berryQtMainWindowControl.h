@@ -14,7 +14,7 @@ found in the LICENSE file.
 #ifndef BERRYQTMAINWINDOWCONTROL_H_
 #define BERRYQTMAINWINDOWCONTROL_H_
 
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 
 #include <berryShell.h>
 #include <internal/berryQtWidgetController.h>

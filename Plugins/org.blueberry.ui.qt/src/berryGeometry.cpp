@@ -15,7 +15,7 @@ found in the LICENSE file.
 
 #include <QPoint>
 #include <QRect>
-#include <QWidget>
+#include <QtWidgets/QWidget>
 
 #include <limits>
 

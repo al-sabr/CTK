@@ -16,7 +16,7 @@ found in the LICENSE file.
 
 #include <berryShell.h>
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 
 namespace berry {
 

@@ -18,8 +18,8 @@ found in the LICENSE file.
 #include "internal/berryWorkbench.h"
 #include "internal/intro/berryIntroDescriptor.h"
 
-#include <QApplication>
-#include <QMessageBox>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMessageBox>
 
 namespace berry {
 

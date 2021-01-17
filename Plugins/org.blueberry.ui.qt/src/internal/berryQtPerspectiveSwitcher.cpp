@@ -17,7 +17,7 @@ found in the LICENSE file.
 #include <berryIWorkbenchPage.h>
 #include <berryIPerspectiveRegistry.h>
 
-#include <QActionGroup>
+#include <QtWidgets/QActionGroup>
 
 namespace berry {
 

@@ -18,9 +18,9 @@ found in the LICENSE file.
 #include <berryIWorkbench.h>
 #include <berryIWorkbenchWindow.h>
 
-#include <QAction>
-#include <QActionGroup>
-#include <QMenu>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QActionGroup>
+#include <QtWidgets/QMenu>
 #include <QSignalMapper>
 
 namespace berry {

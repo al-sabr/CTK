@@ -414,7 +414,7 @@ set(INTERNAL_CPP_FILES
 
 )
 
-set(MOC_H_FILES
+set(PLUGIN_MOC_SRCS
 
   src/berryAbstractUICTKPlugin.h
   src/berryEditorPart.h
@@ -484,7 +484,7 @@ set(MOC_H_FILES
   src/internal/intro/berryEditorIntroAdapterPart.h
 )
 
-set(UI_FILES
+set(PLUGIN_UI_FORMS
   src/internal/berryQtShowPerspectiveDialog.ui
   src/internal/berryQtShowViewDialog.ui
   src/internal/berryQtStylePreferencePage.ui
@@ -494,11 +494,11 @@ set(UI_FILES
   src/internal/dialogs/berrySavePerspectiveDialog.ui
 )
 
-set(QRC_FILES
+set(PLUGIN_resources
   resources/org_blueberry_ui_qt.qrc
 )
 
-set(CACHED_RESOURCE_FILES
+set(PLUGIN_CACHED_RESOURCEFILES
   plugin.xml
 )
 
@@ -511,3 +511,5 @@ endforeach(file ${SRC_CPP_FILES})
 foreach(file ${INTERNAL_CPP_FILES})
   set(CPP_FILES ${CPP_FILES} src/internal/${file})
 endforeach(file ${INTERNAL_CPP_FILES})
+
+set(PLUGIN_SRCS ${CPP_FILES})

@@ -12,7 +12,7 @@ found in the LICENSE file.
 
 #include "berryFileEditorInput.h"
 
-#include <QIcon>
+#include <QtGui/QIcon>
 
 namespace berry {
 

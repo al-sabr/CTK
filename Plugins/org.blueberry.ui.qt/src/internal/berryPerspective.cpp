@@ -31,7 +31,7 @@ found in the LICENSE file.
 #include "presentations/berryIStackPresentationSite.h"
 #include "berryIContextService.h"
 
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 namespace berry
 {

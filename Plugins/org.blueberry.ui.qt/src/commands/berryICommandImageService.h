@@ -16,7 +16,7 @@ found in the LICENSE file.
 
 #include "../services/berryIDisposable.h"
 
-#include <QIcon>
+#include <QtGui/QIcon>
 
 namespace berry {
 

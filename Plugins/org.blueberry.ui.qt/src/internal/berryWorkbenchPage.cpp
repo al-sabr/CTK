@@ -40,7 +40,7 @@ found in the LICENSE file.
 
 #include <berryPlatform.h>
 
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 namespace berry
 {

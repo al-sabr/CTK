@@ -23,7 +23,7 @@ found in the LICENSE file.
 #include "internal/berryQtSash.h"
 #include <internal/berryQtControlWidget.h>
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 
 namespace berry
 {

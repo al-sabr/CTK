@@ -14,7 +14,7 @@ found in the LICENSE file.
 #ifndef BERRYQTPERSPECTIVESWITCHER_H_
 #define BERRYQTPERSPECTIVESWITCHER_H_
 
-#include <QToolBar>
+#include <QtWidgets/QToolBar>
 #include <QHash>
 
 #include <berryIPerspectiveListener.h>

@@ -20,9 +20,9 @@ found in the LICENSE file.
 #include "berryIPreferencesService.h"
 #include "berryIPreferences.h"
 
-#include <QApplication>
-#include <QIcon>
-#include <QImage>
+#include <QtWidgets/QApplication>
+#include <QtGui/QIcon>
+#include <QtGui/QImage>
 #include <QString>
 
 namespace berry

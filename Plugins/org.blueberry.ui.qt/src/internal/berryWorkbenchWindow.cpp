@@ -45,11 +45,11 @@ found in the LICENSE file.
 
 #include "berryDebugUtil.h"
 
-#include <QMainWindow>
-#include <QHBoxLayout>
-#include <QMenuBar>
-#include <QMoveEvent>
-#include <QResizeEvent>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QMenuBar>
+#include <QtGui/QMoveEvent>
+#include <QtGui/QResizeEvent>
 
 namespace berry
 {

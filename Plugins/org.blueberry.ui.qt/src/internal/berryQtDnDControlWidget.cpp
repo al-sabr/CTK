@@ -14,10 +14,10 @@ found in the LICENSE file.
 
 #include "berryQtDnDControlWidget.h"
 
-#include <QDragEnterEvent>
-#include <QDragMoveEvent>
-#include <QDragLeaveEvent>
-#include <QDropEvent>
+#include <QtGui/QDragEnterEvent>
+#include <QtGui/QDragMoveEvent>
+#include <QtGui/QDragLeaveEvent>
+#include <QtGui/QDropEvent>
 
 namespace berry {
 

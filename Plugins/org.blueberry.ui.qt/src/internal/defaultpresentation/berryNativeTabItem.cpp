@@ -18,7 +18,7 @@ found in the LICENSE file.
 
 #include <berryConstants.h>
 
-#include <QToolButton>
+#include <QtWidgets/QToolButton>
 
 namespace berry
 {

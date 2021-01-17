@@ -21,10 +21,10 @@ found in the LICENSE file.
 #include "berryGuiWidgetsTweaklet.h"
 
 #include <QEvent>
-#include <QKeyEvent>
-#include <QApplication>
-#include <QRubberBand>
-#include <QPixmap>
+#include <QtGui/QKeyEvent>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QRubberBand>
+#include <QtGui/QPixmap>
 
 namespace berry
 {

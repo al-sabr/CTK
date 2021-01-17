@@ -13,10 +13,10 @@ found in the LICENSE file.
 #include "berryEmptyTabFolder.h"
 #include "berryEmptyTabItem.h"
 
-#include <QHBoxLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QRect>
-#include <QWidget>
-#include <QFrame>
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QFrame>
 
 namespace berry
 {

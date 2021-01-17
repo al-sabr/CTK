@@ -18,7 +18,7 @@ found in the LICENSE file.
 
 #include <org_blueberry_ui_qt_Export.h>
 
-#include <QIcon>
+#include <QtGui/QIcon>
 
 class QMenu;
 class QMenuProxy;

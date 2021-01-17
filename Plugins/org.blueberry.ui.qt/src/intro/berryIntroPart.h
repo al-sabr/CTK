@@ -21,7 +21,7 @@ found in the LICENSE file.
 #include <berryIExecutableExtension.h>
 #include <berryIPropertyChangeListener.h>
 
-#include <QIcon>
+#include <QtGui/QIcon>
 
 namespace berry
 {

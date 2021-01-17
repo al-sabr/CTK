@@ -13,8 +13,8 @@ found in the LICENSE file.
 #ifndef BERRYQTOPENPERSPECTIVEACTION_H_
 #define BERRYQTOPENPERSPECTIVEACTION_H_
 
-#include <QAction>
-#include <QActionGroup>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QActionGroup>
 
 #include <berryIWorkbenchWindow.h>
 #include <berryIPerspectiveDescriptor.h>
