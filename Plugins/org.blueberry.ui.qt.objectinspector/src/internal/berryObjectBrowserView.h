@@ -19,8 +19,8 @@ found in the LICENSE file.
 #include <ui_berryQtObjectBrowserView.h>
 #include "berryQtObjectTableModel.h"
 
-#include <QAction>
-#include <QMenu>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
 
 class QAbstractProxyModel;
 

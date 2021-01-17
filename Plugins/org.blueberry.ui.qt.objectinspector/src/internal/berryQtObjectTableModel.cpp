@@ -17,7 +17,7 @@ found in the LICENSE file.
 #include <berryDebugBreakpointManager.h>
 
 #include <QTimer>
-#include <QIcon>
+#include <QtGui/QIcon>
 
 #include <cstring>
 

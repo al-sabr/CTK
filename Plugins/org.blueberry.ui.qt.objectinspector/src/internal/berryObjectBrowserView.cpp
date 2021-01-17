@@ -10,10 +10,10 @@ found in the LICENSE file.
 
 ============================================================================*/
 
-#include <QToolBar>
+#include <QtWidgets/QToolBar>
 #include <QSortFilterProxyModel>
-#include <QVBoxLayout>
-#include <QLabel>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QLabel>
 
 #include "berryObjectBrowserView.h"
 #include "berryDebugUtil.h"
