@@ -6,4 +6,10 @@
 
 set(target_libraries
   CTKWidgets
+  org_blueberry_ui_qt
 )
+
+if(CTK_USE_Qt5)
+  message("BLUEBERRY:UI:QT USES QT5")
+  list(APPEND target_libraries Qt5::Help Qt5::OpenGL Qt5::PrintSupport Qt5::WebEngine Qt5::Widgets Qt5::Xml)
+endif()

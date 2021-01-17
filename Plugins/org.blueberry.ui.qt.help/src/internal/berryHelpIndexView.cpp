@@ -22,7 +22,7 @@ found in the LICENSE file.
 
 #include <ctkSearchBox.h>
 
-#include <QHelpIndexWidget>
+#include <QtHelp/QHelpIndexWidget>
 #include <QLayout>
 #include <QLabel>
 #include <QMenu>

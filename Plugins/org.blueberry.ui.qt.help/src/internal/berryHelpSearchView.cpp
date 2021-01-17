@@ -24,8 +24,8 @@ found in the LICENSE file.
 #include <QMimeData>
 #include <QTextBrowser>
 #include <QClipboard>
-#include <QHelpSearchQueryWidget>
-#include <QHelpSearchResultWidget>
+#include <QtHelp/QHelpSearchQueryWidget>
+#include <QtHelp/QHelpSearchResultWidget>
 #include <QApplication>
 
 namespace berry {

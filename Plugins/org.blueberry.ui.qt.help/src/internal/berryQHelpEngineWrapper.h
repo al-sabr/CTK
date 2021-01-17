@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef BERRYQHELPENGINEWRAPPER_H
 #define BERRYQHELPENGINEWRAPPER_H
 
-#include <QHelpEngine>
+#include <QtHelp/QHelpEngine>
 
 
 namespace berry {

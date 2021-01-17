@@ -12,7 +12,7 @@ found in the LICENSE file.
 
 #include "berryQHelpEngineWrapper.h"
 
-#include <QHelpSearchEngine>
+#include <QtHelp/QHelpSearchEngine>
 
 
 namespace berry {

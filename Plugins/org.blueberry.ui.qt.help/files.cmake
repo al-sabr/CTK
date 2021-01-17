@@ -21,7 +21,7 @@ set(INTERNAL_CPP_FILES
 
 set(CPP_FILES )
 
-set(MOC_H_FILES
+set(PLUGIN_MOC_SRCS
   src/internal/berryHelpContentView.h
   src/internal/berryHelpEditor.h
   src/internal/berryHelpEditorFindWidget.h
@@ -37,18 +37,18 @@ set(MOC_H_FILES
   src/internal/berryQHelpEngineWrapper.h
 )
 
-set(CACHED_RESOURCE_FILES
+set(PLUGIN_CACHED_RESOURCEFILES
   plugin.xml
   resources/help.svg
   resources/helpIndex.svg
   resources/helpSearch.svg
 )
 
-set(QRC_FILES
+set(PLUGIN_resources
   resources/org_blueberry_ui_qt_help.qrc
 )
 
-set(UI_FILES
+set(PLUGIN_UI_FORMS
   src/internal/berryHelpTopicChooser.ui
 )
 
@@ -59,3 +59,5 @@ endforeach(file ${SRC_CPP_FILES})
 foreach(file ${INTERNAL_CPP_FILES})
   set(CPP_FILES ${CPP_FILES} src/internal/${file})
 endforeach(file ${INTERNAL_CPP_FILES})
+
+set(PLUGIN_SRCS ${CPP_FILES})
