@@ -765,7 +765,10 @@ if(CTK_QT_VERSION VERSION_LESS "5")
 endif()
 
 if(CTK_USE_BLUEBERRY)
-  list(APPEND plugin_list org.blueberry.core.runtime)
+  list(APPEND plugin_list
+    org.blueberry.core.runtime
+    org.blueberry.core.commands
+    )
 endif()
 
 foreach(_plugin ${plugin_list})
