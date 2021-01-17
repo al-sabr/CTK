@@ -772,6 +772,7 @@ if(CTK_USE_BLUEBERRY)
     org.blueberry.core.jobs
     org.blueberry.ui.qt
     #org.blueberry.ui.qt.help
+    org.blueberry.ui.qt.log
     )
 endif()
 
