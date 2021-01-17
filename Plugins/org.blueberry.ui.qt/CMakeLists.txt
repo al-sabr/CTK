@@ -22,11 +22,6 @@ include("${CMAKE_CURRENT_LIST_DIR}/files.cmake")
 
 ctkFunctionGetTargetLibraries(PLUGIN_target_libraries)
 
-if(CTK_USE_Qt5)
-  message("BLUEBERRY:UI:QT USES QT5")
-  list(APPEND PLUGIN_target_libraries Qt5::Widgets Qt5::PrintSupport Qt5::Svg)
-endif()
-
 ctkMacroBuildPlugin(
   NAME ${PROJECT_NAME}
   EXPORT_DIRECTIVE ${PLUGIN_export_directive}
