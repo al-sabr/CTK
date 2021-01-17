@@ -768,6 +768,8 @@ if(CTK_USE_BLUEBERRY)
   list(APPEND plugin_list
     org.blueberry.core.runtime
     org.blueberry.core.commands
+    org.blueberry.core.expressions
+    org.blueberry.core.jobs
     )
 endif()
 
