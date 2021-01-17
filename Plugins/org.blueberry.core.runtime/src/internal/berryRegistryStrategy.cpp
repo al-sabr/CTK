@@ -31,7 +31,7 @@ found in the LICENSE file.
 
 #include <QFileInfo>
 #include <QDateTime>
-#include <QXmlSimpleReader>
+#include <QtXML/QXmlSimpleReader>
 
 namespace berry {
 

@@ -10,5 +10,5 @@ set(target_libraries
   #mbilog_
   #mbilog
   QT_LIBRARIES
-  #PUBLIC Poco::Foundation Poco::Util Poco::XML
+  Poco::Foundation Poco::Util Poco::XML
 )

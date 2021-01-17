@@ -46,7 +46,7 @@ found in the LICENSE file.
 #include <ctkPluginFrameworkLauncher.h>
 
 #include <QCoreApplication>
-#include <QDesktopServices>
+#include <QtGui/QDesktopServices>
 #include <QDebug>
 #include <QMutexLocker>
 

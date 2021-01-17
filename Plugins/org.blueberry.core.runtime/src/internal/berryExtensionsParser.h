@@ -16,7 +16,8 @@ found in the LICENSE file.
 #include "berrySmartPointer.h"
 
 #include <QStack>
-#include <QXmlDefaultHandler>
+//#include <QXmlDefaultHandler>
+#include <QtXML/QXmlDefaultHandler>
 
 class QTranslator;
 

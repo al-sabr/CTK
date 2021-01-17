@@ -1,8 +1,7 @@
 project(org_blueberry_core_runtime)
 
-message("POCO PATH : " ${Poco_DIR})
-
-find_package(Qt5 REQUIRED COMPONENTS Core Gui Xml)
+#find_package(Poco REQUIRED COMPONENTS Poco::Foundation Poco::Util Poco::Xml)
+#find_package(Qt5 REQUIRED COMPONENTS Core Gui Xml)
 
 set(PLUGIN_export_directive "org_blueberry_core_runtime_EXPORT")
 
@@ -24,7 +23,7 @@ ctkMacroBuildPlugin(
     src/registry
 )
 
-target_link_libraries(${PROJECT_NAME} PUBLIC Poco::Foundation Poco::Util Poco::XML)
+#target_link_libraries(${PROJECT_NAME} PUBLIC Poco::Foundation Poco::Util Poco::XML)
 
 if(CTK_USE_Qt5)
   target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widget)
