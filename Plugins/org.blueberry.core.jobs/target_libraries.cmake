@@ -5,9 +5,5 @@
 #
 
 set(target_libraries
+  org_blueberry_core_runtime
 )
-
-if(CTK_USE_Qt5)
-  message("BLUEBERRY:UI:QT USES QT5")
-  list(APPEND target_libraries Qt5::Widgets)
-endif()
