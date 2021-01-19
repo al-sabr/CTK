@@ -27,10 +27,10 @@ found in the LICENSE file.
 #include <QDesktopServices>
 #include <QWheelEvent>
 
-#include <QWebEngineSettings>
-#include <QWebEngineUrlSchemeHandler>
-#include <QWebEngineUrlRequestJob>
-#include <QWebEngineProfile>
+#include <QtWebEngineWidgets/QWebEngineSettings>
+#include <QtWebEngineCore/QWebEngineUrlSchemeHandler>
+#include <QtWebEngineCore/QWebEngineUrlRequestJob>
+#include <QtWebEngineWidgets/QWebEngineProfile>
 
 namespace berry {
 

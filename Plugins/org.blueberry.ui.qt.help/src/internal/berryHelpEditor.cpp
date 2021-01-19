@@ -27,7 +27,7 @@ found in the LICENSE file.
 #include <berryIWorkbenchPartConstants.h>
 
 #include <QToolBar>
-#include <QHelpEngine>
+#include <QtHelp/QHelpEngine>
 #include <QVBoxLayout>
 
 namespace berry {

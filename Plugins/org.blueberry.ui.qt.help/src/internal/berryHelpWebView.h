@@ -17,8 +17,8 @@ found in the LICENSE file.
 #include <QFont>
 #include <QAction>
 
-#include <QWebEnginePage>
-#include <QWebEngineView>
+#include <QtWebEngineWidgets/QWebEnginePage>
+#include <QtWebEngineWidgets/QWebEngineView>
 
 #include <berryIEditorSite.h>
 

@@ -21,7 +21,7 @@ found in the LICENSE file.
 #include <berryIWorkbenchPage.h>
 
 #include <QSortFilterProxyModel>
-#include <QHelpContentWidget>
+#include <QtHelp/QHelpContentWidget>
 #include <QLayout>
 #include <QMenu>
 #include <QHeaderView>
