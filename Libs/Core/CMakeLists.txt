@@ -119,6 +119,10 @@ set(KIT_MOC_SRCS
   ctkWorkflow_p.h
   ctkWorkflowStep_p.h
   ctkWorkflowTransitions.h
+
+  # Adding MITK logging system headers.
+  mitkLog.h
+  mitkLogMacros.h
   )
 
 # UI files
