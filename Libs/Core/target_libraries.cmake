@@ -6,6 +6,7 @@
 
 set(target_libraries
   BFD_LIBRARIES
+  CTKmbilog
   )
 
 if (CTK_QT_VERSION VERSION_LESS "5")
