@@ -7,6 +7,19 @@ set(KIT_MOC_SRCS
   mbilogBackendBase.h
   mbilogTextBackendBase.h
   mbilogBackendCout.h
+
+  # Adding MITK logging system headers.
+  mitkLog.h
+  mitkLogMacros.h
+  mitkException.h
+  mitkExceptionMacros.h
+
+  # ITK
+  itkMacro.h
+  itkExceptionObject.h
+  itkSmartPointer.h
+  itkWin32Header.h
+
 )
 
 set(KIT_SRCS
@@ -15,4 +28,7 @@ set(KIT_SRCS
   mbilogBackendCout.cpp
   mbilogBackendBase.cpp
   mbilogTextBackendBase.cpp
+
+  mitkException.cpp
+  mitkLog.cpp
 )
