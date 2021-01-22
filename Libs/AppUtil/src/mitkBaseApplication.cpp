@@ -10,7 +10,7 @@ found in the LICENSE file.
 
 ============================================================================*/
 
-#include <mitkBaseApplication.h>
+#include <../include/mitkBaseApplication.h>
 
 #include <mitkExceptionMacro.h>
 #include <mitkLogMacros.h>
@@ -27,17 +27,19 @@ found in the LICENSE file.
 
 #include <usModuleSettings.h>
 
+/*
 #include <vtkOpenGLRenderWindow.h>
-#include <QVTKOpenGLWidget.h>
+include <QVTKOpenGLWidget.h>
+*/
 
-#include <QCoreApplication>
-#include <QDir>
-#include <QFileInfo>
-#include <QRunnable>
-#include <QSplashScreen>
-#include <QStandardPaths>
-#include <QTime>
-#include <QWebEngineUrlScheme>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QDir>
+#include <QtCore/QFileInfo>
+#include <QtCore/QRunnable>
+#include <QtWidgets/QSplashScreen>
+#include <QtCore/QStandardPaths>
+#include <QtCore/QTime>
+#include <QtWebEngineCore/QWebEngineUrlScheme>
 
 namespace
 {
@@ -636,11 +638,13 @@ namespace mitk
   {
     if (nullptr == qApp)
     {
+      /*
       vtkOpenGLRenderWindow::SetGlobalMaximumNumberOfMultiSamples(0);
 
       auto defaultFormat = QVTKOpenGLWidget::defaultFormat();
       defaultFormat.setSamples(0);
       QSurfaceFormat::setDefaultFormat(defaultFormat);
+      */
 
 #ifdef Q_OS_OSX
       QCoreApplication::setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);

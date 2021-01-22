@@ -13,12 +13,12 @@ found in the LICENSE file.
 #ifndef mitkBaseApplication_h
 #define mitkBaseApplication_h
 
-#include <MitkAppUtilExports.h>
+#include <ctkAppUtilExport.h>
 
 #include <Poco/Util/Application.h>
 
-#include <QString>
-#include <QVariant>
+#include <QtCore/QString>
+#include <QtCore/QVariant>
 
 class ctkPluginContext;
 class ctkPluginFramework;
@@ -72,7 +72,7 @@ namespace mitk
    * }
    * </code>
    */
-  class MITKAPPUTIL_EXPORT BaseApplication : public Poco::Util::Application
+  class CTK_APPUTIL_EXPORT BaseApplication : public Poco::Util::Application
   {
   public:
     // Command line arguments
