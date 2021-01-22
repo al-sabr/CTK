@@ -21,7 +21,7 @@ namespace mitk
   /*!
     \brief mbilog backend implementation for mitk
    */
-  class CTK_CORE_EXPORT LoggingBackend : public mbilog::TextBackendBase
+  class MBILOG_EXPORT LoggingBackend : public mbilog::TextBackendBase
   {
   public:
     /** \brief overloaded method for receiving log message from mbilog
