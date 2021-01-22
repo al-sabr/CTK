@@ -17,7 +17,7 @@ found in the LICENSE file.
 #include "berryHelpEditorInput.h"
 #include "berryHelpEditor.h"
 
-#include <QLayout>
+#include <QtWidgets/QLayout>
 #include <QMenu>
 #include <QEvent>
 #include <QMouseEvent>

@@ -12,8 +12,8 @@ found in the LICENSE file.
 
 #include "berryHelpEditorFindWidget.h"
 
-#include <QApplication>
-#include <QCheckBox>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QHideEvent>
 #include <QKeyEvent>
 #include <QLabel>

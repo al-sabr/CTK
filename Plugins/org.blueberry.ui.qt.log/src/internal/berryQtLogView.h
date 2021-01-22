@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef BERRYQTLOGVIEW_H
 #define BERRYQTLOGVIEW_H
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 #include <QSortFilterProxyModel>
 
 #include "ui_berryQtLogView.h"

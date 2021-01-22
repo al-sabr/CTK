@@ -14,8 +14,8 @@ found in the LICENSE file.
 #ifndef BERRYHELPWEBVIEW_H
 #define BERRYHELPWEBVIEW_H
 
-#include <QFont>
-#include <QAction>
+#include <QtGui/QFont>
+#include <QtWidgets/QAction>
 
 #include <QtWebEngineWidgets/QWebEnginePage>
 #include <QtWebEngineWidgets/QWebEngineView>

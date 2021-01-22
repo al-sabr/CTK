@@ -15,7 +15,7 @@ found in the LICENSE file.
 
 #include <berryQtViewPart.h>
 
-#include <QTreeView>
+#include <QtWidgets/QTreeView>
 
 class QSortFilterProxyModel;
 class QHelpContentModel;

@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef BERRYLOGVIEW_H_
 #define BERRYLOGVIEW_H_
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 
 #include "berryQtViewPart.h"
 

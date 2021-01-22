@@ -19,10 +19,10 @@ found in the LICENSE file.
 #include <berryPlatform.h>
 #include <berryPlatformUI.h>
 
-#include <QHeaderView>
+#include <QtWidgets/QHeaderView>
 
 #include <QTimer>
-#include <QClipboard>
+#include <QtGui/QClipboard>
 
 namespace berry {
 

@@ -20,7 +20,7 @@ found in the LICENSE file.
 #include <QString>
 #include <QUrl>
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 
 namespace berry {
 

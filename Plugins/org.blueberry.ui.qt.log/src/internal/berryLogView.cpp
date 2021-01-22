@@ -14,7 +14,7 @@ found in the LICENSE file.
 
 #include "berryQtLogView.h"
 
-#include <QHBoxLayout>
+#include <QtWidgets/QHBoxLayout>
 
 namespace berry {
 

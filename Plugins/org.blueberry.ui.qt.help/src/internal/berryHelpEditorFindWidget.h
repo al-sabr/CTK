@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef BERRYHELPEDITORFINDWIDGET_H
 #define BERRYHELPEDITORFINDWIDGET_H
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 
 class QCheckBox;
 class QLabel;

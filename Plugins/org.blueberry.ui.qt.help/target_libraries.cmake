@@ -5,6 +5,7 @@
 #
 
 set(target_libraries
+  CTKWidgets
   org_blueberry_ui_qt
 )
 

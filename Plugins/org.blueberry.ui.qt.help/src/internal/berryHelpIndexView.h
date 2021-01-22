@@ -16,7 +16,7 @@ found in the LICENSE file.
 #include <berryQtViewPart.h>
 
 #include <QModelIndex>
-#include <QListView>
+#include <QtWidgets/QListView>
 
 class ctkSearchBox;
 class QHelpIndexWidget;

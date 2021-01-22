@@ -23,7 +23,7 @@ found in the LICENSE file.
 #include <iomanip>
 
 #include <QTimer>
-#include <QIcon>
+#include <QtGui/QIcon>
 #include <QModelIndex>
 #include <QDebug>
 
