@@ -20,6 +20,10 @@ set(KIT_MOC_SRCS
   itkSmartPointer.h
   itkWin32Header.h
 
+  # ITK Mutext related stuff
+  itkSimpleFastMutexLock.h
+  itkThreadSupport.h
+  itkWindows.h
 )
 
 set(KIT_SRCS
@@ -31,4 +35,10 @@ set(KIT_SRCS
 
   mitkException.cpp
   mitkLog.cpp
+
+  # ITK Mutext related stuff
+  itkSimpleFastMutexLock.cxx
+  itkSimpleFastMutexLockNoThreads.cxx
+  itkSimpleFastMutexLockPThreads.cxx
+  itkSimpleFastMutexLockWinThreads.cxx
 )

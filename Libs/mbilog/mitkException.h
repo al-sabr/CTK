@@ -13,7 +13,8 @@ found in the LICENSE file.
 #ifndef MITKEXCEPTION_H_INCLUDED
 #define MITKEXCEPTION_H_INCLUDED
 
-#include <ctkCoreExport.h>
+//#include <ctkCoreExport.h>
+#include <mbilogExport.h>
 #include <itkMacro.h>
 #include <string>
 #include <sstream>
@@ -44,7 +45,7 @@ namespace mitk
   *
   *                 mitkThrowException(MyException) << "optional exception message";
   */
-  class CTK_CORE_EXPORT Exception : itk::ExceptionObject
+  class MBILOG_EXPORT Exception : itk::ExceptionObject
   {
   public:
     Exception(const char *file, unsigned int lineNumber = 0, const char *desc = "None", const char *loc = "Unknown")
@@ -112,7 +113,7 @@ namespace mitk
     std::vector<ReThrowData> m_RethrowData;
   };
 
-  CTK_CORE_EXPORT std::ostream &operator<<(std::ostream &os, const mitk::Exception &e);
+  MBILOG_EXPORT std::ostream &operator<<(std::ostream &os, const mitk::Exception &e);
 } // namespace mitk
 
 #endif

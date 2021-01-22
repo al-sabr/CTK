@@ -23,6 +23,7 @@
 #  include <stdexcept>
 
 #  include "itkSmartPointer.h"
+#  include "mbilogExport.h"
 
 namespace itk
 {

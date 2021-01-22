@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef MITK_EXCEPTIONMACRO_H_DEFINED
 #define MITK_EXCEPTIONMACRO_H_DEFINED
 
-#include "mitkException.h"
+#include <mitkException.h>
 #include <mitkLogMacros.h>
 #include <sstream>
 

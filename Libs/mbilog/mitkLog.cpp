@@ -16,8 +16,8 @@ found in the LICENSE file.
 
 /*
 #include <itkOutputWindow.h>
-#include <itkSimpleFastMutexLock.h>
 */
+#include <itkSimpleFastMutexLock.h>
 
 #include <cstdio>
 #include <fstream>
