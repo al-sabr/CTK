@@ -14,9 +14,9 @@ found in the LICENSE file.
 
 #include "qtsingleapplication.h"
 
-#include <QDataStream>
+#include <QtCore/QDataStream>
 
-#include <QTemporaryDir>
+#include <QtCore/QTemporaryDir>
 
 bool createTemporaryDir(QString &path)
 {

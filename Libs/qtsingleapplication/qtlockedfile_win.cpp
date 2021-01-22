@@ -38,9 +38,9 @@
 **
 ****************************************************************************/
 
-#include <qt_windows.h>
+#include <QtCore/qt_windows.h>
 #include "qtlockedfile.h"
-#include <QFileInfo>
+#include <QtCore/QFileInfo>
 
 #define MUTEX_PREFIX "QtLockedFile mutex "
 // Maximum number of concurrent read locks. Must not be greater than MAXIMUM_WAIT_OBJECTS

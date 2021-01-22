@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef QTHANDLENEWAPPINSTANCE_H
 #define QTHANDLENEWAPPINSTANCE_H
 
-#include <QString>
+#include <QtCore/QString>
 
 class QtSingleApplication;
 

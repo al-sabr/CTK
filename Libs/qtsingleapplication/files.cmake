@@ -1,10 +1,10 @@
-set(MOC_H_FILES
+set(KIT_MOC_SRCS
   qtlocalpeer.h
   qtsingleapplication.h
   qtsinglecoreapplication.h
 )
 
-set(CPP_FILES
+set(KIT_SRCS
   qthandlenewappinstance.h
   qtlockedfile.h
 
