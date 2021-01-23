@@ -36,9 +36,6 @@ set(KIT_SRCS
   mitkException.cpp
   mitkLog.cpp
 
-  # ITK Mutext related stuff
+  # ITK Mutex related stuff
   itkSimpleFastMutexLock.cxx
-  itkSimpleFastMutexLockNoThreads.cxx
-  itkSimpleFastMutexLockPThreads.cxx
-  itkSimpleFastMutexLockWinThreads.cxx
 )
