@@ -1240,6 +1240,15 @@ mark_as_advanced(CMAKE_THREAD_LIBS)
 set(ITK_DEFAULT_MAX_THREADS 128 CACHE STRING "The maximum number of threads allowed. Default: 128")
 mark_as_advanced(ITK_DEFAULT_MAX_THREADS)
 
+# Some headers are using this configuration flag for compilation.
+set(ITK_USE_64BITS_IDS_DEFAULT "OFF")
+# Note WIN32 is true when targeting any windows system
+if(CMAKE_SIZEOF_VOID_P EQUAL "8" AND WIN32)
+  set(ITK_USE_64BITS_IDS_DEFAULT "ON")
+endif()
+option(ITK_USE_64BITS_IDS "When ON, ITK will use 64-bit integer types instead of long types for sizes and indexes. This is needed for managing images larger than 4Gb in some platforms." "${ITK_USE_64BITS_IDS_DEFAULT}")
+mark_as_advanced(ITK_USE_64BITS_IDS)
+
 
 #-----------------------------------------------------------------------------
 # Set the header template which defines custom export/import macros

@@ -20,6 +20,20 @@ set(KIT_MOC_SRCS
   itkSmartPointer.h
   itkWin32Header.h
 
+  itkLightObject.h
+  itkSingleton.h
+  itkSingletonMacro.h
+  itkIntTypes.h
+  itkObjectFactory.h
+  itkObjectFactoryBase.h
+  itkCreateObjectFunction.h
+  itkObject.h
+  itkEventObject.h
+  itkCommand.h
+  itkIndent.h
+  itkMetaDataDictionary.h
+  itkMetaDataObjectBase.h
+  itkCommonEnums.h
   # ITK Mutext related stuff
   itkSimpleFastMutexLock.h
   itkThreadSupport.h
@@ -38,4 +52,14 @@ set(KIT_SRCS
 
   # ITK Mutex related stuff
   itkSimpleFastMutexLock.cxx
+  itkExceptionObject.cxx
+  itkLightObject.cxx
+  itkSingleton.cxx
+  itkObject.cxx
+  itkEventObject.cxx
+  itkCommand.cxx
+  itkIndent.cxx
+  itkMetaDataDictionary.cxx
+  itkMetaDataObjectBase.cxx
+
 )

@@ -216,11 +216,11 @@ namespace itk
 #endif
 
 // Setup symbol exports
-#ifndef ITK_TEMPLATE_EXPORT
+#ifndef MBILOG_EXPORT
 #  ifdef ITK_TEMPLATE_VISIBILITY_DEFAULT
-#    define ITK_TEMPLATE_EXPORT __attribute__((visibility("default")))
+#    define MBILOG_EXPORT __attribute__((visibility("default")))
 #  else
-#    define ITK_TEMPLATE_EXPORT
+#    define MBILOG_EXPORT
 #  endif
 #endif
 
