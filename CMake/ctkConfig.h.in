@@ -6,3 +6,11 @@
 
 #endif
 
+// ITK DEFINITION FLAGS
+
+#cmakedefine ITK_DEFAULT_MAX_THREADS @ITK_DEFAULT_MAX_THREADS@
+
+/* what threading system are we using */
+#cmakedefine ITK_USE_PTHREADS
+#cmakedefine ITK_HP_PTHREADS
+#cmakedefine ITK_USE_WIN32_THREADS

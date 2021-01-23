@@ -1222,6 +1222,26 @@ set(CMAKE_C_FLAGS ${CTK_C_FLAGS} CACHE STRING "CMake CXX Flags" FORCE)
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS_INIT} ${CTK_EXE_LINKER_FLAGS}" CACHE STRING "Flags used when linking executables" FORCE)
 
 #-----------------------------------------------------------------------------
+# This section is connected with code that MBILOG, MITK & ITK are using.
+#
+include(FindThreads)
+set(ITK_USE_WIN32_THREADS 0)
+set(ITK_USE_PTHREADS 0)
+set(ITK_HP_PTHREADS 0)
+if(CMAKE_USE_WIN32_THREADS_INIT)
+  set(ITK_USE_WIN32_THREADS 1)
+elseif(CMAKE_USE_PTHREADS_INIT AND NOT EMSCRIPTEN)
+  set(ITK_USE_PTHREADS 1)
+elseif(CMAKE_HP_PTHREADS_INIT)
+  set(ITK_HP_PTHREADS 1)
+endif()
+set(CMAKE_THREAD_LIBS "${CMAKE_THREAD_LIBS_INIT}" CACHE STRING "Thread library used.")
+mark_as_advanced(CMAKE_THREAD_LIBS)
+set(ITK_DEFAULT_MAX_THREADS 128 CACHE STRING "The maximum number of threads allowed. Default: 128")
+mark_as_advanced(ITK_DEFAULT_MAX_THREADS)
+
+
+#-----------------------------------------------------------------------------
 # Set the header template which defines custom export/import macros
 # for shared libraries
 #

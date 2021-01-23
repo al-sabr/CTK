@@ -23,7 +23,7 @@ found in the LICENSE file.
 #include <fstream>
 #include <iostream>
 
-//static itk::SimpleFastMutexLock logMutex;
+static itk::SimpleFastMutexLock logMutex;
 static mitk::LoggingBackend *mitkLogBackend = nullptr;
 static std::ofstream *logFile = nullptr;
 static std::string logFileName = "";
