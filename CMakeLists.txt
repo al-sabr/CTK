@@ -284,6 +284,8 @@ foreach(file
   CMake/ctkFunctionGetGccVersion.cmake
   CMake/ctkFunctionGetCompilerVisibilityFlags.cmake
   CMake/ctkFunctionCompileSnippets.cmake
+  # External ITK macros
+  CMake/itkModuleMacros.cmake
   )
   include(${file})
   install(FILES ${file} DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development)
@@ -1330,3 +1332,7 @@ add_subdirectory( Documentation )
 # This directory is typically the last SUBDIRS in the main CMakeLists.txt.
 add_subdirectory(CMake/LastConfigureStep)
 
+#---------------------------------------------------------------------------
+# KWSys from ITK
+#
+add_subdirectory(External/KWSys)
