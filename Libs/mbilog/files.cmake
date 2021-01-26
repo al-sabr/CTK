@@ -36,8 +36,16 @@ set(KIT_MOC_SRCS
   itkCommonEnums.h
   # ITK Mutext related stuff
   itkSimpleFastMutexLock.h
-  itkThreadSupport.h
   itkWindows.h
+  itkOutputWindow.h
+
+  itkThreadSupport.h
+  itkPoolMultiThreader.h
+  itkMultiThreaderBase.h
+  itkThreadPool.h
+  itkNumericTraits.h
+
+  itkFixedArray.h
 )
 
 set(KIT_SRCS
@@ -62,4 +70,15 @@ set(KIT_SRCS
   itkMetaDataDictionary.cxx
   itkMetaDataObjectBase.cxx
 
+  itkNumericTraits.cxx
+  itkThreadPool.cxx
+  itkMultiThreaderBase.cxx
 )
+
+
+if(WIN32)
+  list(APPEND KIT_SRCS itkWin32OutputWindow.cxx)
+endif()
+if(ITK_USE_WIN32_THREADS OR ITK_USE_PTHREADS)
+  list(APPEND KIT_SRCS itkPoolMultiThreader.cxx itkThreadPool.cxx)
+endif()
