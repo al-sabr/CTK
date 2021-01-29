@@ -271,3 +271,23 @@ install(
   FILES ${ctk_config_version}
   DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development
   )
+
+# Import from ITK/CMakeLists.txt->Line#151
+configure_file(../ITKConfigVersion.cmake.in ITKConfigVersion.cmake @ONLY)
+
+# Import from ITK/CMakeLists.txt->Line#542
+
+# Generate ITKConfig.cmake for the install tree.
+set(ITK_CONFIG_CODE "
+# Compute the installation prefix from this ITKConfig.cmake file location.
+get_filename_component(ITK_INSTALL_PREFIX \"\${CMAKE_CURRENT_LIST_FILE}\" PATH)")
+# Construct the proper number of get_filename_component(... PATH)
+# calls to compute the installation prefix.
+string(REGEX REPLACE "/" ";" _count "${ITK_INSTALL_PACKAGE_DIR}")
+foreach(p ${_count})
+  set(ITK_CONFIG_CODE "${ITK_CONFIG_CODE}
+get_filename_component(ITK_INSTALL_PREFIX \"\${ITK_INSTALL_PREFIX}\" PATH)")
+endforeach()
+set(ITK_CONFIG_CODE "${ITK_CONFIG_CODE}
+set(ITK_MODULES_DIR \"\${ITK_INSTALL_PREFIX}/${ITK_INSTALL_PACKAGE_DIR}/Modules\")")
+

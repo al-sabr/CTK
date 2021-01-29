@@ -215,6 +215,10 @@ endif()
 if(NOT CTK_INSTALL_DOC_DIR)
   set(CTK_INSTALL_DOC_DIR "doc")
 endif()
+#-----------------------------------------------------------------------------
+# Install directories, for ITK related stuff
+#
+#set(ITK_DIR "${CTK_INSTALL_BIN_DIR}")
 
 mark_as_superbuild(
   CTK_INSTALL_BIN_DIR:STRING
@@ -286,6 +290,7 @@ foreach(file
   CMake/ctkFunctionCompileSnippets.cmake
   # External ITK macros
   CMake/itkModuleMacros.cmake
+  CMake/itkVersion.cmake
   )
   include(${file})
   install(FILES ${file} DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development)
@@ -1326,13 +1331,34 @@ include(Utilities/KWStyle/KWStyle.cmake)
 #
 add_subdirectory( Documentation )
 
+
+#---------------------------------------------------------------------------
+# KWSys from ITK
+#
+
+# Code imported from ITK/CMakeLists.txt/Line#171
+if(NOT ITK_INSTALL_PACKAGE_DIR)
+  set(ITK_INSTALL_PACKAGE_DIR "lib/cmake/itk-${ITK_MAJOR_VERSION}.${ITK_MINOR_VERSION}")
+endif()
+
+# ITK placeholder for configuration generation.
+# Code imported from ITK/CMakeLists.txt/Line#542
+
+set(ITK_OLDEST_VALIDATED_POLICIES_VERSION "3.10.2")
+set(ITK_NEWEST_VALIDATED_POLICIES_VERSION "3.14.0")
+cmake_minimum_required(VERSION ${ITK_OLDEST_VALIDATED_POLICIES_VERSION} FATAL_ERROR)
+if("${CMAKE_VERSION}" VERSION_LESS_EQUAL "${ITK_NEWEST_VALIDATED_POLICIES_VERSION}")
+  #Set and use the newest available cmake policies that are validated to work
+  set(ITK_CMAKE_POLICY_VERSION "${CMAKE_VERSION}")
+else()
+  set(ITK_CMAKE_POLICY_VERSION "${ITK_NEWEST_VALIDATED_POLICIES_VERSION}")
+endif()
+cmake_policy(VERSION ${ITK_CMAKE_POLICY_VERSION})
+
+add_subdirectory(External/KWSys)
+
 #-----------------------------------------------------------------------------
 # The commands in this directory are intended to be executed as
 # the end of the whole configuration process, as a "last step".
 # This directory is typically the last SUBDIRS in the main CMakeLists.txt.
 add_subdirectory(CMake/LastConfigureStep)
-
-#---------------------------------------------------------------------------
-# KWSys from ITK
-#
-add_subdirectory(External/KWSys)
