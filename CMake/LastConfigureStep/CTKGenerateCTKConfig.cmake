@@ -272,9 +272,6 @@ install(
   DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development
   )
 
-# Import from ITK/CMakeLists.txt->Line#151
-configure_file(../ITKConfigVersion.cmake.in ITKConfigVersion.cmake @ONLY)
-
 # Import from ITK/CMakeLists.txt->Line#542
 
 # Generate ITKConfig.cmake for the install tree.
