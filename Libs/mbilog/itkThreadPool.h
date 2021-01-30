@@ -52,7 +52,7 @@ namespace itk
 
 struct ThreadPoolGlobals;
 
-class ITKCommon_EXPORT ThreadPool : public Object
+class MBILOG_EXPORT ThreadPool : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(ThreadPool);

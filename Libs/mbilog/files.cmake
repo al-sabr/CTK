@@ -46,6 +46,20 @@ set(KIT_MOC_SRCS
   itkNumericTraits.h
 
   itkFixedArray.h
+  itkRegion.h
+  itkImageRegion.h
+  itkImageRegion.hxx
+  itkConceptChecking.h
+  itkMath.h
+  itkMathDetail.h
+  itkSize.h
+  itkContinuousIndex.h
+
+  itkPoint.h
+  itkPoint.hxx
+  itkNumericTraitsPointPixel.h
+
+  itkVersion.h
 )
 
 set(KIT_SRCS
@@ -73,6 +87,16 @@ set(KIT_SRCS
   itkNumericTraits.cxx
   itkThreadPool.cxx
   itkMultiThreaderBase.cxx
+
+  itkOutputWindow.cxx
+  itkThreadPool.cxx
+
+  itkRegion.cxx
+  itkMath.cxx
+  itkNumericTraitsPointPixel.cxx
+
+  itkVersion.cxx
+
 )
 
 
