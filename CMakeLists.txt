@@ -317,6 +317,10 @@ install(FILES
 set(ITK_VERSION
   "${ITK_VERSION_MAJOR}.${ITK_VERSION_MINOR}.${ITK_VERSION_PATCH}")
 
+# Version string should not include patch level.  The major.minor is
+# enough to distinguish available features of the toolkit.
+set(ITK_VERSION_STRING "${ITK_VERSION_MAJOR}.${ITK_VERSION_MINOR}")
+
 message("ITK_VERSION:             ${ITK_VERSION}")
 #-----------------------------------------------------------------------------
 # Testing
@@ -1341,6 +1345,7 @@ add_subdirectory( Documentation )
 #
 
 add_subdirectory(External/KWSys)
+add_subdirectory(External/VNL)
 
 #-----------------------------------------------------------------------------
 # The commands in this directory are intended to be executed as
