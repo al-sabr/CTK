@@ -39,7 +39,7 @@ itkGetGlobalValueMacro(Object, bool, GlobalWarningDisplay, true);
 
 bool * Object::m_GlobalWarningDisplay;
 
-class ITKCommon_HIDDEN Observer
+class MBILOG_EXPORT Observer
 {
 public:
   Observer(Command * c, const EventObject * event, unsigned long tag)
@@ -58,7 +58,7 @@ Observer::~Observer()
   delete m_Event;
 }
 
-class ITKCommon_HIDDEN SubjectImplementation
+class MBILOG_EXPORT SubjectImplementation
 {
 public:
   SubjectImplementation() { m_Count = 0; }
