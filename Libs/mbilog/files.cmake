@@ -46,6 +46,11 @@ set(KIT_MOC_SRCS
   itkNumericTraits.h
 
   itkFixedArray.h
+  itkFixedArray.hxx
+  itkNumericTraitsFixedArrayPixel.h
+  itkPixelTraits.h
+  itkVector.h
+  itkVector.hxx
   itkRegion.h
   itkImageRegion.h
   itkImageRegion.hxx
@@ -94,6 +99,8 @@ set(KIT_SRCS
   itkRegion.cxx
   itkMath.cxx
   itkNumericTraitsPointPixel.cxx
+  itkNumericTraitsFixedArrayPixel.cxx
+  itkVector.cxx
 
   itkVersion.cxx
 
