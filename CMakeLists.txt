@@ -314,6 +314,10 @@ install(FILES
   COMPONENT Development
   )
 
+set(ITK_VERSION
+  "${ITK_VERSION_MAJOR}.${ITK_VERSION_MINOR}.${ITK_VERSION_PATCH}")
+
+message("ITK_VERSION:             ${ITK_VERSION}")
 #-----------------------------------------------------------------------------
 # Testing
 #
@@ -1336,11 +1340,23 @@ add_subdirectory( Documentation )
 # KWSys from ITK
 #
 
+add_subdirectory(External/KWSys)
+
+#-----------------------------------------------------------------------------
+# The commands in this directory are intended to be executed as
+# the end of the whole configuration process, as a "last step".
+# This directory is typically the last SUBDIRS in the main CMakeLists.txt.
+add_subdirectory(CMake/LastConfigureStep)
+
+# Import from ITK/CMakeLists.txt->Line#151
+configure_file(CMake/ITKConfigVersion.cmake.in ITKConfigVersion.cmake @ONLY)
+
 # Code imported from ITK/CMakeLists.txt/Line#171
 if(NOT ITK_INSTALL_PACKAGE_DIR)
   set(ITK_INSTALL_PACKAGE_DIR "lib/cmake/itk-${ITK_MAJOR_VERSION}.${ITK_MINOR_VERSION}")
 endif()
 
+message("ITK_INSTALL_PACKAGE_DIR :                  ${ITK_INSTALL_PACKAGE_DIR}")  
 # ITK placeholder for configuration generation.
 # Code imported from ITK/CMakeLists.txt/Line#542
 
@@ -1354,11 +1370,3 @@ else()
   set(ITK_CMAKE_POLICY_VERSION "${ITK_NEWEST_VALIDATED_POLICIES_VERSION}")
 endif()
 cmake_policy(VERSION ${ITK_CMAKE_POLICY_VERSION})
-
-add_subdirectory(External/KWSys)
-
-#-----------------------------------------------------------------------------
-# The commands in this directory are intended to be executed as
-# the end of the whole configuration process, as a "last step".
-# This directory is typically the last SUBDIRS in the main CMakeLists.txt.
-add_subdirectory(CMake/LastConfigureStep)
