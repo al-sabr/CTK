@@ -28,6 +28,7 @@ set(KIT_MOC_SRCS
   itkObjectFactoryBase.h
   itkCreateObjectFunction.h
   itkObject.h
+  itkDataObject.h
   itkEventObject.h
   itkCommand.h
   itkIndent.h
@@ -44,6 +45,9 @@ set(KIT_MOC_SRCS
   itkMultiThreaderBase.h
   itkThreadPool.h
   itkNumericTraits.h
+  itkWeakPointer.h
+  itkRealTimeStamp.h
+  itkRealTimeInterval.h
 
   itkFixedArray.h
   itkFixedArray.hxx
@@ -54,6 +58,12 @@ set(KIT_MOC_SRCS
   itkRegion.h
   itkImageRegion.h
   itkImageRegion.hxx
+  itkImageSourceCommon.h
+  itkImageRegionSplitterBase.h
+  itkImageRegionSplitterSlowDimension.h
+  itkImageIORegion.h
+  
+  itkProcessObject.h
   itkConceptChecking.h
   itkMath.h
   itkMathDetail.h
@@ -65,6 +75,9 @@ set(KIT_MOC_SRCS
   itkNumericTraitsPointPixel.h
 
   itkVersion.h
+  itkTotalProgressReporter.h
+  itkPlatformMultiThreader.h
+
 )
 
 set(KIT_SRCS
@@ -92,6 +105,8 @@ set(KIT_SRCS
   itkNumericTraits.cxx
   itkThreadPool.cxx
   itkMultiThreaderBase.cxx
+  itkRealTimeStamp.cxx
+  itkRealTimeInterval.cxx
 
   itkOutputWindow.cxx
   itkThreadPool.cxx
@@ -104,6 +119,17 @@ set(KIT_SRCS
 
   itkVersion.cxx
   ${CTK_BINARY_DIR}/itkBuildInformation.cxx
+
+  itkTotalProgressReporter.cxx
+  itkPlatformMultiThreader.cxx
+  
+  itkImageSourceCommon.cxx
+  itkImageRegionSplitterBase.cxx
+  itkImageIORegion.cxx
+  itkImageRegionSplitterSlowDimension.cxx
+  itkProcessObject.cxx
+  itkDataObject.cxx
+
 )
 
 
