@@ -96,6 +96,7 @@ set(KIT_SRCS
   itkLightObject.cxx
   itkSingleton.cxx
   itkObject.cxx
+  itkDataObject.cxx
   itkEventObject.cxx
   itkCommand.cxx
   itkIndent.cxx
@@ -128,7 +129,6 @@ set(KIT_SRCS
   itkImageIORegion.cxx
   itkImageRegionSplitterSlowDimension.cxx
   itkProcessObject.cxx
-  itkDataObject.cxx
 
 )
 
