@@ -180,8 +180,8 @@ public:
   /** \note: the functions are preferred over the member variables as
    * they are defined for all partial specialization
    */
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self MBILOG_EXPORT Zero;
+  static const Self MBILOG_EXPORT One;
 };
 } // end namespace itk
 

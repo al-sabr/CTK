@@ -103,7 +103,7 @@ set(KIT_SRCS
   itkVector.cxx
 
   itkVersion.cxx
-
+  ${CTK_BINARY_DIR}/itkBuildInformation.cxx
 )
 
 

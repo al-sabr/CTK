@@ -20,6 +20,8 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mbilogConfig.h.in"
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
 
+configure_file(itkBuildInformation.cxx.in ${CTK_BINARY_DIR}/itkBuildInformation.cxx)
+
 set(KIT_export_directive "MBILOG_EXPORT")
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake
