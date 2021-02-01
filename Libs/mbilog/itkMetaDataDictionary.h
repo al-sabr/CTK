@@ -23,6 +23,7 @@
 #include <map>
 #include <string>
 #include <memory>
+#include <mbilogExport.h>
 
 namespace itk
 {

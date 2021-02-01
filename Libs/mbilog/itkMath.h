@@ -31,7 +31,8 @@
 #include <cmath>
 #include "itkMathDetail.h"
 #include "itkConceptChecking.h"
-#include <vnl/vnl_math.h>
+#include <src/vxl/core/vnl/vnl_math.h>
+#include <mbilogExport.h>
 
 /* Only maintain backwards compatibility with old versions
  * of VXL back to the point where vnl_math:: was introduced

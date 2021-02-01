@@ -34,6 +34,7 @@
 #include "itkWeakPointer.h"
 #include "itkRealTimeStamp.h"
 #include "itkObjectFactory.h"
+#include <mbilogExport.h>
 
 namespace itk
 {
@@ -48,7 +49,7 @@ class ITK_FORWARD_EXPORT DataObject;
  * \brief Exception object for DataObject exceptions.
  * \ingroup ITKCommon
  */
-class ITKCommon_EXPORT DataObjectError : public ExceptionObject
+class MBILOG_EXPORT DataObjectError : public ExceptionObject
 {
 public:
   /** Default constructor.  Needed to ensure the exception object can be
@@ -106,7 +107,7 @@ private:
  * Exception object for invalid requested region.
  * \ingroup ITKCommon
  */
-class ITKCommon_EXPORT InvalidRequestedRegionError : public DataObjectError
+class MBILOG_EXPORT InvalidRequestedRegionError : public DataObjectError
 {
 public:
   /** Default constructor. Needed to ensure the exception object can be copied.
@@ -287,7 +288,7 @@ protected:
  * \ingroup ITKSystemObjects
  * \ingroup ITKCommon
  */
-class ITK_FORCE_EXPORT_MACRO(ITKCommon) DataObject : public Object
+class ITK_FORCE_EXPORT_MACRO(MBILOG) DataObject : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(DataObject);

@@ -22,6 +22,7 @@
 #include "itkSmartPointer.h"
 #include "itkTimeStamp.h"
 #include "itkIndent.h"
+#include <mbilogExport.h>
 #include <atomic>
 
 #include <iostream>

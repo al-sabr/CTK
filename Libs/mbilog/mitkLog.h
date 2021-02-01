@@ -13,7 +13,7 @@ found in the LICENSE file.
 #ifndef _MITK_LOG_H
 #define _MITK_LOG_H
 
-#include <ctkCoreExport.h>
+#include <mbilogExport.h>
 #include <mbilog.h>
 
 namespace mitk

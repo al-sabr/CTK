@@ -19,6 +19,7 @@
 #define itkEventObject_h
 
 #include "itkIndent.h"
+#include <mbilogExport.h>
 
 namespace itk
 {

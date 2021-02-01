@@ -21,7 +21,7 @@
 
 #include "itkNumericTraits.h"
 #include "itkVector.h"
-
+#include <mbilogExport.h>
 #include "vnl/vnl_vector_ref.h"
 #include "itkMath.h"
 

@@ -19,6 +19,7 @@
 #define itkNumericTraits_h
 
 #include "itkMacro.h"
+#include <mbilogExport.h>
 
 #undef min
 #undef max

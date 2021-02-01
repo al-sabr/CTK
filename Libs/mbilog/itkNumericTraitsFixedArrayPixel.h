@@ -20,6 +20,7 @@
 
 #include "itkNumericTraits.h"
 #include "itkFixedArray.h"
+#include <mbilogExport.h>
 
 namespace itk
 {

@@ -37,6 +37,7 @@
 #include <set>
 #include <algorithm>
 #include <thread>
+#include "mbilogExport.h"
 
 namespace itk
 {
@@ -135,7 +136,7 @@ class MultiThreaderBase;
  *
  * \ingroup ITKCommon
  */
-class ITKCommon_EXPORT ProcessObject : public Object
+class MBILOG_EXPORT ProcessObject : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(ProcessObject);

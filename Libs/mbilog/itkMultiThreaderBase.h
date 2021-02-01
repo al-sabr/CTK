@@ -38,7 +38,7 @@
 #include <functional>
 #include <thread>
 #include "itkProgressReporter.h"
-
+#include <mbilogExport.h>
 
 namespace itk
 {

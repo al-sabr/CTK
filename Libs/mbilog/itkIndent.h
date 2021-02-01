@@ -30,6 +30,7 @@
 
 #include "itkMacro.h"
 #include <iostream>
+#include <mbilogExport.h>
 
 namespace itk
 {

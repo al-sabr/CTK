@@ -30,7 +30,7 @@
 #include "itkObject.h"
 #include "itkObjectFactory.h"
 #include "itkSingletonMacro.h"
-
+#include <mbilogExport.h>
 
 namespace itk
 {

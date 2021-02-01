@@ -31,6 +31,7 @@
 #include "itkObject.h"
 #include "itkObjectFactory.h"
 #include "itkConfig.h"
+#include <mbilogExport.h>
 
 #define ITK_VERSION_TO_STRING(x) ITK_VERSION_TO_STRING0(x)
 #define ITK_VERSION_TO_STRING0(x) #x

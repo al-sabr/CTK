@@ -32,6 +32,7 @@
 #include "itkIntTypes.h"
 #include <atomic>
 #include "itkSingletonMacro.h"
+#include <mbilogExport.h>
 
 namespace itk
 {

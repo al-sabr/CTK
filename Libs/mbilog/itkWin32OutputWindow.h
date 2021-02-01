@@ -33,6 +33,8 @@
 #  include "itkOutputWindow.h"
 #  include "itkObjectFactory.h"
 #  include "itkWindows.h"
+#include <mbilogExport.h>
+
 namespace itk
 {
 /** \class Win32OutputWindow

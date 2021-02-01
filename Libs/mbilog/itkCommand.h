@@ -21,6 +21,7 @@
 #include "itkObject.h"
 #include "itkObjectFactory.h"
 #include <functional>
+#include <mbilogExport.h>
 
 namespace itk
 {

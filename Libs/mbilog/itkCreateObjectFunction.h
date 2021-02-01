@@ -19,6 +19,7 @@
 #define itkCreateObjectFunction_h
 
 #include "itkObject.h"
+#include <mbilogExport.h>
 
 namespace itk
 {

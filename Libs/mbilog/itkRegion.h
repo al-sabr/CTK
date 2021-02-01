@@ -30,6 +30,7 @@
 
 #include "itkObject.h"
 #include "itkCommonEnums.h"
+#include <mbilogExport.h>
 
 namespace itk
 {

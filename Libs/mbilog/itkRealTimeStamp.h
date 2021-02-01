@@ -21,6 +21,7 @@
 #include "itkRealTimeInterval.h"
 #include "itkMacro.h"
 #include <iostream>
+#include "mbilogExport.h"
 
 namespace itk
 {
@@ -42,7 +43,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT RealTimeStamp
+class MBILOG_EXPORT RealTimeStamp
 {
 public:
   using Self = RealTimeStamp;
@@ -99,7 +100,7 @@ public:
   operator>=(const Self &) const;
 
   /** Default print out of a RealTimeStamp */
-  friend ITKCommon_EXPORT std::ostream &
+  friend MBILOG_EXPORT std::ostream &
                           operator<<(std::ostream & os, const RealTimeStamp & v);
 
 private:

@@ -18,7 +18,7 @@
 
 
 #include "itkThreadPool.h"
-#include "itksys/SystemTools.hxx"
+#include "src/itksys/SystemTools.hxx"
 #include "itkThreadSupport.h"
 #include "itkNumericTraits.h"
 #include "itkMultiThreaderBase.h"

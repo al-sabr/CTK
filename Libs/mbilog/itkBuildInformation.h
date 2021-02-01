@@ -22,6 +22,7 @@
 #include "itkObject.h"
 #include <mutex>
 #include "itkSingletonMacro.h"
+#include <mbilogExport.h>
 
 namespace itk
 {

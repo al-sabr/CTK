@@ -22,6 +22,7 @@
 #include "itkSingletonMacro.h"
 #include <map>
 #include <functional>
+#include <mbilogExport.h>
 
 /** \brief A function which does nothing
  *

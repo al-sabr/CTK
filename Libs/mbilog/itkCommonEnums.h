@@ -22,6 +22,7 @@
 
 #include "itkIntTypes.h"
 #include <ostream>
+#include <mbilogExport.h>
 
 namespace itk
 {

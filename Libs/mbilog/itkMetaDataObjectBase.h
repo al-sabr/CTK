@@ -31,6 +31,7 @@
 #include "itkLightObject.h"
 #include <typeinfo>
 #include <iostream>
+#include <mbilogExport.h>
 
 namespace itk
 {

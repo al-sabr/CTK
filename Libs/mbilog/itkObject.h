@@ -32,7 +32,7 @@
 #include "itkEventObject.h"
 #include "itkMetaDataDictionary.h"
 #include "itkSingletonMacro.h"
-
+#include <mbilogExport.h>
 #include <functional>
 
 namespace itk

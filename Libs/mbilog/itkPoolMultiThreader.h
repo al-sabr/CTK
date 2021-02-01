@@ -30,6 +30,7 @@
 
 #include "itkMultiThreaderBase.h"
 #include "itkThreadPool.h"
+#include <mbilogExport.h>
 
 namespace itk
 {
