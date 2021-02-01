@@ -14,9 +14,7 @@ found in the LICENSE file.
 #include <mitkLog.h>
 #include <mitkLogMacros.h>
 
-/*
 #include <itkOutputWindow.h>
-*/
 #include <itkSimpleFastMutexLock.h>
 
 #include <cstdio>
@@ -65,7 +63,7 @@ void mitk::LoggingBackend::ProcessMessage(const mbilog::LogMessage &l)
 #else
     FormatFull(*outputWindow, l);
 #endif
-    //itk::OutputWindow::GetInstance()->DisplayText(outputWindow->str().c_str());
+    itk::OutputWindow::GetInstance()->DisplayText(outputWindow->str().c_str());
   }
   logMutex.Unlock();
 }

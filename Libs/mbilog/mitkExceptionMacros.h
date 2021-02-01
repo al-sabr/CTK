@@ -17,8 +17,6 @@ found in the LICENSE file.
 #include <mitkLogMacros.h>
 #include <sstream>
 
-#define ITK_LOCATION "dummyITKLocation"
-
 /** The exception macro is used to throw an exception
  *  (i.e., usually a condition that results in program failure).
  *

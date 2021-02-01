@@ -36,7 +36,7 @@
 #  include "itkWindows.h"
 #  include <winbase.h>
 #endif
-#include "ctkConfig.h"
+#include "itkConfig.h"
 
 
 namespace itk

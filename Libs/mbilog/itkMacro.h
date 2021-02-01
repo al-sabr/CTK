@@ -39,7 +39,7 @@
 #define itkMacro_h
 
 #include "itkWin32Header.h"
-#include "ctkConfig.h"
+#include "itkConfig.h"
 #include "ctkCoreExport.h"
 #include "mbilogExport.h"
 #include <typeinfo>

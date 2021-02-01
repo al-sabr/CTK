@@ -5,19 +5,3 @@
 #define CTK_SOURCE_DIR "@CTK_SOURCE_DIR@"
 
 #endif
-
-// ITK DEFINITION FLAGS
-#cmakedefine ITK_USE_64BITS_IDS
-#cmakedefine ITK_DEFAULT_MAX_THREADS @ITK_DEFAULT_MAX_THREADS@
-
-/* what threading system are we using */
-#cmakedefine ITK_USE_PTHREADS
-#cmakedefine ITK_HP_PTHREADS
-#cmakedefine ITK_USE_WIN32_THREADS
-
-// ITK Versioning
-
-#define ITK_VERSION_MAJOR @ITK_VERSION_MAJOR@
-#define ITK_VERSION_MINOR @ITK_VERSION_MINOR@
-#define ITK_VERSION_PATCH @ITK_VERSION_PATCH@
-#define ITK_VERSION_STRING "@ITK_VERSION_STRING@"

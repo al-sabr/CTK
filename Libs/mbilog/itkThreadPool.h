@@ -18,7 +18,7 @@
 #ifndef itkThreadPool_h
 #define itkThreadPool_h
 
-#include "ctkConfig.h"
+#include "itkConfig.h"
 #include "itkIntTypes.h"
 
 #include <deque>

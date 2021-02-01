@@ -82,4 +82,5 @@ endforeach()
 #-----------------------------------------------------------------------------
 # Create the CTKConfig.cmake file containing the CTK configuration.
 # Since it might generate configuration file depending
+include(ITKGenerateITKConfig.cmake)
 include(CTKGenerateCTKConfig.cmake)
