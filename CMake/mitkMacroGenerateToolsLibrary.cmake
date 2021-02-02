@@ -65,7 +65,7 @@ macro(MITK_GENERATE_TOOLS_LIBRARY)
   if(TOOL_FILES OR TOOL_QTGUI_FILES)
     if(libraryname AND reallycreatelibrary)
       # configure one file with the itkLoad method
-      configure_file( ${MITK_DIR}/ToolExtensionITKFactoryLoader.cpp.in
+      configure_file( ${CTK_DIR}/ToolExtensionITKFactoryLoader.cpp.in
                       ${PROJECT_BINARY_DIR}/mitkToolExtensionITKFactoryLoader.cpp
                       @ONLY )
       # also mark this file for compilation
