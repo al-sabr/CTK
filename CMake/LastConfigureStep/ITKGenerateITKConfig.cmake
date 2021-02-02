@@ -143,3 +143,13 @@ else()
   set(ITK_CMAKE_POLICY_VERSION "${ITK_NEWEST_VALIDATED_POLICIES_VERSION}")
 endif()
 cmake_policy(VERSION ${ITK_CMAKE_POLICY_VERSION})
+
+# ---------------- Tools -----------------
+# Code imported from MITK/CMakeLists.txt/Line#1416
+
+configure_file(${CTK_SOURCE_DIR}/CMake/ToolExtensionITKFactory.cpp.in
+               ${CTK_BINARY_DIR}/ToolExtensionITKFactory.cpp.in COPYONLY)
+configure_file(${CTK_SOURCE_DIR}/CMake/ToolExtensionITKFactoryLoader.cpp.in
+               ${CTK_BINARY_DIR}/ToolExtensionITKFactoryLoader.cpp.in COPYONLY)
+configure_file(${CTK_SOURCE_DIR}/CMake/ToolGUIExtensionITKFactory.cpp.in
+               ${CTK_BINARY_DIR}/ToolGUIExtensionITKFactory.cpp.in COPYONLY)

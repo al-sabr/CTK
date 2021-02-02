@@ -288,6 +288,8 @@ foreach(file
   CMake/ctkFunctionGetGccVersion.cmake
   CMake/ctkFunctionGetCompilerVisibilityFlags.cmake
   CMake/ctkFunctionCompileSnippets.cmake
+  # External MITK macros
+  CMake/mitkMacroGenerateToolsLibrary
   # External ITK macros
   CMake/itkModuleMacros.cmake
   CMake/itkVersion.cmake

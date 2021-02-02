@@ -1,3 +1,5 @@
+include(mitkMacroGenerateToolsLibrary)
+
 # Directory containing the ctkConfig.h file
 set_and_check(ITK_CONFIG_H_INCLUDE_DIR "@PACKAGE_ITK_CONFIG_H_INCLUDE_DIR_CONFIG@")
 
