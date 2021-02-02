@@ -40,8 +40,7 @@
 
 #include "itkWin32Header.h"
 #include "itkConfig.h"
-#include "ctkCoreExport.h"
-#include "mbilogExport.h"
+#include <mbilogExport.h>
 #include <typeinfo>
 
 #include <string>

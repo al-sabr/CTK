@@ -142,3 +142,11 @@ endif()
 if(ITK_USE_WIN32_THREADS OR ITK_USE_PTHREADS)
   list(APPEND KIT_SRCS itkPoolMultiThreader.cxx itkThreadPool.cxx)
 endif()
+
+if(ITK_DYNAMIC_LOADING)
+  list(APPEND KIT_SRCS itkDynamicLoader.cxx)
+endif()
+
+if(ITK_USE_TBB)
+  list(APPEND KIT_SRCS itkTBBMultiThreader.cxx)
+endif()
