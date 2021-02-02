@@ -4,7 +4,7 @@
 //:
 //  \file
 //  \author fsm
-#include "vnl/vnl_export.h"
+#include "src/vxl/core/vnl/vnl_export.h"
 
 //: Raise exception for invalid index.
 extern VNL_EXPORT void vnl_error_vector_index (const char* fcn, int index);

@@ -1,7 +1,7 @@
 #ifndef vxl_version_h_
 #define vxl_version_h_
 
-#include <vxl_config.h>
+#include <src/vxl/core/vxl_config.h>
 
 //:
 // \file

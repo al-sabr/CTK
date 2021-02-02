@@ -23,10 +23,10 @@
 #include <cstddef>
 #include <cmath>
 #ifdef _MSC_VER
-#  include <vcl_msvc_warnings.h>
+#  include <src/vxl/vcl/vcl_msvc_warnings.h>
 #endif
-#include "vnl_numeric_traits.h"
-#include <vnl/vnl_export.h>
+#include "src/vxl/core/vnl/vnl_numeric_traits.h"
+#include <src/vxl/core/vnl/vnl_export.h>
 
 // avoid messing about with aux_* functions for gcc 2.7 -- fsm
 template <class T, class S> VNL_EXPORT void vnl_c_vector_one_norm(T const *p, unsigned n, S *out);
