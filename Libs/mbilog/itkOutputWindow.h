@@ -33,6 +33,10 @@
 
 namespace itk
 {
+
+
+struct OutputWindowGlobals;
+
 /** \class OutputWindow
  * \brief Messages sent from the system are collected by this object.
  *
@@ -127,8 +131,10 @@ protected:
   PrintSelf(std::ostream & os, Indent indent) const override;
 
 private:
-  bool           m_PromptUser;
-  static Pointer m_Instance;
+  itkGetGlobalDeclarationMacro(OutputWindowGlobals, PimplGlobals);
+
+  bool                         m_PromptUser;
+  static OutputWindowGlobals * m_PimplGlobals;
 };
 } // end namespace itk
 

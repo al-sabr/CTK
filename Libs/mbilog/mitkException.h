@@ -13,7 +13,6 @@ found in the LICENSE file.
 #ifndef MITKEXCEPTION_H_INCLUDED
 #define MITKEXCEPTION_H_INCLUDED
 
-//#include <ctkCoreExport.h>
 #include <mbilogExport.h>
 #include <itkMacro.h>
 #include <string>
@@ -54,8 +53,8 @@ namespace mitk
     {
     }
 
-    //~Exception() throw() override {}
-    //itkTypeMacro(ClassName, SuperClassName);
+    ~Exception() throw() override {}
+    itkTypeMacro(ClassName, SuperClassName);
 
     /** \brief Adds rethrow data to this exception. */
     void AddRethrowData(const char *file, unsigned int lineNumber, const char *message);
