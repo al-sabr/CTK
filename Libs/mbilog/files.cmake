@@ -78,6 +78,7 @@ set(KIT_MOC_SRCS
   itkTotalProgressReporter.h
   itkPlatformMultiThreader.h
 
+  itkDirectory.h
 )
 
 set(KIT_SRCS
@@ -96,6 +97,7 @@ set(KIT_SRCS
   itkLightObject.cxx
   itkSingleton.cxx
   itkObject.cxx
+  itkObjectFactoryBase.cxx
   itkDataObject.cxx
   itkEventObject.cxx
   itkCommand.cxx
@@ -130,6 +132,7 @@ set(KIT_SRCS
   itkImageRegionSplitterSlowDimension.cxx
   itkProcessObject.cxx
 
+  itkDirectory.cxx
 )
 
 
