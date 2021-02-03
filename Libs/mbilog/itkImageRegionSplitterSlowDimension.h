@@ -19,6 +19,7 @@
 #define itkImageRegionSplitterSlowDimension_h
 
 #include "itkImageRegionSplitterBase.h"
+#include "mbilogExport.h"
 
 namespace itk
 {
@@ -43,7 +44,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT ImageRegionSplitterSlowDimension : public ImageRegionSplitterBase
+class MBILOG_EXPORT ImageRegionSplitterSlowDimension : public ImageRegionSplitterBase
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(ImageRegionSplitterSlowDimension);

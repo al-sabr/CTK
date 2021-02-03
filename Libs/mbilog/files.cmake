@@ -56,8 +56,7 @@ set(KIT_MOC_SRCS
   itkVector.h
   itkVector.hxx
   itkRegion.h
-  itkImageRegion.h
-  itkImageRegion.hxx
+  #itkImageRegion.h
   itkImageSourceCommon.h
   itkImageRegionSplitterBase.h
   itkImageRegionSplitterSlowDimension.h
@@ -79,6 +78,9 @@ set(KIT_MOC_SRCS
   itkPlatformMultiThreader.h
 
   itkDirectory.h
+  itkNumericTraitsVectorPixel.h
+  itkIndex.h
+  itkProgressReporter.h
 )
 
 set(KIT_SRCS
@@ -133,6 +135,8 @@ set(KIT_SRCS
   itkProcessObject.cxx
 
   itkDirectory.cxx
+  itkNumericTraitsVectorPixel.cxx
+  itkProgressReporter.cxx
 )
 
 

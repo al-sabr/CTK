@@ -62,7 +62,7 @@ class ITK_TEMPLATE_EXPORT ImageBase;
  * \sphinxexample{Core/Common/CreateAnImageRegion,An object which holds the index (start) and size of a region of an
  * image} \sphinxexample{Core/Common/ImageRegionIntersection,Determine image region intersection}
  * \sphinxexample{Core/Common/IsPixelInsideRegion,Determine if a pixel is inside of a region}
- * \sphinxexample{Core/Common/ImageRegionOverlap,Determine the overlap of two regions}
+ * \sphinxexample{Core/Common/RegionOverlap,Determine the overlap of two regions}
  * \endsphinx
  */
 template <unsigned int VImageDimension>
@@ -115,19 +115,19 @@ public:
   /** Constructor. ImageRegion is a lightweight object that is not reference
    * counted, so the constructor is public. Its two data members are filled
    * with zeros (using C++11 default member initializers). */
-  ImageRegion() ITK_NOEXCEPT = default;
+  ImageRegion();
 
   /** Destructor. ImageRegion is a lightweight object that is not reference
    * counted, so the destructor is public. */
-  ~ImageRegion() override = default;
+  ~ImageRegion() override ;
 
   /** Copy constructor. ImageRegion is a lightweight object that is not
    * reference counted, so the copy constructor is public. */
-  ImageRegion(const Self &) ITK_NOEXCEPT = default;
+  ImageRegion(const Self &);
 
   /** Constructor that takes an index and size. ImageRegion is a lightweight
    * object that is not reference counted, so this constructor is public. */
-  ImageRegion(const IndexType & index, const SizeType & size) ITK_NOEXCEPT
+  ImageRegion(const IndexType & index, const SizeType & size) 
     :
     // Note: Use parentheses instead of curly braces to initialize data members,
     // to avoid AppleClang 6.0.0.6000056 compile errors, "no viable conversion..."
@@ -138,7 +138,7 @@ public:
   /** Constructor that takes a size and assumes an index of zeros. ImageRegion
    * is lightweight object that is not reference counted so this constructor
    * is public. */
-  ImageRegion(const SizeType & size) ITK_NOEXCEPT : m_Size(size)
+  ImageRegion(const SizeType & size) : m_Size(size)
   {
     // Note: m_Index is initialized by its C++11 default member initializer.
   }
@@ -146,7 +146,7 @@ public:
   /** operator=. ImageRegion is a lightweight object that is not reference
    * counted, so operator= is public. */
   Self &
-  operator=(const Self &) ITK_NOEXCEPT = default;
+  operator=(const Self &) ;
 
   /** Set the index defining the corner of the region. */
   void
@@ -227,14 +227,14 @@ public:
 
   /** Compare two regions. */
   bool
-  operator==(const Self & region) const ITK_NOEXCEPT
+  operator==(const Self & region) const
   {
     return (m_Index == region.m_Index) && (m_Size == region.m_Size);
   }
 
   /** Compare two regions. */
   bool
-  operator!=(const Self & region) const ITK_NOEXCEPT
+  operator!=(const Self & region) const
   {
     return !(*this == region);
   }

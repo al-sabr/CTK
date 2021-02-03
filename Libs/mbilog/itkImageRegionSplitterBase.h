@@ -21,6 +21,7 @@
 #include "itkImageRegion.h"
 #include "itkObjectFactory.h"
 #include "itkImageIORegion.h"
+#include "mbilogExport.h"
 
 namespace itk
 {
@@ -55,7 +56,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT ImageRegionSplitterBase : public Object
+class MBILOG_EXPORT ImageRegionSplitterBase : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(ImageRegionSplitterBase);

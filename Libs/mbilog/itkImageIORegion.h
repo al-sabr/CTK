@@ -22,6 +22,7 @@
 #include "itkIntTypes.h"
 #include "itkObjectFactory.h"
 #include "itkImageRegion.h"
+#include "mbilogExport.h"
 
 namespace itk
 {
@@ -49,7 +50,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT ImageIORegion : public Region
+class MBILOG_EXPORT ImageIORegion : public Region
 {
 public:
   /** Standard class type aliases. */
@@ -189,7 +190,7 @@ private:
 
 
 // Declare operator<<
-extern ITKCommon_EXPORT std::ostream &
+extern MBILOG_EXPORT std::ostream &
                         operator<<(std::ostream & os, const ImageIORegion & region);
 
 
