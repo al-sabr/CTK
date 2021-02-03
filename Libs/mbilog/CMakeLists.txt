@@ -78,4 +78,14 @@ ctkMacroBuildLib(
   #GENERATE_EXPORT_HEADER TRUE
   )
 
-target_link_libraries(${PROJECT_NAME} ITKKWSys ITKVNL ITKVNLInstantiation)
+  #-----------------------------------------------------------------------------
+# Choose a directory for the generated headers.
+#[[
+if(NOT KWSYS_HEADER_ROOT)
+set(KWSYS_HEADER_ROOT "${PROJECT_BINARY_DIR}")
+endif()
+set(KWSYS_HEADER_DIR "${KWSYS_HEADER_ROOT}/${KWSYS_NAMESPACE}")
+include_directories(${KWSYS_HEADER_ROOT})
+]]
+
+target_link_libraries(${PROJECT_NAME} itksys itkvnl)
