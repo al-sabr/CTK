@@ -34,8 +34,8 @@
 #include "itkNumericTraits.h"
 #include <mutex>
 
-#include "src/itksys/SystemTools.hxx"
-#include "src/itksys/SystemInformation.hxx"
+#include "itksys/SystemTools.hxx"
+#include "itksys/SystemInformation.hxx"
 #include "itkImageSourceCommon.h"
 #include "itkSingleton.h"
 #include "itkProcessObject.h"

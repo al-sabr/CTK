@@ -22,7 +22,7 @@
 #include "itkNumericTraits.h"
 #include "itkVector.h"
 #include <mbilogExport.h>
-#include "src/vxl/core/vnl/vnl_vector_ref.h"
+#include "vnl_vector_ref.h"
 #include "itkMath.h"
 
 namespace itk

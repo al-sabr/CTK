@@ -10,16 +10,16 @@
 //   2009-03-30 Peter Vanroose - Added arg_min() & arg_max() and reimplemented min() & max()
 // \endverbatim
 
-#include <vcl_compiler_detection.h>
+#include <../../vcl/vcl_compiler_detection.h>
 #ifdef _MSC_VER
 #  include <vcl_msvc_warnings.h>
 #endif // for macro decisions based on compiler type
-#include <vxl_config.h>   // for checking supported integer data types
+#include <../vxl_config.h>   // for checking supported integer data types
 #include <cfloat>// for DBL_MAX and FLT_MAX
 
-#include <vnl/vnl_config.h> // is SSE enabled
-#include "vnl/vnl_alloc.h"  // is SSE enabled
-#include "vnl/vnl_export.h"
+#include <vnl_config.h> // is SSE enabled
+#include "vnl_alloc.h"  // is SSE enabled
+#include "vnl_export.h"
 
 // some caveats...
 // - Due to the way vnl_matrix is represented in memory cannot guarantee 16-byte alignment,

@@ -15,15 +15,15 @@
 #include <iosfwd>
 #include "vnl_error.h"
 
-#include <vcl_compiler.h>
+#include <../../vcl/vcl_compiler.h>
 #ifdef _MSC_VER
 #  include <vcl_msvc_warnings.h>
 #endif
 
 #include "vnl_c_vector.h"
-#include <vnl/vnl_config.h>
-#include "vnl/vnl_error.h"
-#include "vnl/vnl_export.h"
+#include <vnl_config.h>
+#include "vnl_error.h"
+#include "vnl_export.h"
 #ifndef NDEBUG
 # if VNL_CONFIG_CHECK_BOUNDS
 #include <cassert>

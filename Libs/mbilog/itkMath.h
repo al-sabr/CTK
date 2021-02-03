@@ -40,7 +40,7 @@
  * versions of VXL where only vnl_math_ was available are not
  * supported.
  */
-#include <vxl_version.h>
+#include <../vxl_version.h>
 
 namespace itk
 {

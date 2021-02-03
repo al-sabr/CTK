@@ -35,7 +35,7 @@
 #ifdef _MSC_VER
 #  include <vcl_msvc_warnings.h>
 #endif
-#include "vnl/vnl_export.h"
+#include "vnl_export.h"
 
 constexpr int VNL_ALLOC_ALIGN = 8;
 constexpr std::size_t VNL_ALLOC_MAX_BYTES = 256;
