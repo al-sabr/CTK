@@ -20,6 +20,7 @@
 
 #include "itkObject.h"
 #include "src/itksys/Directory.hxx"
+#include "mbilogExport.h"
 
 namespace itk
 {

@@ -11,8 +11,8 @@ set(KIT_MOC_SRCS
   # Adding MITK logging system headers.
   mitkLog.h
   mitkLogMacros.h
-  #mitkException.h
-  #mitkExceptionMacros.h
+  mitkException.h
+  mitkExceptionMacros.h
 
   # ITK
   itkMacro.h
@@ -56,7 +56,7 @@ set(KIT_MOC_SRCS
   itkVector.h
   itkVector.hxx
   itkRegion.h
-  #itkImageRegion.h
+  itkImageRegion.h
   itkImageSourceCommon.h
   itkImageRegionSplitterBase.h
   itkImageRegionSplitterSlowDimension.h
