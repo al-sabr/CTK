@@ -42,8 +42,8 @@
 #endif
 #include "dll.h"
 #include <vxl_config.h>
-#include <vnl/vnl_config.h> // for VNL_CONFIG_ENABLE_SSE2_ROUNDING
-#include <vnl/vnl_export.h>
+#include <vnl_config.h> // for VNL_CONFIG_ENABLE_SSE2_ROUNDING
+#include <vnl_export.h>
 #ifdef VNL_CHECK_FPU_ROUNDING_MODE
 #include <cassert>
 #endif
