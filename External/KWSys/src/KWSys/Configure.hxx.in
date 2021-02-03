@@ -4,7 +4,7 @@
 #define @KWSYS_NAMESPACE@_Configure_hxx
 
 /* Include C configuration.  */
-#include <@KWSYS_NAMESPACE@/Configure.h>
+#include <src/@KWSYS_NAMESPACE@/Configure.h>
 
 /* Whether wstring is available.  */
 #define @KWSYS_NAMESPACE@_STL_HAS_WSTRING @KWSYS_STL_HAS_WSTRING@

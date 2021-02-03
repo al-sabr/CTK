@@ -19,7 +19,7 @@
 #define itkVector_hxx
 
 #include "itkMath.h"
-#include "vnl/vnl_vector.h"
+#include "src/vxl/core/vnl/vnl_vector.h"
 #include "itkObject.h"
 #include "itkNumericTraitsVectorPixel.h"
 

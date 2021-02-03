@@ -33,13 +33,14 @@
 #include "itkConceptChecking.h"
 #include <src/vxl/core/vnl/vnl_math.h>
 #include <mbilogExport.h>
+#include <itkMacro.h>
 
 /* Only maintain backwards compatibility with old versions
  * of VXL back to the point where vnl_math:: was introduced
  * versions of VXL where only vnl_math_ was available are not
  * supported.
  */
-#include <vxl_version.h>
+#include <src/vxl/core/vxl_version.h>
 
 namespace itk
 {
