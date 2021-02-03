@@ -19,7 +19,7 @@
 #define itkDirectory_h
 
 #include "itkObject.h"
-#include "src/itksys/Directory.hxx"
+#include "itksys/Directory.hxx"
 #include "mbilogExport.h"
 
 namespace itk

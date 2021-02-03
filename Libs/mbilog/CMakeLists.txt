@@ -77,3 +77,5 @@ ctkMacroBuildLib(
   BYPASS_REGEX TRUE
   #GENERATE_EXPORT_HEADER TRUE
   )
+
+target_link_libraries(${PROJECT_NAME} ITKKWSys ITKVNL ITKVNLInstantiation)

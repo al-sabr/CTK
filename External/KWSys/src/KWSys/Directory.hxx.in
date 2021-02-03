@@ -3,7 +3,7 @@
 #ifndef @KWSYS_NAMESPACE@_Directory_hxx
 #define @KWSYS_NAMESPACE@_Directory_hxx
 
-#include <src/@KWSYS_NAMESPACE@/Configure.h>
+#include <@KWSYS_NAMESPACE@/Configure.h>
 
 #include <string>
 

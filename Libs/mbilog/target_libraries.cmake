@@ -7,11 +7,6 @@
 set(target_libraries
   CTK
   CTKCore
-  itksys
-  itkvnl
-  ITKKWSys
-  ITKVNL
-  ITKVNLInstantiation
   )
 
 if(CTK_QT_VERSION VERSION_GREATER "4")

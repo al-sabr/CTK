@@ -14,8 +14,8 @@
 // \endverbatim
 //-----------------------------------------------------------------------------
 
-#include "src/vxl/core/vnl/vnl_vector.h"
-#include "src/vxl/core/vnl/vnl_export.h"
+#include "vnl/vnl_vector.h"
+#include "vnl/vnl_export.h"
 
 //: vnl_vector using user-supplied storage
 //   vnl_vector for which the data space has

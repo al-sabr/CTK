@@ -3,7 +3,7 @@
 #define vnl_dll_h_
 
 #ifdef _MSC_VER
-#  include <src/vxl/vcl/vcl_msvc_warnings.h>
+#  include <vcl_msvc_warnings.h>
 #endif
 
 #define VNL_DLL_DATA

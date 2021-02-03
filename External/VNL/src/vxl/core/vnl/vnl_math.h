@@ -38,12 +38,12 @@
 #include <algorithm>
 #include <complex>
 #ifdef _MSC_VER
-#  include <src/vxl/vcl/vcl_msvc_warnings.h>
+#  include <vcl_msvc_warnings.h>
 #endif
 #include "dll.h"
-#include <src/vxl/core/vxl_config.h>
-#include <src/vxl/core/vnl/vnl_config.h> // for VNL_CONFIG_ENABLE_SSE2_ROUNDING
-#include <src/vxl/core/vnl/vnl_export.h>
+#include <vxl_config.h>
+#include <vnl/vnl_config.h> // for VNL_CONFIG_ENABLE_SSE2_ROUNDING
+#include <vnl/vnl_export.h>
 #ifdef VNL_CHECK_FPU_ROUNDING_MODE
 #include <cassert>
 #endif
