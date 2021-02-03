@@ -44,9 +44,10 @@ namespace mitk
   *
   *                 mitkThrowException(MyException) << "optional exception message";
   */
-  class MBILOG_EXPORT Exception : itk::ExceptionObject
+  class MBILOG_EXPORT Exception : public itk::ExceptionObject
   {
   public:
+
     Exception(const char *file, unsigned int lineNumber = 0, const char *desc = "None", const char *loc = "Unknown")
       //: itk::ExceptionObject(file, lineNumber, desc, loc)
 

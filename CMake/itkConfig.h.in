@@ -22,4 +22,6 @@
 #define ITK_VERSION_PATCH @ITK_VERSION_PATCH@
 #define ITK_VERSION_STRING "@ITK_VERSION_STRING@"
 
+#define ITK_NOEXCEPT = noexcept
+
 #endif

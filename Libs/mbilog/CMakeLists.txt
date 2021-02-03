@@ -15,7 +15,6 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mbilogConfig.cmake.in"
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mbilogConfig.h.in"
 "${CMAKE_CURRENT_BINARY_DIR}/mbilogConfig.h" @ONLY)
 
-
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
@@ -56,7 +55,6 @@ set(MAPPING_VALUES "
   MAKE_MAP_ENTRY( \"CMAKE_CXX_FLAGS\",       \"${CMAKE_CXX_FLAGS} ${CMAKE_CXX_FLAGS_${CMAKE_BUILD_TYPE}}\",
                                                                           \"The CXX compiler flags.\"                 );
 ")
-
 
 configure_file(itkBuildInformation.cxx.in ${CTK_BINARY_DIR}/itkBuildInformation.cxx)
 

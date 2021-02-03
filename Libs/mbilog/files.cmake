@@ -11,8 +11,8 @@ set(KIT_MOC_SRCS
   # Adding MITK logging system headers.
   mitkLog.h
   mitkLogMacros.h
-  mitkException.h
-  mitkExceptionMacros.h
+  #mitkException.h
+  #mitkExceptionMacros.h
 
   # ITK
   itkMacro.h
