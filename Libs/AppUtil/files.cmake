@@ -1,12 +1,12 @@
 set(KIT_MOC_SRCS
-  include/mitkBaseApplication.h
-  include/QmitkSafeApplication.h
-  include/QmitkSingleApplication.h
+  mitkBaseApplication.h
+  QmitkSafeApplication.h
+  QmitkSingleApplication.h
 )
 
 set(KIT_SRCS
-  src/mitkBaseApplication.cpp
-  src/mitkProvisioningInfo.cpp
-  src/QmitkSafeApplication.cpp
-  src/QmitkSingleApplication.cpp
+  mitkBaseApplication.cpp
+  mitkProvisioningInfo.cpp
+  QmitkSafeApplication.cpp
+  QmitkSingleApplication.cpp
 )

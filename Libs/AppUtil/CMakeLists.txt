@@ -17,6 +17,7 @@ project(CTKAppUtil)
 
 include(files.cmake)
 
+find_package(CppMicroServices COMPONENTS usLogService usWebConsole usHttpService)
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #

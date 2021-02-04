@@ -9,6 +9,7 @@ set(target_libraries
   CTKPluginFramework
   CTKmbilog
   CTKqtsingleapplication
+  CppMicroServices
   Qt5::Widgets Qt5::WebEngine
   Poco::Util
   )
