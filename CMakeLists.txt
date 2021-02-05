@@ -596,12 +596,11 @@ add_subdirectory(External/VNL)
 ctk_lib_option(mbilog
                "Build the MITK mbilog library" ON)
 
-               
-ctk_lib_option(qtsingleapplication
-               "Build the MITK SingleApplication library" ON)
-
 ctk_lib_option(AppUtil
                "Build the MITK AppUtil library" ON)
+
+ctk_lib_option(qtsingleapplication
+               "Build the MITK SingleApplication library" ON)
 
 ctk_lib_option(Core
                "Build the Core library" ON)
