@@ -1,5 +1,17 @@
 include(CMakePackageConfigHelpers OPTIONAL)
 
+# During minor releases bugs may be identified that identify broken interface, or
+# useless interfaces that need to be retained to not break backwards compatibilty.
+# These ITK_FUTURE_LEGACY_REMOVE are another level of granularity for
+# which backwards compatible features we want to maintain.
+cmake_dependent_option(ITK_FUTURE_LEGACY_REMOVE
+      "Completely remove compilation of code which will become deprecated by default in ITKv5." OFF
+      "ITK_LEGACY_REMOVE" OFF)
+cmake_dependent_option(ITK_LEGACY_SILENT
+      "Silence all legacy code messages when ITK_LEGACY_REMOVE:BOOL=OFF." OFF
+      "NOT ITK_LEGACY_REMOVE" OFF)
+      
+
 set(CTK_CONFIG_DIR_CONFIG ${CTK_SUPERBUILD_BINARY_DIR})
 set(CTK_CMAKE_DIR_CONFIG ${CTK_CMAKE_DIR})
 set(CTK_CMAKE_UTILITIES_DIR_CONFIG ${CTK_CMAKE_UTILITIES_DIR})

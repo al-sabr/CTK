@@ -289,7 +289,7 @@ foreach(file
   CMake/ctkFunctionGetCompilerVisibilityFlags.cmake
   CMake/ctkFunctionCompileSnippets.cmake
   # External MITK macros
-  CMake/mitkMacroGenerateToolsLibrary
+  CMake/mitkMacroGenerateToolsLibrary.cmake
   # External ITK macros
   CMake/itkModuleMacros.cmake
   CMake/itkVersion.cmake
@@ -582,6 +582,13 @@ option(CTK_BUILD_QTDESIGNER_PLUGINS "Build Qt Designer plugins" ON)
 mark_as_advanced(CTK_BUILD_QTDESIGNER_PLUGINS)
 mark_as_superbuild(CTK_BUILD_QTDESIGNER_PLUGINS)
 
+#---------------------------------------------------------------------------
+# KWSys & VNL from ITK
+#
+
+add_subdirectory(External/KWSys)
+add_subdirectory(External/VNL)
+
 #-----------------------------------------------------------------------------
 # CTK Libraries
 #
@@ -589,11 +596,12 @@ mark_as_superbuild(CTK_BUILD_QTDESIGNER_PLUGINS)
 ctk_lib_option(mbilog
                "Build the MITK mbilog library" ON)
 
-ctk_lib_option(AppUtil
-               "Build the MITK AppUtil library" ON)
-
+               
 ctk_lib_option(qtsingleapplication
                "Build the MITK SingleApplication library" ON)
+
+ctk_lib_option(AppUtil
+               "Build the MITK AppUtil library" ON)
 
 ctk_lib_option(Core
                "Build the Core library" ON)
@@ -1340,14 +1348,6 @@ include(Utilities/KWStyle/KWStyle.cmake)
 # Documentation
 #
 add_subdirectory( Documentation )
-
-
-#---------------------------------------------------------------------------
-# KWSys from ITK
-#
-
-add_subdirectory(External/KWSys)
-add_subdirectory(External/VNL)
 
 #-----------------------------------------------------------------------------
 # The commands in this directory are intended to be executed as
