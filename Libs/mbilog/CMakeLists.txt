@@ -87,3 +87,5 @@ endif()
 set(KWSYS_HEADER_DIR "${KWSYS_HEADER_ROOT}/${KWSYS_NAMESPACE}")
 include_directories(${KWSYS_HEADER_ROOT})
 ]]
+
+target_link_libraries(${PROJECT_NAME} itksys)
