@@ -24,7 +24,7 @@ namespace itk
  */
 Directory::Directory()
 {
-  m_Internal = new itksys::Directory;
+  m_Internal = new kwsys::Directory;
 }
 
 /**

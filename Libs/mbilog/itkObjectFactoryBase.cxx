@@ -396,7 +396,7 @@ inline bool
 NameIsSharedLibrary(const char * name)
 {
 #ifdef ITK_DYNAMIC_LOADING
-  std::string extension = itksys::DynamicLoader::LibExtension();
+  std::string extension = kwsys::DynamicLoader::LibExtension();
 
   std::string sname = name;
   if (sname.rfind(extension) == sname.size() - extension.size())

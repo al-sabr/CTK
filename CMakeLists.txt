@@ -586,7 +586,7 @@ mark_as_superbuild(CTK_BUILD_QTDESIGNER_PLUGINS)
 # KWSys & VNL from ITK
 #
 
-add_subdirectory(External/KWSys)
+add_subdirectory(External/kwsys)
 add_subdirectory(External/VNL)
 
 #-----------------------------------------------------------------------------

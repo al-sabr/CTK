@@ -34,8 +34,8 @@
 #include "itkNumericTraits.h"
 #include <mutex>
 
-#include "itksys/SystemTools.hxx"
-#include "itksys/SystemInformation.hxx"
+#include "kwsys/SystemTools.hxx"
+#include "kwsys/SystemInformation.hxx"
 #include "itkImageSourceCommon.h"
 #include "itkSingleton.h"
 #include "itkProcessObject.h"
@@ -140,9 +140,9 @@ MultiThreaderBase::GetGlobalDefaultThreader()
     {
       std::string envVar;
       // first check ITK_GLOBAL_DEFAULT_THREADER
-      if (itksys::SystemTools::GetEnv("ITK_GLOBAL_DEFAULT_THREADER", envVar))
+      if (kwsys::SystemTools::GetEnv("ITK_GLOBAL_DEFAULT_THREADER", envVar))
       {
-        envVar = itksys::SystemTools::UpperCase(envVar);
+        envVar = kwsys::SystemTools::UpperCase(envVar);
         ThreaderEnum threaderT = ThreaderTypeFromString(envVar);
         if (threaderT != ThreaderEnum::Unknown)
         {
@@ -151,9 +151,9 @@ MultiThreaderBase::GetGlobalDefaultThreader()
       }
       // if that was not set check ITK_USE_THREADPOOL (deprecated)
       else if (!m_PimplGlobals->GlobalDefaultThreaderTypeIsInitialized &&
-               itksys::SystemTools::GetEnv("ITK_USE_THREADPOOL", envVar))
+               kwsys::SystemTools::GetEnv("ITK_USE_THREADPOOL", envVar))
       {
-        envVar = itksys::SystemTools::UpperCase(envVar);
+        envVar = kwsys::SystemTools::UpperCase(envVar);
         itkGenericOutputMacro("Warning: ITK_USE_THREADPOOL \
 has been deprecated since ITK v5.0. \
 You should now use ITK_GLOBAL_DEFAULT_THREADER\
@@ -182,7 +182,7 @@ You should now use ITK_GLOBAL_DEFAULT_THREADER\
 MultiThreaderBase::ThreaderEnum
 MultiThreaderBase::ThreaderTypeFromString(std::string threaderString)
 {
-  threaderString = itksys::SystemTools::UpperCase(threaderString);
+  threaderString = kwsys::SystemTools::UpperCase(threaderString);
   if (threaderString == "PLATFORM")
   {
     return ThreaderEnum::Platform;
@@ -301,7 +301,7 @@ MultiThreaderBase::GetGlobalDefaultNumberOfThreads()
      */
     std::vector<std::string> ITK_NUMBER_OF_THREADS_ENV_LIST;
     std::string              itkNumberOfThreadsEvnListString = "";
-    if (itksys::SystemTools::GetEnv("ITK_NUMBER_OF_THREADS_ENV_LIST", itkNumberOfThreadsEvnListString))
+    if (kwsys::SystemTools::GetEnv("ITK_NUMBER_OF_THREADS_ENV_LIST", itkNumberOfThreadsEvnListString))
     {
       // NOTE: We always put "ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS" at the end
       // unconditionally.
@@ -326,7 +326,7 @@ MultiThreaderBase::GetGlobalDefaultNumberOfThreads()
     std::string itkGlobalDefaultNumberOfThreadsEnv = "0";
     for (const auto & lit : ITK_NUMBER_OF_THREADS_ENV_LIST)
     {
-      if (itksys::SystemTools::GetEnv(lit.c_str(), itkGlobalDefaultNumberOfThreadsEnv))
+      if (kwsys::SystemTools::GetEnv(lit.c_str(), itkGlobalDefaultNumberOfThreadsEnv))
       {
         threadCount = static_cast<ThreadIdType>(atoi(itkGlobalDefaultNumberOfThreadsEnv.c_str()));
       }
@@ -372,7 +372,7 @@ MultiThreaderBase::GetGlobalDefaultNumberOfThreadsByPlatform()
   pthread_setconcurrency(num);
 #  endif
 
-  itksys::SystemInformation mySys;
+  kwsys::SystemInformation mySys;
   mySys.RunCPUCheck();
   int result = mySys.GetNumberOfPhysicalCPU(); // Avoid using hyperthreading cores.
   if (result == -1)
