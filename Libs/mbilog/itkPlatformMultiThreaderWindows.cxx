@@ -27,7 +27,7 @@
  *=========================================================================*/
 #include "itkPlatformMultiThreader.h"
 #include "itkObjectFactory.h"
-#include "kwsys/SystemTools.hxx"
+#include "itksys/SystemTools.hxx"
 #include <cstdlib>
 
 #include "itkWindows.h"

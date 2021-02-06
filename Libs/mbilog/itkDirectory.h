@@ -19,7 +19,7 @@
 #define itkDirectory_h
 
 #include "itkObject.h"
-#include "kwsys/Directory.hxx"
+#include "itksys/Directory.hxx"
 #include "mbilogExport.h"
 
 namespace itk
@@ -81,7 +81,7 @@ protected:
   PrintSelf(std::ostream & os, Indent indent) const override;
 
 private:
-  ::kwsys::Directory * m_Internal;
+  ::itksys::Directory * m_Internal;
 }; // End Class: Directory
 } // end namespace itk
 
