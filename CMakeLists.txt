@@ -293,6 +293,8 @@ foreach(file
   # External ITK macros
   CMake/itkModuleMacros.cmake
   CMake/itkVersion.cmake
+  # Debugging macro
+  CMake/ctkMacroDebugVariables.cmake
   )
   include(${file})
   install(FILES ${file} DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development)
@@ -601,7 +603,7 @@ endif()
 set(KWSYS_USE_Glob 1)
 set(KWSYS_USE_Registry 1)
 set(KWSYS_USE_SystemInformation 1)
-
+set(KWSYS_INSTALL_EXPORT_NAME ${${KWSYS_NAMESPACE}-targets})
 set(KWSYS_INSTALL_COMPONENT_NAME_RUNTIME RuntimeLibraries)
 set(KWSYS_INSTALL_COMPONENT_NAME_DEVELOPMENT Development)
 set(KWSYS_PROPERTIES_C WINDOWS_EXPORT_ALL_SYMBOLS FALSE)
@@ -1379,3 +1381,5 @@ add_subdirectory( Documentation )
 # the end of the whole configuration process, as a "last step".
 # This directory is typically the last SUBDIRS in the main CMakeLists.txt.
 add_subdirectory(CMake/LastConfigureStep)
+
+#ctkDebugVariables()
