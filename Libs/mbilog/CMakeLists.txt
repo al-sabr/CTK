@@ -80,5 +80,4 @@ ctkMacroBuildLib(
 
 ctkFunctionGetTargetLibraries(itksys)
 
-message("CMAKE_BUILD_TYPE_INIT = ${CMAKE_BUILD_TYPE_INIT}")
 target_link_libraries(${PROJECT_NAME} "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/${CMAKE_BUILD_TYPE_INIT}/itksys.lib")
