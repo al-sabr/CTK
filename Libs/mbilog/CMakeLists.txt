@@ -78,14 +78,7 @@ ctkMacroBuildLib(
   #GENERATE_EXPORT_HEADER TRUE
   )
 
-  #-----------------------------------------------------------------------------
-# Choose a directory for the generated headers.
-#[[
-if(NOT KWSYS_HEADER_ROOT)
-set(KWSYS_HEADER_ROOT "${PROJECT_BINARY_DIR}")
-endif()
-set(KWSYS_HEADER_DIR "${KWSYS_HEADER_ROOT}/${KWSYS_NAMESPACE}")
-include_directories(${KWSYS_HEADER_ROOT})
-]]
+ctkFunctionGetTargetLibraries(itksys)
 
-#target_link_libraries(${PROJECT_NAME} itksys)
+message("CMAKE_BUILD_TYPE_INIT = ${CMAKE_BUILD_TYPE_INIT}")
+target_link_libraries(${PROJECT_NAME} "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/${CMAKE_BUILD_TYPE_INIT}/itksys.lib")

@@ -5,9 +5,9 @@
 #
 
 set(target_libraries
+  itksys vnl vcl
   CTKCore
-  vnl vcl itksys
-  )
+)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
   list(APPEND target_libraries Qt5::Core)
