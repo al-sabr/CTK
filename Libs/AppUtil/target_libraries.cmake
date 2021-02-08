@@ -7,6 +7,7 @@
 set(target_libraries
   CTKCore
   CTKPluginFramework
+  CTKmitk
   CTKmbilog
   CTKqtsingleapplication
   CppMicroServices
