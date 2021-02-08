@@ -1,23 +1,7 @@
-#[[
-if(UNIX AND NOT APPLE)
-  set(qt5_depends "${qt5_depends}+X11Extras")
-endif()
-
-mitk_create_module(
-  PACKAGE_DEPENDS
-    PUBLIC CTK|CTKPluginFramework ${qt5_depends} Poco|Util
-    PRIVATE VTK
-  DEPENDS
-    PUBLIC qtsingleapplication
-    PRIVATE MitkCore
-)
-]]
-
 project(CTKAppUtil)
 
 include(files.cmake)
 
-find_package(CppMicroServices COMPONENTS usLogService usWebConsole usHttpService)
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #

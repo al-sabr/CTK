@@ -629,10 +629,10 @@ namespace mitk
   void BaseApplication::initializeCppMicroServices()
   {
     auto storageDir = this->getProperty(ctkPluginConstants::FRAMEWORK_STORAGE).toString();
-    /*
+    
     if (!storageDir.isEmpty())
       us::ModuleSettings::SetStoragePath((storageDir + "us" + QDir::separator()).toStdString());
-    */
+    
   }
 
   QCoreApplication *BaseApplication::getQApplication() const

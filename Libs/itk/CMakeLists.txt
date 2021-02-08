@@ -61,8 +61,20 @@ ctkMacroBuildLib(
   MOC_SRCS ${KIT_MOC_SRCS}
   TARGET_LIBRARIES ${KIT_target_libraries}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
+  BYPASS_REGEX TRUE
   )
 
-ctkFunctionGetTargetLibraries(itksys)
+#[[]]
+# Extra path for linking.
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  set(ITKSYS_PATH "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/${CMAKE_BUILD_TYPE}")
+else()
+  set(ITKSYS_PATH "${CMAKE_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE}")
+endif()
 
-target_link_libraries(${PROJECT_NAME} "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/MinSizeRel/itksys.lib")
+message("ITKSYS_PATH = ${ITKSYS_PATH}")
+ctkFunctionGetTargetLibraries(itksys)
+target_link_libraries(${PROJECT_NAME} "${ITKSYS_PATH}/itksys.lib")
+
+
+#ctkMacroDebugVariables()

@@ -18,6 +18,8 @@
 #
 ###########################################################################
 
+SET(CMAKE_CONFIGURATION_TYPES ${CMAKE_BUILD_TYPE} CACHE STRING "" FORCE)
+
 cmake_minimum_required(VERSION 3.0)
 
 foreach(p
@@ -325,7 +327,6 @@ set(ITK_VERSION
 # enough to distinguish available features of the toolkit.
 set(ITK_VERSION_STRING "${ITK_VERSION_MAJOR}.${ITK_VERSION_MINOR}")
 
-message("ITK_VERSION:             ${ITK_VERSION}")
 #-----------------------------------------------------------------------------
 # Testing
 #
@@ -1387,5 +1388,3 @@ add_subdirectory( Documentation )
 # the end of the whole configuration process, as a "last step".
 # This directory is typically the last SUBDIRS in the main CMakeLists.txt.
 add_subdirectory(CMake/LastConfigureStep)
-
-#ctkDebugVariables()

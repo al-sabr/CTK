@@ -38,3 +38,15 @@ ctkMacroBuildLib(
   BYPASS_REGEX TRUE
   #GENERATE_EXPORT_HEADER TRUE
   )
+
+# Extra path for linking.
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  set(ITKSYS_PATH "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/${CMAKE_BUILD_TYPE}")
+else()
+  set(ITKSYS_PATH "${CMAKE_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE}")
+endif()
+
+message("ITKSYS_PATH = ${ITKSYS_PATH}")
+#[[]]
+ctkFunctionGetTargetLibraries(itksys)
+target_link_libraries(${PROJECT_NAME} "${ITKSYS_PATH}/itksys.lib")
