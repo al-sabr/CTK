@@ -1,5 +1,4 @@
 set(KIT_MOC_SRCS
-
   # ITK
   itkMacro.h
   itkExceptionObject.h

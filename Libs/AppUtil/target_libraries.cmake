@@ -8,7 +8,6 @@ set(target_libraries
   CTKCore
   CTKPluginFramework
   CTKmitk
-  CTKmbilog
   CTKqtsingleapplication
   CppMicroServices
   Qt5::Widgets Qt5::WebEngine
