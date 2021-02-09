@@ -5,6 +5,7 @@
 #
 
 set(target_libraries
-  itksys vnl vcl
+  KWSYS_LIBRARIES
+  VLX_LIBRARIES
   CTKCore
 )

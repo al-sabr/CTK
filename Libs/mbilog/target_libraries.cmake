@@ -5,8 +5,9 @@
 #
 
 set(target_libraries
+KWSYS_LIBRARIES
+VLX_LIBRARIES
   CTKCore
-  CTKitk
 )
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
