@@ -18,11 +18,11 @@ if(${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
 endif()
 
 # Sanity checks
-if(DEFINED VLX_DIR AND NOT EXISTS ${ZMQ_DIR})
-  message(FATAL_ERROR "VLX_DIR variable is defined but corresponds to non-existing directory")
+if(DEFINED VXL_DIR AND NOT EXISTS ${ZMQ_DIR})
+  message(FATAL_ERROR "VXL_DIR variable is defined but corresponds to non-existing directory")
 endif()
 
-if(NOT DEFINED VLX_DIR)
+if(NOT DEFINED VXL_DIR)
 
   set(revision_tag faa3fcf45bb6c4374431b42bc3b5ad9ce518dbd8)
   if(${proj}_REVISION_TAG)
@@ -52,13 +52,13 @@ if(NOT DEFINED VLX_DIR)
      DEPENDS
       ${${proj}_DEPENDENCIES}
     )
-  set(VLX_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
+  set(VXL_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
 
 else()
   ExternalProject_Add_Empty(${proj} DEPENDS ${${proj}_DEPENDENCIES})
 endif()
 
 mark_as_superbuild(
-  VARS VLX_DIR:PATH
+  VARS VXL_DIR:PATH
   LABELS "FIND_PACKAGE"
   )
