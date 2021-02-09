@@ -49,11 +49,24 @@ if(NOT DEFINED KWSYS_DIR)
     INSTALL_COMMAND ""
     CMAKE_CACHE_ARGS
       ${ep_common_cache_args}
-      #-DKWSYS_NAMESPACE:STRING=itksys
-     DEPENDS
-      ${${proj}_DEPENDENCIES}
+      -DKWSYS_NAMESPACE:STRING=itksys
+      -DKWSYS_NAMESPACE_ALIAS:STRING=KWSYS::itksys
+      -DKWSYS_USE_SystemTools:BOOL=ON
+      -DKWSYS_USE_RegularExpression:BOOL=ON
+      -DKWSYS_USE_Directory:BOOL=ON
+      -DKWSYS_USE_Base64:BOOL=ON
+      -DKWSYS_USE_MD5:BOOL=ON
+      -DKWSYS_USE_CommandLineArguments:BOOL=ON
+      -DKWSYS_USE_Process:BOOL=ON
+      -DKWSYS_USE_DynamicLoader:BOOL=OFF
+      -DKWSYS_USE_Glob:BOOL=ON
+      -DKWSYS_USE_Registry:BOOL=ON
+      -DKWSYS_USE_SystemInformation:BOOL=ON
+      DEPENDS
+        ${${proj}_DEPENDENCIES}
     )
-  set(KWSYS_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
+    set(KWSYS_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
+
 
 else()
   ExternalProject_Add_Empty(${proj} DEPENDS ${${proj}_DEPENDENCIES})

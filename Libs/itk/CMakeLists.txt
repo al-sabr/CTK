@@ -45,6 +45,10 @@ set(MAPPING_VALUES "
 
 configure_file(itkBuildInformation.cxx.in ${CTK_BINARY_DIR}/itkBuildInformation.cxx)
 
+configure_file(${CMAKE_SOURCE_DIR}/CMake/ITKConfig.cmake.in ITKConfig.cmake @ONLY)
+
+configure_file(${CTK_SOURCE_DIR}/CMake/itkConfig.h.in itkConfig.h @ONLY)
+
 set(KIT_export_directive "ITK_EXPORT")
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake

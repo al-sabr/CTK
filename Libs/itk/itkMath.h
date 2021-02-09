@@ -31,7 +31,7 @@
 #include <cmath>
 #include "itkMathDetail.h"
 #include "itkConceptChecking.h"
-#include <vnl_math.h>
+#include <vnl/vnl_math.h>
 #include <itkExport.h>
 #include <itkMacro.h>
 
