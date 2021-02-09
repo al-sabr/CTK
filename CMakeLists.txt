@@ -614,10 +614,6 @@ if(DEFINED CMAKE_MACOSX_RPATH AND NOT "${CMAKE_MACOSX_RPATH}" STREQUAL "")
 endif()
 set(KWSYS_PROPERTIES_CXX MACOSX_RPATH ${_macosx_rpath} WINDOWS_EXPORT_ALL_SYMBOLS FALSE)
 
-
-add_subdirectory(External/kwsys)
-add_subdirectory(External/VNL)
-
 #-----------------------------------------------------------------------------
 # CTK Libraries
 #
@@ -1125,6 +1121,8 @@ set(CTK_DEPENDENCIES
   OpenIGTLink
   ITK
   QtTesting
+  KWSYS
+  VXL
   )
 
 if(BUILD_TESTING)
