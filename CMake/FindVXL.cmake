@@ -79,7 +79,7 @@ macro(findVxlLibrary lib includeDir)
   #  message(STATUS "VXL_${UPPER}_LIBRARY_DEBUG: ${VXL_${UPPER}_LIBRARY_DEBUG}")
   #  message(STATUS "VXL_${UPPER}_LIBRARY_RELEASE: ${VXL_${UPPER}_LIBRARY_RELEASE}")
     # include the macro to adjust libraries
-    INCLUDE (${CMP_MODULES_SOURCE_DIR}/cmpAdjustLibVars.cmake)
+    include(${CMAKE_SOURCE_DIR}/CMake/cmpAdjustLibVars.cmake)
     cmp_ADJUST_LIB_VARS( VXL_${UPPER} )
     
     # Group all the libraries together that we have found
