@@ -18,7 +18,7 @@ if(${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
 endif()
 
 # Sanity checks
-if(DEFINED KWSYS_DIR AND NOT EXISTS ${ZMQ_DIR})
+if(DEFINED KWSYS_DIR AND NOT EXISTS ${KWSYS_DIR})
   message(FATAL_ERROR "KWSYS_DIR variable is defined but corresponds to non-existing directory")
 endif()
 
@@ -50,7 +50,7 @@ if(NOT DEFINED KWSYS_DIR)
     CMAKE_CACHE_ARGS
       ${ep_common_cache_args}
       -DKWSYS_NAMESPACE:STRING=itksys
-      -DKWSYS_NAMESPACE_ALIAS:STRING=KWSYS::itksys
+      #-DKWSYS_NAMESPACE_ALIAS:STRING=KWSYS::itksys
       -DKWSYS_USE_SystemTools:BOOL=ON
       -DKWSYS_USE_RegularExpression:BOOL=ON
       -DKWSYS_USE_Directory:BOOL=ON

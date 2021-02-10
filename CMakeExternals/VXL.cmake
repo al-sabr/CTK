@@ -18,7 +18,7 @@ if(${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
 endif()
 
 # Sanity checks
-if(DEFINED VXL_DIR AND NOT EXISTS ${ZMQ_DIR})
+if(DEFINED VXL_DIR AND NOT EXISTS ${VXL})
   message(FATAL_ERROR "VXL_DIR variable is defined but corresponds to non-existing directory")
 endif()
 
