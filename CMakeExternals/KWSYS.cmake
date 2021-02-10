@@ -49,7 +49,7 @@ if(NOT DEFINED KWSYS_DIR)
     INSTALL_COMMAND ""
     CMAKE_CACHE_ARGS
       ${ep_common_cache_args}
-      -DKWSYS_NAMESPACE:STRING=itksys
+      #-DKWSYS_NAMESPACE:STRING=itksys
       #-DKWSYS_NAMESPACE_ALIAS:STRING=KWSYS::itksys
       -DKWSYS_USE_SystemTools:BOOL=ON
       -DKWSYS_USE_RegularExpression:BOOL=ON

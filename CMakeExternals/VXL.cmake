@@ -49,6 +49,23 @@ if(NOT DEFINED VXL_DIR)
     INSTALL_COMMAND ""
     CMAKE_CACHE_ARGS
       ${ep_common_cache_args}
+      -DVXL_BUILD_EXAMPLES:BOOL=OFF
+      -DBUILD_TESTING:BOOL=OFF
+      -DVXL_BUILD_CORE_IMAGING=${VXL_BUILD_CORE_IMAGING}
+      -DVXL_FORCE_V3P_BZLIB2:BOOL=OFF
+      -DVXL_USING_NATIVE_BZLIB2:BOOL=TRUE # for disable build built-in bzip2 (v3p/bzlib/CMakeLists.txt#L10-L26)
+      -DVXL_FORCE_V3P_CLIPPER:BOOL=ON # TODO : need add clipper port to turn off
+      -DVXL_FORCE_V3P_DCMTK:BOOL=OFF
+      -DVXL_FORCE_V3P_GEOTIFF:BOOL=OFF
+      -DVXL_FORCE_V3P_J2K:BOOL=OFF
+      -DVXL_FORCE_V3P_JPEG:BOOL=OFF
+      -DVXL_FORCE_V3P_OPENJPEG2:BOOL=ON # TODO : need fix compile error when using openjpeg port to turn off
+      -DVXL_FORCE_V3P_PNG:BOOL=OFF
+      -DVXL_FORCE_V3P_TIFF:BOOL=OFF
+      -DVXL_FORCE_V3P_ZLIB:BOOL=OFF
+      -DVXL_USE_DCMTK:BOOL=OFF # TODO : need fix dcmtk support to turn on
+      -DVXL_USE_GEOTIFF:BOOL=ON
+      -DVXL_USE_WIN_WCHAR_T:BOOL=${USE_WIN_WCHAR_T}
      DEPENDS
       ${${proj}_DEPENDENCIES}
     )
