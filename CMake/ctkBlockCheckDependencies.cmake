@@ -61,6 +61,14 @@ if(NOT DEFINED CTK_DEPENDENCIES)
   message(FATAL_ERROR "error: CTK_DEPENDENCIES variable is not defined !")
 endif()
 
+set(KWSYS_enabling_variable KWSYS_LIBRARIES)
+set(${KWSYS_enabling_variable}_INCLUDE_DIRS KWSYS_INCLUDE_DIR)
+set(${KWSYS_enabling_variable}_FIND_PACKAGE_CMD KWSYS)
+
+set(VXL_enabling_variable VXL_LIBRARIES)
+set(${VXL_enabling_variable}_INCLUDE_DIRS VXL_INCLUDE_DIR)
+set(${VXL_enabling_variable}_FIND_PACKAGE_CMD VXL)
+
 set(DCMTK_enabling_variable DCMTK_LIBRARIES)
 set(${DCMTK_enabling_variable}_INCLUDE_DIRS DCMTK_INCLUDE_DIR)
 set(${DCMTK_enabling_variable}_FIND_PACKAGE_CMD DCMTK)
