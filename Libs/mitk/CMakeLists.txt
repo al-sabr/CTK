@@ -1,11 +1,16 @@
 project(CTKmitk)
 
+#find_package(ITK COMPONENTS KWSYS REQUIRED) 
+
 include(files.cmake)
 
 set(KIT_export_directive "MITK_EXPORT")
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake
 # The following macro will read the target libraries from the file 'target_libraries.cmake'
+
+#find_package(ITK COMPONENTS ITKInternal REQUIRED) 
+
 set(KIT_target_libraries)
 
 ctkFunctionGetTargetLibraries(KIT_target_libraries)

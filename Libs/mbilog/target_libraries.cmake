@@ -5,8 +5,7 @@
 #
 
 set(target_libraries
-KWSYS_LIBRARIES
-VLX_LIBRARIES
+  ITKInternal
   CTKCore
 )
 
