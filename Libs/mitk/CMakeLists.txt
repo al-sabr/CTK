@@ -1,6 +1,6 @@
 project(CTKmitk)
 
-#find_package(ITK COMPONENTS KWSYS REQUIRED) 
+#find_package(ITK COMPONENTS ITKInternal REQUIRED)
 
 include(files.cmake)
 
@@ -25,3 +25,5 @@ ctkMacroBuildLib(
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
   BYPASS_REGEX TRUE
   )
+
+#target_link_libraries(${PROJECT_NAME} ITKInternal)

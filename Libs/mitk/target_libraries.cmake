@@ -5,6 +5,7 @@
 #
 
 set(target_libraries
+  ITK_LIBRARIES
   ITKInternal
   CTKCore
   CTKmbilog

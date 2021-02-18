@@ -595,9 +595,6 @@ ctk_lib_option(mbilog
 ctk_lib_option(AppUtil
                "Build the MITK AppUtil library" ON)
 
-ctk_lib_option(itk
-               "Build the MITK AppUtil library" ON)
-
 ctk_lib_option(mitk
                "Build the MITK AppUtil library" ON)
 
@@ -1092,8 +1089,8 @@ set(CTK_DEPENDENCIES
   OpenIGTLink
   ITK
   QtTesting
-  KWSYS
-  VXL
+  #KWSYS
+  #VXL
   )
 
 if(BUILD_TESTING)

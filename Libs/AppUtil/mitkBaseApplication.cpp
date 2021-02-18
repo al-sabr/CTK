@@ -630,8 +630,8 @@ namespace mitk
   {
     auto storageDir = this->getProperty(ctkPluginConstants::FRAMEWORK_STORAGE).toString();
     
-    if (!storageDir.isEmpty())
-      us::ModuleSettings::SetStoragePath((storageDir + "us" + QDir::separator()).toStdString());
+    //if (!storageDir.isEmpty())
+      //us::ModuleSettings::SetStoragePath((storageDir + "us" + QDir::separator()).toStdString());
     
   }
 

@@ -15,8 +15,7 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mbilogConfig.cmake.in"
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mbilogConfig.h.in"
 "${CMAKE_CURRENT_BINARY_DIR}/mbilogConfig.h" @ONLY)
 
-
-#find_package(ITK COMPONENTS ITKInternal REQUIRED) 
+#find_package(ITK COMPONENTS ITKCommon ITKInternal REQUIRED) 
 
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
