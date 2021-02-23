@@ -6,7 +6,7 @@
 
 set(target_libraries
   ITK_LIBRARIES
-  ITKInternal
+  ITKFoundationCommon
   CTKCore
   CTKPluginFramework
   CppMicroServices

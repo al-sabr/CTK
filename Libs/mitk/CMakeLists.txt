@@ -4,7 +4,9 @@ project(CTKmitk)
 
 include(files.cmake)
 
-set(KIT_export_directive "MITK_EXPORT")
+#find_package(CppMicroServices REQUIRED)
+
+set(KIT_export_directive "MITKCORE_EXPORT")
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake
 # The following macro will read the target libraries from the file 'target_libraries.cmake'
@@ -12,6 +14,11 @@ set(KIT_export_directive "MITK_EXPORT")
 #find_package(ITK COMPONENTS ITKInternal REQUIRED) 
 
 set(KIT_target_libraries)
+
+# ---------------- Configure files -----------------
+
+configure_file(${CTK_SOURCE_DIR}/CMake/mitkConfig.h.in ${CTK_BINARY_DIR}/mitkConfig.h)
+configure_file(${CTK_SOURCE_DIR}/CMake/MITKConfig.cmake.in ${CTK_BINARY_DIR}/MITKConfig.cmake @ONLY)
 
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 

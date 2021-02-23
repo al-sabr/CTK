@@ -25,7 +25,7 @@ endif()
 
 if(NOT DEFINED ITK_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
 
-  set(revision_tag "itk-basic-internal-kws-vxl")
+  set(revision_tag "itk-4.13-foundation-internal-kwsys+vxl")
   if(${proj}_REVISION_TAG)
     set(revision_tag ${${proj}_REVISION_TAG})
   endif()

@@ -6,7 +6,11 @@
 
 set(target_libraries
   ITK_LIBRARIES
-  ITKInternal
+  ITK
+  VTK_LIBRARIES
+  VTK
+  CppMicroServices
+  ITKFoundationCommon
   CTKCore
   CTKmbilog
 )
