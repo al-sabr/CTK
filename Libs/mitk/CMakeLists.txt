@@ -4,8 +4,6 @@ project(CTKmitk)
 
 include(files.cmake)
 
-#find_package(CppMicroServices REQUIRED)
-
 set(KIT_export_directive "MITKCORE_EXPORT")
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake
