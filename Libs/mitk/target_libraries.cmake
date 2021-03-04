@@ -11,6 +11,8 @@ set(target_libraries
   VTK
   CppMicroServices
   ITKFoundationCommon
+  ITKFoundationSpatialObjects
+  ITKFoundationTransform
   CTKCore
   CTKmbilog
 )

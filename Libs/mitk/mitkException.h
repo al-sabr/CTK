@@ -44,7 +44,7 @@ namespace mitk
   *
   *                 mitkThrowException(MyException) << "optional exception message";
   */
-  class MITK_EXPORT Exception : public itk::ExceptionObject
+  class MITKCORE_EXPORT Exception : public itk::ExceptionObject
   {
   public:
 
@@ -113,7 +113,7 @@ namespace mitk
     std::vector<ReThrowData> m_RethrowData;
   };
 
-  MITK_EXPORT std::ostream &operator<<(std::ostream &os, const mitk::Exception &e);
+  MITKCORE_EXPORT std::ostream &operator<<(std::ostream &os, const mitk::Exception &e);
 } // namespace mitk
 
 #endif
