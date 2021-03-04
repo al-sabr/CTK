@@ -373,6 +373,11 @@ endif()
 option(CTK_USE_BLUEBERRY "Build the BlueBerry platform" ON)
 
 #-----------------------------------------------------------------------------
+# MITK CORE depending on BLUEBERRY FRAMEWORK
+#
+option(CTK_USE_MITK_CORE "Build the MITK Core library" ON)
+
+#-----------------------------------------------------------------------------
 # QtTesting
 #
 option(CTK_USE_QTTESTING "Enable/Disable QtTesting" OFF)
@@ -803,6 +808,16 @@ if(CTK_USE_BLUEBERRY)
     org.blueberry.ui.qt.help
     org.blueberry.ui.qt.log
     org.blueberry.ui.qt.objectinspector
+    )
+endif()
+
+if(CTK_USE_MITK_CORE)
+  list(APPEND plugin_list
+    org.mitk.core.services
+    org.mitk.gui.common
+    org.mitk.gui.qt.application
+    org.mitk.gui.qt.ext
+    org.mitk.gui.qt.extapplication
     )
 endif()
 
