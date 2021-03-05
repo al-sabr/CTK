@@ -1093,6 +1093,7 @@ endif()
 # CTK dependencies - Projects should be TOPOLOGICALLY ordered
 #-----------------------------------------------------------------------------
 set(CTK_DEPENDENCIES
+  CppMicroServices
   Log4Qt
   VTK
   PythonQt

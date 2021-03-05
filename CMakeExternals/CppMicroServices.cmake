@@ -1,8 +1,8 @@
 #
-# ITK
+# CppMicroServices
 #
 
-set(proj ITK)
+set(proj CppMicroServices)
 
 set(${proj}_DEPENDENCIES "")
 
@@ -14,19 +14,18 @@ ExternalProject_Include_Dependencies(${proj}
   )
 
 if(${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
-  unset(ITK_DIR CACHE)
-  find_package(ITK REQUIRED NO_MODULE)
+  unset(CppMicroServices_DIR CACHE)
+  find_package(CppMicroServices REQUIRED NO_MODULE)
 endif()
 
 # Sanity checks
-if(DEFINED ITK_DIR AND NOT EXISTS ${ITK_DIR})
-  message(FATAL_ERROR "ITK_DIR variable is defined but corresponds to non-existing directory")
+if(DEFINED CppMicroServices_DIR AND NOT EXISTS ${CppMicroServices_DIR})
+  message(FATAL_ERROR "CppMicroServices_DIR variable is defined but corresponds to non-existing directory")
 endif()
 
-if(NOT DEFINED ITK_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
+if(NOT DEFINED CppMicroServices_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
 
-  #set(revision_tag "itk-4.13-foundation-internal-kwsys+vxl")
-  set(revision_tag "release-4.13")
+  set(revision_tag "")
   if(${proj}_REVISION_TAG)
     set(revision_tag ${${proj}_REVISION_TAG})
   endif()
@@ -38,10 +37,8 @@ if(NOT DEFINED ITK_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
                       GIT_TAG ${revision_tag})
   else()
-    set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://github.com/InsightSoftwareConsortium/ITK/"
+    set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://github.com/CppMicroServices/CppMicroServices"
                       GIT_TAG ${revision_tag})
-    #set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://github.com/al-sabr/ITK"
-    #                  GIT_TAG ${revision_tag})
   endif()
 
   set(ep_project_include_arg)
@@ -60,29 +57,16 @@ if(NOT DEFINED ITK_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
     CMAKE_CACHE_ARGS
       ${ep_common_cache_args}
       ${ep_project_include_arg}
-      -DBUILD_EXAMPLES:BOOL=OFF
-      -DBUILD_SHARED_LIBS:BOOL=ON
-      -DBUILD_TESTING:BOOL=OFF
-      -DITK_BUILD_DEFAULT_MODULES:BOOL=OFF
-      -DITKGroup_Core:BOOL=ON
-      #-DITKGroup_Foundation:BOOL=ON
-      -DITK_USE_REVIEW:BOOL=OFF
-      -DITK_USE_REVIEW_STATISTICS:BOOL=OFF
-      -DITK_USE_OPTIMIZED_REGISTRATION_METHODS:BOOL=ON
-      -DITK_USE_PORTABLE_ROUND:BOOL=ON
-      -DITK_USE_CENTERED_PIXEL_COORDINATES_CONSISTENTLY:BOOL=ON
-      -DITK_USE_TRANSFORM_IO_FACTORIES:BOOL=ON
-      -DITK_LEGACY_REMOVE:BOOL=ON
     DEPENDS
       ${${proj}_DEPENDENCIES}
     )
-  set(ITK_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
+  set(CppMicroServices_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
 
 else()
   ExternalProject_Add_Empty(${proj} DEPENDS ${${proj}_DEPENDENCIES})
 endif()
 
 mark_as_superbuild(
-  VARS ITK_DIR:PATH
+  VARS CppMicroServices_DIR:PATH
   LABELS "FIND_PACKAGE"
   )
