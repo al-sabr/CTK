@@ -5,11 +5,12 @@
 #
 
 set(target_libraries
+  CppMicroServices
+  CppMicroServices_LIBRARIES
   ITK_LIBRARIES
   ITK
   VTK_LIBRARIES
   VTK
-  CppMicroServices
   ITKFoundationCommon
   ITKFoundationSpatialObjects
   ITKFoundationTransform

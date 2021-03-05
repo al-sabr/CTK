@@ -30,5 +30,3 @@ ctkMacroBuildLib(
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
   BYPASS_REGEX TRUE
   )
-
-#target_link_libraries(${PROJECT_NAME} ITKInternal)
