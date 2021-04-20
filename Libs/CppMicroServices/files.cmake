@@ -5,7 +5,10 @@ set(KIT_MOC_SRCS
   Threads_p.h
   Utils_p.h
   WaitCondition_p.h
+  ModuleSettings.h
+  StaticInit_p.h
 )
 
 set(KIT_SRCS
+  ModuleSettings.cpp
 )
