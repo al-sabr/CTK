@@ -19,8 +19,8 @@
 
 ============================================================================*/
 
-#ifndef USSHAREDLIBRARY_H
-#define USSHAREDLIBRARY_H
+#ifndef SHAREDLIBRARY_H
+#define SHAREDLIBRARY_H
 
 #include "GlobalConfig.h"
 #include "SharedData.h"

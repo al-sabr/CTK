@@ -311,7 +311,7 @@ class NoLockingStrategy
 
 }
 
-#include <usWaitCondition_p.h>
+#include <WaitCondition_p.h>
 
 namespace cppmicroservices {
 
