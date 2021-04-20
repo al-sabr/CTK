@@ -2,7 +2,6 @@ project(CTKCppMicroServices)
 
 include(files.cmake)
 
-find_package(CppMicroServices REQUIRED NO_MODULE)
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
