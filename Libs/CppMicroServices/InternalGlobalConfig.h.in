@@ -7,6 +7,7 @@
 #define INTERNALGLOBALCONFIG_H
 
 #include "CppMicroServicesExport.h"
+
 //-------------------------------------------------------------------
 // Namespace customization
 //-------------------------------------------------------------------
@@ -36,6 +37,8 @@
 
   namespace US_NAMESPACE {}
 
+#endif /* user namespace */
+
 //-------------------------------------------------------------------
 // Debuging & Logging
 //-------------------------------------------------------------------
@@ -49,4 +52,4 @@ US_BEGIN_NAMESPACE
 US_END_NAMESPACE
 
 
-#endif /* user namespace */
+#endif // INTERNALGLOBALCONFIG_H

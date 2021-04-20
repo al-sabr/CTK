@@ -24,6 +24,7 @@
 #define THREADINGMODEL_H
 
 #include <cppmicroservices/GlobalConfig.h>
+#include "InternalGlobalConfig.h"
 
 #ifdef US_ENABLE_THREADING_SUPPORT
 
@@ -133,7 +134,6 @@
   #define US_ATOMIC_ASSIGN(l, r)        *l = r;
 
 #endif
-
 
 US_BEGIN_NAMESPACE
 
