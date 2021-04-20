@@ -1,12 +1,9 @@
 set(KIT_MOC_SRCS
-  mitkBaseApplication.h
-  QmitkSafeApplication.h
-  QmitkSingleApplication.h
+  AtomicInt_p.h
+  SharedData.h
+  SharedLibrary.h
+  Threads_p.h
 )
 
 set(KIT_SRCS
-  mitkBaseApplication.cpp
-  mitkProvisioningInfo.cpp
-  QmitkSafeApplication.cpp
-  QmitkSingleApplication.cpp
 )

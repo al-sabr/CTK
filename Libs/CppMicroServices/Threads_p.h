@@ -20,10 +20,10 @@
 ============================================================================*/
 
 
-#ifndef USTHREADINGMODEL_H
-#define USTHREADINGMODEL_H
+#ifndef THREADINGMODEL_H
+#define THREADINGMODEL_H
 
-#include <usCoreConfig.h>
+#include <GlobalConfig.h>
 
 #ifdef US_ENABLE_THREADING_SUPPORT
 
@@ -135,7 +135,7 @@
 #endif
 
 
-US_BEGIN_NAMESPACE
+namespace cppmicroservices {
 
 class Mutex
 {
@@ -309,11 +309,11 @@ class NoLockingStrategy
 {
 };
 
-US_END_NAMESPACE
+}
 
 #include <usWaitCondition_p.h>
 
-US_BEGIN_NAMESPACE
+namespace cppmicroservices {
 
 template<class LockingStrategy = MutexLockingStrategy,
          template<class Host> class WaitConditionStrategy = NoWaitCondition
@@ -324,6 +324,6 @@ class MultiThreaded : public LockingStrategy,
   friend class WaitConditionStrategy<MultiThreaded<LockingStrategy, WaitConditionStrategy> >;
 };
 
-US_END_NAMESPACE
+namespace cppmicroservices {
 
 #endif // USTHREADINGMODEL_H

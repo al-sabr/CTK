@@ -1,4 +1,4 @@
-project(CTKAppUtil)
+project(CTKCppMicroServices)
 
 include(files.cmake)
 
@@ -7,7 +7,7 @@ find_package(CppMicroServices REQUIRED NO_MODULE)
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
 
-set(KIT_export_directive "CTK_APPUTIL_EXPORT")
+set(KIT_export_directive "CPPMICROSERVICES_Core_EXPORT")
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake
 # The following macro will read the target libraries from the file 'target_libraries.cmake'

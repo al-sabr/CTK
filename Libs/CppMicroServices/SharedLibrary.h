@@ -22,12 +22,12 @@
 #ifndef USSHAREDLIBRARY_H
 #define USSHAREDLIBRARY_H
 
-#include "usCoreConfig.h"
-#include "usSharedData.h"
+#include "GlobalConfig.h"
+#include "SharedData.h"
 
 #include <string>
 
-US_BEGIN_NAMESPACE
+namespace cppmicroservices {
 
 class SharedLibraryPrivate;
 
@@ -36,7 +36,7 @@ class SharedLibraryPrivate;
  *
  * The SharedLibrary class loads shared libraries at runtime.
  */
-class US_Core_EXPORT SharedLibrary
+class CPPMICROSERVICES_Core_EXPORT SharedLibrary
 {
 public:
 
@@ -209,6 +209,6 @@ private:
 
 };
 
-US_END_NAMESPACE
+}
 
 #endif // USTESTUTILSHAREDLIBRARY_H

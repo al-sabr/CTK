@@ -29,15 +29,15 @@ LGPL Exception version 1.1 (file LGPL_EXCEPTION.txt in Qt 4.7.3 package).
 
 ============================================================================*/
 
-#ifndef USSHAREDDATA_H
-#define USSHAREDDATA_H
+#ifndef SHAREDDATA_H
+#define SHAREDDATA_H
 
-#include "usAtomicInt_p.h"
+#include "AtomicInt_p.h"
 
 #include <algorithm>
 #include <utility>
 
-US_BEGIN_NAMESPACE
+namespace cppmicroservices {
 
 /**
  * \ingroup MicroServicesUtils
@@ -272,6 +272,6 @@ template <class T>
 void swap(US_PREPEND_NAMESPACE(ExplicitlySharedDataPointer<T)>& p1, US_PREPEND_NAMESPACE(ExplicitlySharedDataPointer<T)>& p2)
 { p1.Swap(p2); }
 
-US_END_NAMESPACE
+}
 
 #endif // USSHAREDDATA_H

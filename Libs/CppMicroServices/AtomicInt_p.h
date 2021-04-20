@@ -20,13 +20,13 @@
 ============================================================================*/
 
 
-#ifndef USATOMICINT_H
-#define USATOMICINT_H
+#ifndef ATOMICINT_H
+#define ATOMICINT_H
 
-#include <usCoreConfig.h>
-#include "usThreads_p.h"
+#include <GlobalConfig.h>
+#include "Threads_p.h"
 
-US_BEGIN_NAMESPACE
+namespace cppmicroservices {
 
 /**
  * This class acts as an atomic integer.
@@ -74,6 +74,6 @@ public:
 
 };
 
-US_END_NAMESPACE
+}
 
 #endif // USATOMICINT_H
