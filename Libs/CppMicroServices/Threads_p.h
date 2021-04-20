@@ -23,7 +23,7 @@
 #ifndef THREADINGMODEL_H
 #define THREADINGMODEL_H
 
-#include <GlobalConfig.h>
+#include <cppmicroservices/GlobalConfig.h>
 
 #ifdef US_ENABLE_THREADING_SUPPORT
 
@@ -135,7 +135,7 @@
 #endif
 
 
-namespace cppmicroservices {
+US_BEGIN_NAMESPACE
 
 class Mutex
 {
@@ -309,11 +309,11 @@ class NoLockingStrategy
 {
 };
 
-}
+US_END_NAMESPACE
 
 #include <WaitCondition_p.h>
 
-namespace cppmicroservices {
+US_BEGIN_NAMESPACE
 
 template<class LockingStrategy = MutexLockingStrategy,
          template<class Host> class WaitConditionStrategy = NoWaitCondition
@@ -324,6 +324,6 @@ class MultiThreaded : public LockingStrategy,
   friend class WaitConditionStrategy<MultiThreaded<LockingStrategy, WaitConditionStrategy> >;
 };
 
-namespace cppmicroservices {
+US_END_NAMESPACE
 
 #endif // USTHREADINGMODEL_H

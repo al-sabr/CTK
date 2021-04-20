@@ -1,0 +1,52 @@
+/*
+  INTERNALCONFIG.h
+  this file is generated. Do not change!
+*/
+
+#ifndef INTERNALGLOBALCONFIG_H
+#define INTERNALGLOBALCONFIG_H
+
+#include "CppMicroServicesExport.h"
+//-------------------------------------------------------------------
+// Namespace customization
+//-------------------------------------------------------------------
+
+#define US_NAMESPACE @US_NAMESPACE@
+
+#ifndef US_NAMESPACE /* user namespace */
+
+  # define US_PREPEND_NAMESPACE(name) ::name
+  # define US_USE_NAMESPACE
+  # define US_BEGIN_NAMESPACE
+  # define US_END_NAMESPACE
+  # define US_FORWARD_DECLARE_CLASS(name) class name;
+  # define US_FORWARD_DECLARE_STRUCT(name) struct name;
+
+#else /* user namespace */
+
+  # define US_PREPEND_NAMESPACE(name) ::US_NAMESPACE::name
+  # define US_USE_NAMESPACE using namespace ::US_NAMESPACE;
+  # define US_BEGIN_NAMESPACE namespace US_NAMESPACE {
+  # define US_END_NAMESPACE }
+  # define US_FORWARD_DECLARE_CLASS(name) \
+    US_BEGIN_NAMESPACE class name; US_END_NAMESPACE
+
+  # define US_FORWARD_DECLARE_STRUCT(name) \
+    US_BEGIN_NAMESPACE struct name; US_END_NAMESPACE
+
+  namespace US_NAMESPACE {}
+
+//-------------------------------------------------------------------
+// Debuging & Logging
+//-------------------------------------------------------------------
+
+#cmakedefine US_ENABLE_DEBUG_OUTPUT
+
+US_BEGIN_NAMESPACE
+  enum MsgType { DebugMsg = 0, InfoMsg = 1, WarningMsg = 2, ErrorMsg = 3 };
+  typedef void (*MsgHandler)(MsgType, const char *);
+  CTK_CPPMICROSERVICES_Core_EXPORT MsgHandler installMsgHandler(MsgHandler);
+US_END_NAMESPACE
+
+
+#endif /* user namespace */

@@ -23,8 +23,8 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#include <GlobalConfig.h>
-
+#include <cppmicroservices/GlobalConfig.h>
+#include "CppMicroServicesExport.h"
 #include <string>
 #include <vector>
 
@@ -32,22 +32,22 @@
 // Module auto-loading
 //-------------------------------------------------------------------
 
-namespace cppmicroservices {
+US_BEGIN_NAMESPACE
 
 struct ModuleInfo;
 
 std::vector<std::string> AutoLoadModules(const ModuleInfo& moduleInfo);
 
-namespace cppmicroservices {
+US_END_NAMESPACE
 
 //-------------------------------------------------------------------
 // Error handling
 //-------------------------------------------------------------------
 
-namespace cppmicroservices {
+US_BEGIN_NAMESPACE
 
-CPPMICROSERVICES_Core_EXPORT std::string GetLastErrorStr();
+CTK_CPPMICROSERVICES_Core_EXPORT std::string GetLastErrorStr();
 
-namespace cppmicroservices {
+US_END_NAMESPACE
 
 #endif // USUTILS_H

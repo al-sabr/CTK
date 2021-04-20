@@ -7,6 +7,7 @@ set(KIT_MOC_SRCS
   WaitCondition_p.h
   ModuleSettings.h
   StaticInit_p.h
+  Log_p.h
 )
 
 set(KIT_SRCS

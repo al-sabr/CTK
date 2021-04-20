@@ -22,12 +22,13 @@
 #ifndef SHAREDLIBRARY_H
 #define SHAREDLIBRARY_H
 
-#include "GlobalConfig.h"
+#include "cppmicroservices/GlobalConfig.h"
+#include "CppMicroServicesExport.h"
 #include "SharedData.h"
 
 #include <string>
 
-namespace cppmicroservices {
+US_BEGIN_NAMESPACE
 
 class SharedLibraryPrivate;
 
@@ -36,7 +37,7 @@ class SharedLibraryPrivate;
  *
  * The SharedLibrary class loads shared libraries at runtime.
  */
-class CPPMICROSERVICES_Core_EXPORT SharedLibrary
+class CTK_CPPMICROSERVICES_Core_EXPORT SharedLibrary
 {
 public:
 
@@ -209,6 +210,6 @@ private:
 
 };
 
-}
+US_END_NAMESPACE
 
 #endif // USTESTUTILSHAREDLIBRARY_H

@@ -600,6 +600,9 @@ ctk_lib_option(mbilog
 ctk_lib_option(AppUtil
                "Build the MITK AppUtil library" ON)
 
+ctk_lib_option(CppMicroServices
+               "Build the CppMicroServices framework port of old code with the new one" ON)
+
 ctk_lib_option(mitk
                "Build the MITK AppUtil library" ON)
 

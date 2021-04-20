@@ -23,12 +23,13 @@
 #ifndef MODULESETTINGS_H
 #define MODULESETTINGS_H
 
-#include "GlobalConfig.h"
-
+#include "cppmicroservices/GlobalConfig.h"
+#include "CppMicroServicesExport.h"
+#include "InternalGlobalConfig.h"
 #include <vector>
 #include <string>
 
-namespace cppmicroservices {
+US_BEGIN_NAMESPACE
 
 /**
  * \ingroup MicroServices
@@ -44,7 +45,7 @@ namespace cppmicroservices {
  *
  * \remarks This class is thread safe.
  */
-class CPPMICROSERVICES_Core_EXPORT ModuleSettings
+class CTK_CPPMICROSERVICES_Core_EXPORT ModuleSettings
 {
 public:
 
@@ -166,6 +167,6 @@ private:
   ModuleSettings& operator=(const ModuleSettings&);
 };
 
-}
+US_END_NAMESPACE
 
 #endif // USMODULESETTINGS_H

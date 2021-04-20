@@ -5,6 +5,7 @@
 #
 
 set(target_libraries
+  CTKCore
   CppMicroServices
   CppMicroServices_LIBRARIES
   )

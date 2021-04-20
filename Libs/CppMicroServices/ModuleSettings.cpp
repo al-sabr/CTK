@@ -29,27 +29,27 @@
 #include <algorithm>
 #include <cctype>
 
-namespace cppmicroservices {
+US_BEGIN_NAMESPACE
 
-namespace {
+    namespace {
 
-  std::string RemoveTrailingPathSeparator(const std::string& in)
-  {
+        std::string RemoveTrailingPathSeparator(const std::string& in)
+        {
 #ifdef US_PLATFORM_WINDOWS
-    const char separator = '\\';
+            const char separator = '\\';
 #else
-    const char separator = '/';
+            const char separator = '/';
 #endif
-    if (in.empty()) return in;
-    std::string::const_iterator lastChar = --in.end();
-    while (lastChar != in.begin() && std::isspace(*lastChar)) lastChar--;
-    if (*lastChar != separator) lastChar++;
-    std::string::const_iterator firstChar = in.begin();
-    while (firstChar < lastChar && std::isspace(*firstChar)) firstChar++;
-    return std::string(firstChar, lastChar);
-  }
+            if (in.empty()) return in;
+            std::string::const_iterator lastChar = --in.end();
+            while (lastChar != in.begin() && std::isspace(*lastChar)) lastChar--;
+            if (*lastChar != separator) lastChar++;
+            std::string::const_iterator firstChar = in.begin();
+            while (firstChar < lastChar && std::isspace(*firstChar)) firstChar++;
+            return std::string(firstChar, lastChar);
+        }
 
-}
+    }
 
 std::string ModuleSettings::CURRENT_MODULE_PATH()
 {
@@ -186,4 +186,4 @@ MsgType ModuleSettings::GetLogLevel()
   return moduleSettingsPrivate()->logLevel;
 }
 
-}
+US_END_NAMESPACE

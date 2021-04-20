@@ -22,7 +22,7 @@
 #ifndef WAITCONDITION_P_H
 #define WAITCONDITION_P_H
 
-#include "GlobalConfig.h"
+#include "cppmicroservices/GlobalConfig.h"
 #include "Log_p.h"
 #include "Utils_p.h"
 #include "Threads_p.h"
@@ -32,7 +32,7 @@
 #include <cerrno>
 #endif
 
-namespace cppmicroservices {
+US_BEGIN_NAMESPACE
 
 /**
  * \brief A thread synchronization object used to suspend execution until some
@@ -373,6 +373,6 @@ void WaitCondition<MutexHost>::NotifyAll() {}
 
 #endif
 
-}
+US_END_NAMESPACE
 
 #endif // USWAITCONDITION_P_H

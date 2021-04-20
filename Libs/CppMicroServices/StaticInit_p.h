@@ -34,7 +34,7 @@ LGPL Exception version 1.1 (file LGPL_EXCEPTION.txt in Qt 4.7.3 package).
 
 #include "Threads_p.h"
 
-namespace cppmicroservices {
+US_BEGIN_NAMESPACE
 
 // POD for US_GLOBAL_STATIC
 template <typename T>
@@ -82,9 +82,6 @@ public:
     deleter(globalStatic);
   }
 };
-
-}
-
 
 #define US_GLOBAL_STATIC_INIT(TYPE, NAME)                                \
   static US_PREPEND_NAMESPACE(GlobalStatic)<TYPE>& this_##NAME()         \
@@ -167,5 +164,7 @@ public:
     }                                                                    \
     return this_##NAME().pointer;                                        \
   }
+
+US_END_NAMESPACE
 
 #endif // US_STATIC_INIT_H
