@@ -15,7 +15,7 @@ found in the LICENSE file.
 
 #include <iostream>
 
-#include "mbilogExports.h"
+#include "mbilogExport.h"
 #include "mbilogLogMessage.h"
 #include "mbilogLoggingTypes.h"
 #include "mbilogTextBackendBase.h"
@@ -37,7 +37,7 @@ namespace mbilog
      *         the mbi logging mechanism and a logging message is emitted. The method formats the
      *         logging messages to a normal string (depending on formatting mode) and writes it to std::cout.
      *
-     *  \param l Logging message.
+     *  \param logMessage Logging message.
      */
     void ProcessMessage(const mbilog::LogMessage &l) override;
 
