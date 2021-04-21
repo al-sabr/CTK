@@ -10,3 +10,9 @@ CMakeLists.txt.user*
 
 # ignore ctags file
 tags
+
+build/*
+build-*
+
+.vscode/settings.json
+CMakeSettings.json
