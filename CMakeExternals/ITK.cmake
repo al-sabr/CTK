@@ -25,7 +25,7 @@ endif()
 
 if(NOT DEFINED ITK_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
 
-  set(revision_tag "v3.20.1")
+  set(revision_tag "v4.13.2")
   if(${proj}_REVISION_TAG)
     set(revision_tag ${${proj}_REVISION_TAG})
   endif()
@@ -37,7 +37,7 @@ if(NOT DEFINED ITK_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
                       GIT_TAG ${revision_tag})
   else()
-    set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://itk.org/ITK.git"
+    set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://github.com/InsightSoftwareConsortium/ITK.git"
                       GIT_TAG ${revision_tag})
   endif()
 
